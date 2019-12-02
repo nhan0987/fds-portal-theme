@@ -1,0 +1,252 @@
+// Main Variable
+$main-color: #b67702;
+$main-color-light: #ef9c00;
+$main-color-dark: #a26a02;
+$main-color-super-dark: #5b3715;
+$secondary-color: #df0024;
+$gray-color: #f6f6f6;
+$gray-color-dark: #a7a7a7;
+$text-color: #000;
+$text-color-2: #939393;
+
+
+
+//Mixin
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin transform($value) {
+	-webkit-transform: $value;
+    transform: $value;
+}
+
+@mixin transition($value) {
+    -webkit-transition: $value;
+    transition: $value;
+}
+
+@mixin d_flex($value) {
+  	display: $value;
+}
+
+@mixin flex_wrap($value) {
+  	-webkit-flex-wrap: $value;
+  	flex-wrap: $value;
+}
+
+@mixin flex_align($value) {
+  	-webkit-align-items: $value;
+  	align-items: $value;
+}
+
+@mixin flex_justify($value) {
+  	-webkit-justify-content: $value;
+  	justify-content: $value;
+}
+@mixin flex_variables($value) {
+  	-webkit-flex: $value;
+  	flex: $value;
+}
+@mixin flex_order($value) {
+  	-webkit-order: $value;
+  	order: $value;
+}
+@mixin background-opacity($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+
+
+
+/*---------- Global ----------*/
+body {
+	background-color: white !important;
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+
+	#wrapper {
+		font-size: 14px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.journal-content-article {
+
+		dl {
+			margin-bottom: 0;
+			
+			dt {
+				display: none;
+			}
+
+			dd {
+				margin-bottom: 0;
+			}
+		}
+
+		p {
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	picture {
+
+		img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	.portlet {
+		margin-bottom: 15px;
+	}
+}
+
+
+
+/*---------- Header ----------*/
+#banner {
+
+	img {
+		max-width: 100%;
+		display: block;
+		width: 100%;
+	}
+}
+
+
+
+/*---------- Footer ----------*/
+#footer {
+	background: url("../images/custom-images/footers/footer-namdan.jpg") center center no-repeat;
+	background-size: cover;
+	border-top: 1px solid $main-color-light;
+	padding-top: 15px;
+	color: $main-color-super-dark;
+
+	.row {
+		padding: 0 20px;
+	}
+	
+	.sitename {
+		color: $secondary-color;
+		text-transform: uppercase;
+		font-size: 24px;
+		font-family: 'Oswald', sans-serif;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+
+	.infos {
+		@include d_flex(flex);
+		@include flex_wrap(wrap);
+
+		> div {
+			margin-bottom: 5px;
+		}
+
+		i {
+			width: 20px;
+			text-align: center;
+			margin-right: 5px;
+		}
+
+		.address {
+			width: 100%;
+		}
+
+		.phone {
+			margin-left: 75px;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.copyright {
+		color: white;
+		border-radius: 20px 20px 0 0;
+		background-color: $main-color;
+		padding: 10px 20px 5px;
+		@include d_flex(flex);
+		@include flex_align(center);
+		margin-top: 10px;
+
+		img {
+			margin-left: auto;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#footer {
+
+		.col-sm-6:last-child {
+			text-align: right;
+		}
+	}
+}
+
+
+
+/*---------- Navbar ----------*/
+#banner + .portlet-navigation {
+	background-color: $main-color;
+	
+	ul {
+		
+		li {
+			position: relative;
+			
+			a {
+				color: white;
+				padding: 10px 15px;
+
+				.lfr-nav-child-toggle {
+					display: none;
+				}
+			}
+			
+			&.selected, &:hover {
+				background-color: $main-color-dark;
+			}
+		}
+
+		.child-menu {
+			background-color: $main-color;
+			
+			li {
+
+				&:hover {
+
+					a {
+						background-color: $main-color-dark;
+					}
+				}
+			}
+		}
+	}
+}
