@@ -1,0 +1,155 @@
+/*---------- Sitemap ----------*/
+.side-sitemap {
+
+	.portlet {
+		background-color: $gray-color;
+		padding: 10px 15px;
+	}
+
+	li {
+
+		a {
+			display: block;
+			padding: 5px 0 5px 30px;
+			text-decoration: none;
+			color: $text-color;
+			position: relative;
+
+			&:hover {
+				color: $secondary-color;
+				font-weight: bold;
+
+				&:before {
+					color: $secondary-color;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				top: 3px;
+				left: 0;
+				color: $gray-color-dark;
+				font-family: 'Font Awesome\ 5 Free';
+				font-size: 18px;
+				width: 20px;
+				text-align: center;
+			}
+		}
+
+		&:nth-child(1) a:before {
+			content: "\f2b5";
+		}
+
+		&:nth-child(2) a:before, &:nth-child(3) a:before {
+			content: "\f15c";
+		}
+
+		&:nth-child(4) a:before {
+			content: "\f0e3";
+			font-weight: bold;
+		}
+
+		&:nth-child(5) a:before, &:nth-child(6) a:before, &:nth-child(7) a:before {
+			content: "\f0ea";
+			font-weight: bold;
+		}
+
+		&:nth-child(8) a:before {
+			content: "\f1ea";
+		}
+
+		&:nth-child(9) a:before {
+			content: "\f2b6";
+		}
+	}
+}
+
+
+/*---------- Weblink ----------*/
+.weblink-wrapper {
+	background-color: $gray-color;
+	border-top: 2px solid $main-color-dark;
+
+	.nav-tabs {
+
+		li {
+			position: relative;
+			margin-right: -45px;
+
+			a {
+				display: inline-block;
+				font-weight: bold;
+				font-size: 16px;
+				padding: 10px 45px 10px 15px;
+				border-bottom-right-radius: 50px;
+				background-color: white;
+				color: $text-color-2;
+				text-transform: uppercase;
+				@include box-shadow(2px 2px 5px 0px rgba(0,0,0,0.3));
+
+				&.active, &:hover {
+					color: $secondary-color;
+				}
+			}
+
+			&:not(:first-child) {
+
+				a {
+					padding-left: 60px;
+				}
+			}
+
+			&:nth-child(1) {
+				z-index: 4;
+			}
+
+			&:nth-child(2) {
+				z-index: 3;
+			}
+
+			&:nth-child(3) {
+				z-index: 2;
+			}
+		}
+	}
+
+	.tab-content {
+		padding: 15px 30px;
+
+		.tab-pane {
+			padding: 0 !important;
+			background-color: transparent !important;
+		}
+		
+		ul {
+			overflow: hidden;
+
+			li {
+				width: 25%;
+				float: left;
+
+				a {
+					display: block;
+					position: relative;
+					padding: 5px 15px;
+					color: $text-color;
+
+					&:before {
+						content: "\f111";
+						position: absolute;
+						top: 14px;
+						left: 0;
+						color: $secondary-color;
+						font-family: 'Font Awesome\ 5 Free';
+						font-weight: bold;
+						font-size: 6px;
+					}
+
+					&:hover {
+						color: $secondary-color;
+					}
+				}
+			}
+		}
+	}
+}
