@@ -14,8 +14,7 @@
 		        value="page" >
 		    </setting>
         </settings>
-		<control-panel-theme>false</control-panel-theme>
-		<page-theme>false</page-theme>
+		<page-theme>true</page-theme>
         <color-scheme id="namdan" name="Huyện Nam Đàn">
 			<default-cs>true</default-cs>
 			<css-class>namdan-theme</css-class>

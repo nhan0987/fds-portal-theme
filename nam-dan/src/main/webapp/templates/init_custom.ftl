@@ -17,7 +17,7 @@
 	<#assign banner_img = 'banner-namdan.jpg'/>
 	<#assign sub_owner = 'Huyện Nam Đàn'/>
 	<#assign main_owner = 'Tỉnh Nghệ An'/>
-	<#assign owner_address = 'Phan Bội Châu, thị trấn Huyện Nam Đàn, Nghệ An'/>
+	<#assign owner_address = 'Phan Bội Châu, thị trấn Huyện Nam Đàn, Nghệ An T'/>
 	<#assign owner_mail = 'namdan@nghean.gov.vn'/>
 	<#assign owner_phone = '(0238) 3 822 150'/>
 	<#assign sub_site_content_responsible = ''/>

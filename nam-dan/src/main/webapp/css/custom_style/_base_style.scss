@@ -1,10 +1,12 @@
 // Main Variable
 $main-color: #b67702;
 $main-color-light: #ef9c00;
+$main-color-super-light: #f5d405;
 $main-color-dark: #a26a02;
 $main-color-super-dark: #5b3715;
 $secondary-color: #df0024;
 $gray-color: #f6f6f6;
+$gray-color-medium: #ebebeb;
 $gray-color-dark: #a7a7a7;
 $text-color: #000;
 $text-color-2: #939393;
@@ -53,15 +55,25 @@ $text-color-2: #939393;
   	-webkit-order: $value;
   	order: $value;
 }
+@mixin flex_direction($value) {
+  	-webkit-flex-direction: $value;
+  	flex-direction: $value;
+}
 @mixin background-opacity($color, $opacity) {
     background-color: rgba($color, $opacity);
+}
+@mixin background-gradient($first-color, $second-color) {
+    background: $first-color;
+	background: -moz-linear-gradient(left,  $first-color 0%, $second-color 100%);
+	background: -webkit-linear-gradient(left,  $first-color 0%,$second-color 100%);
+	background: linear-gradient(to right,  $first-color 0%,$second-color 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=1 );
 }
 
 
 
 /*---------- Global ----------*/
 body {
-	background-color: white !important;
 	
 	ul {
 		list-style: none;
@@ -76,7 +88,7 @@ body {
 		}
 	}
 
-	#wrapper {
+	#mWrapper {
 		font-size: 14px;
 		font-family: 'Roboto', sans-serif;
 	}
@@ -121,6 +133,16 @@ body {
 
 	.portlet {
 		margin-bottom: 15px;
+
+		.portlet-content {
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+		}
+
+		.asset-entries-group-label {
+			display: none;
+		}
 	}
 }
 
@@ -140,18 +162,17 @@ body {
 
 /*---------- Footer ----------*/
 #footer {
-	background: url("../images/custom-images/footers/footer-namdan.jpg") center center no-repeat;
 	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 	border-top: 1px solid $main-color-light;
 	padding-top: 15px;
-	color: $main-color-super-dark;
 
 	.row {
 		padding: 0 20px;
 	}
 	
 	.sitename {
-		color: $secondary-color;
 		text-transform: uppercase;
 		font-size: 24px;
 		font-family: 'Oswald', sans-serif;
@@ -187,9 +208,6 @@ body {
 	}
 
 	.copyright {
-		color: white;
-		border-radius: 20px 20px 0 0;
-		background-color: $main-color;
 		padding: 10px 20px 5px;
 		@include d_flex(flex);
 		@include flex_align(center);
@@ -210,11 +228,39 @@ body {
 	}
 }
 
+.namdan-theme #footer {
+	background-image: url("../images/custom-images/footers/footer-namdan.jpg");
+	color: $main-color-super-dark;
+
+	.sitename {
+		color: $secondary-color;
+	}
+
+	.copyright {
+		color: white;
+		border-radius: 20px 20px 0 0;
+		background-color: $main-color;
+	}
+}
+
+body[class*="xa-"] #footer {
+	background-image: url("../images/custom-images/footers/footer-vandien.jpg");
+	color: white;
+
+	.copyright {
+		background-color: rgba(91,55,21,0.5);
+	}
+}
+
 
 
 /*---------- Navbar ----------*/
 #banner + .portlet-navigation {
 	background-color: $main-color;
+
+	.portlet-header {
+		display: none;
+	}
 	
 	ul {
 		
@@ -237,6 +283,7 @@ body {
 
 		.child-menu {
 			background-color: $main-color;
+			border: 0;
 			
 			li {
 
@@ -247,6 +294,30 @@ body {
 					}
 				}
 			}
+		}
+	}
+}
+
+
+
+/*---------- Other ----------*/
+
+// Nested portlet
+.portlet-nested-portlets {
+
+	> .portlet {
+		margin-bottom: 15px;
+
+		.portlet {
+			margin-bottom: 0;
+		}
+	}
+
+	.columns-2 > div > div > div {
+		height: 100%;
+		
+		> div {
+			height: 100%;
 		}
 	}
 }

@@ -7,6 +7,7 @@
 	portlet_display_root_portlet_id = htmlUtil.escapeAttribute(portlet_display.getRootPortletId())
 	portlet_id = htmlUtil.escapeAttribute(portlet_display.getId())
 	portlet_title = htmlUtil.escape(portlet_display.getTitle())
+	portlet_decorator_id= portlet_display.getPortletDecoratorId()
 />
 
 <section class="portlet" id="portlet_${portlet_id}">
@@ -51,18 +52,20 @@
 				/>
 			</a>
 		</#if>
-
-		<div class="autofit-float autofit-row portlet-header">
-			<div class="autofit-col autofit-col-expand">
-				<h2 class="portlet-title-text">${portlet_title}</h2>
-			</div>
-
-			<div class="autofit-col autofit-col-end">
-				<div class="autofit-section">
-					<@liferay_util["dynamic-include"] key="portlet_header_${portlet_display_root_portlet_id}" />
+		
+		<#if portlet_decorator_id != "borderless">
+			<div class="autofit-float autofit-row portlet-header">
+				<div class="autofit-col autofit-col-expand">
+					<h2 class="portlet-title-text">${portlet_title}</h2>
+				</div>
+	
+				<div class="autofit-col autofit-col-end">
+					<div class="autofit-section">
+						<@liferay_util["dynamic-include"] key="portlet_header_${portlet_display_root_portlet_id}" />
+					</div>
 				</div>
 			</div>
-		</div>
+		</#if>
 
 		${portlet_display.writeContent(writer)}
 	</div>
