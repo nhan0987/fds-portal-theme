@@ -11,13 +11,12 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	
-	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-	
 	<base href="/">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=3234567891088" rel="stylesheet" type="text/css">
 
 	<@liferay_util["include"] page=top_head_include />
+	
+	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
 </head>
 
 <body class="${css_class} home-theme">
