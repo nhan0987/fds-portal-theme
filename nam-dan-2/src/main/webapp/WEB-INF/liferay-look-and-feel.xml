@@ -24,12 +24,19 @@
 			</color-scheme-images-path>
 		</color-scheme>
 		<color-scheme id="vandien" name="Xã Vân Diên 2">
-			<default-cs>true</default-cs>
-			<css-class>xa-vandien</css-class>
+			<default-cs>false</default-cs>
+			<css-class>xavandien-theme</css-class>
 			<color-scheme-images-path>
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>
 		</color-scheme>
+<!-- 		<color-scheme id="namcanh" name="Xã Nam Canh 2"> -->
+<!-- 			<default-cs>false</default-cs> -->
+<!-- 			<css-class>xanamcanh-theme</css-class> -->
+<!-- 			<color-scheme-images-path> -->
+<!-- 				${images-path}/custom-images/color-schemes/${css-class} -->
+<!-- 			</color-scheme-images-path> -->
+<!-- 		</color-scheme> -->
         <portlet-decorator id="borderless" name="Borderless">
             <portlet-decorator-css-class>portlet-borderless</portlet-decorator-css-class>
         </portlet-decorator>

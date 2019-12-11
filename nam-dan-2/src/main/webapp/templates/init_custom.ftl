@@ -24,9 +24,12 @@
 	<#assign owner_phone = '(0238) 3 822 150'/>
 	<#assign sub_site_content_responsible = ''/>
 	<#assign site_owner = ''/>
-<#elseif theme_color_id == "vandien">
+	
+</#if>
+
+<#if theme_color_id == "vandien">
 	<#assign site_title = 'Trang thông tin điện tử'/>
-	<<#assign banner_img = 'banner-vandien.jpg'/>
+	<#assign banner_img = 'banner-vandien.jpg'/>
 	<#assign sub_owner = 'Xã Vân Diên'/>
 	<#assign main_owner = 'Huyện Nam Đàn'/>
 	<#assign owner_address = 'Phan Bội Châu, thị trấn Huyện Nam Đàn, Nghệ An'/>
@@ -35,3 +38,4 @@
 	<#assign sub_site_content_responsible = ''/>
 	<#assign site_owner = ''/>
 </#if>
+
