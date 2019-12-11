@@ -21,7 +21,7 @@
 <@liferay.control_menu />
 
 <div class="container-fluid" id="wrapper">
-	<header id="banner" role="banner">
+	<!--<header id="banner" role="banner">
 		<div id="heading">
 			<h1 class="site-title">
 				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
@@ -43,10 +43,10 @@
 		<#if has_navigation && is_setup_complete>
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
-	</header>
+	</header>-->
 
 	<section id="content">
-		<h1 class="hide-accessible">${the_title}</h1>
+		<!--<h1 class="hide-accessible">${the_title}</h1>-->
 
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
@@ -61,11 +61,11 @@
 		</#if>
 	</section>
 
-	<footer id="footer" role="contentinfo">
+	<!--<footer id="footer" role="contentinfo">
 		<p class="powered-by">
 			<@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
 		</p>
-	</footer>
+	</footer>-->
 </div>
 
 <@liferay_util["include"] page=body_bottom_include />
