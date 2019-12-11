@@ -12,6 +12,7 @@
 <#assign theme_color_id = theme_display.getColorSchemeId()/>
 <#assign theme_type = theme_display.getThemeSetting('theme_type')/>
 <#assign marqueeText = theme_display.getThemeSetting('marquee-text')/>
+<#assign site_title = ""/>
 
 <#if theme_color_id == "namdan">
 	<#assign site_title = 'Cổng thông tin điện tử'/>
