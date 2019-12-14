@@ -5,7 +5,7 @@
 	<compatibility>
 		<version>7.2.0+</version>
 	</compatibility>
-	<theme id="nam-dan" name="Nam Đàn">
+	<theme id="nam-dan-2" name="Nam Đàn 2">
 		<template-extension>ftl</template-extension>
 		<settings>
 	    	<setting type="select" configurable="true" 
@@ -16,20 +16,27 @@
 		    <setting configurable="true" key="marquee-text" type="text" value=""></setting>
         </settings>
 		<page-theme>true</page-theme>
-        <color-scheme id="namdan" name="Huyện Nam Đàn">
+        <color-scheme id="namdan" name="Huyện Nam Đàn 2">
 			<default-cs>true</default-cs>
 			<css-class>namdan-theme</css-class>
 			<color-scheme-images-path>
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>
 		</color-scheme>
-		<color-scheme id="vandien" name="Xã Vân Diên">
-			<default-cs>true</default-cs>
-			<css-class>xa-vandien</css-class>
+		<color-scheme id="vandien" name="Xã Vân Diên 2">
+			<default-cs>false</default-cs>
+			<css-class>xavandien-theme</css-class>
 			<color-scheme-images-path>
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>
 		</color-scheme>
+<!-- 		<color-scheme id="namcanh" name="Xã Nam Canh 2"> -->
+<!-- 			<default-cs>false</default-cs> -->
+<!-- 			<css-class>xanamcanh-theme</css-class> -->
+<!-- 			<color-scheme-images-path> -->
+<!-- 				${images-path}/custom-images/color-schemes/${css-class} -->
+<!-- 			</color-scheme-images-path> -->
+<!-- 		</color-scheme> -->
         <portlet-decorator id="borderless" name="Borderless">
             <portlet-decorator-css-class>portlet-borderless</portlet-decorator-css-class>
         </portlet-decorator>
