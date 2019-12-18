@@ -16,6 +16,7 @@
 	<@liferay_util["include"] page=top_head_include />
 	
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" integrity="sha256-MmuZTsWcczT1IhH71aqQmja5jRcXy3mL/NOvjUy9tso=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 </head>
 
@@ -63,17 +64,17 @@
 		
 		<div id="footer">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-lg-6">
 					<div class="sitename">
 						Ủy ban Nhân dân ${sub_owner} - ${main_owner}
 					</div>
 					<div class="infos">
-						<div class="address"><i class="fas fa-map-marker-alt"></i><span>${owner_address}</span></div>
-						<div class="mail"><i class="far fa-envelope"></i><span>${owner_mail}</span></div>
-						<div class="phone"><i class="fas fa-phone-alt"></i><span>${owner_phone}</span></div>					
+						<div class="address"><i class="fa fa-map-marker"></i><span>${owner_address}</span></div>
+						<div class="mail"><i class="fa fa-envelope-o"></i><span>${owner_mail}</span></div>
+						<div class="phone"><i class="fa fa-phone"></i><span>${owner_phone}</span></div>					
 					</div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-lg-6">
 					<p>
 						<b>Người chịu trách nhiệm:</b> ${sub_site_content_responsible}
 					</p>
@@ -87,7 +88,7 @@
 			</div>
 			<div class="copyright">
 				<span>@2019 Bản quyền thuộc về UBND Huyện Nam Đàn - Tỉnh Nghệ An</span>
-				<img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/logo-fds.png">
+				<!--<img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/logo-fds.png">-->
 			</div>
 		</div>
 	</div>

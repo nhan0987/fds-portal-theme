@@ -209,6 +209,7 @@ body {
 	.copyright {
 		padding: 10px 20px 5px;
 		@include d_flex(flex);
+		@include flex_wrap(wrap);
 		@include flex_align(center);
 		margin-top: 10px;
 
@@ -218,11 +219,40 @@ body {
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
 	#footer {
 
-		.col-sm-6:last-child {
+		.col-lg-6:last-child {
 			text-align: right;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#footer {
+
+		.sitename {
+			margin-bottom: 10px;
+		}
+
+		.infos {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#footer {
+
+		.sitename {
+			font-size: 18px;
+		}
+
+		.copyright {
+
+			img {
+				margin: 10px 0 5px;
+			}
 		}
 	}
 }
@@ -254,45 +284,52 @@ body[class*="xa-"] #footer {
 
 
 /*---------- Navbar ----------*/
-#banner + .portlet-navigation {
+#mainNav {
 	background-color: $main-color;
-
-	.portlet-header {
-		display: none;
-	}
 	
 	ul {
 		
 		li {
 			position: relative;
+
+			&:hover .child-menu {
+				display: block;
+			}
 			
 			a {
 				color: white;
 				padding: 10px 15px;
-
-				.lfr-nav-child-toggle {
-					display: none;
-				}
+				display: block;
+				white-space: nowrap;
 			}
 			
-			&.selected, &:hover {
+			&.active, &:hover {
 				background-color: $main-color-dark;
 			}
 		}
 
 		.child-menu {
 			background-color: $main-color;
-			border: 0;
-			
-			li {
+			display: none;
+			position: absolute;
+			z-index: 1;
+			top: 100%;
+			left: 0;
+		}
+	}
 
-				&:hover {
+	.navbar-toggler {
+		margin: 10px 15px;
+		border: 1px solid white;
+		color: white;
+	}
+}
 
-					a {
-						background-color: $main-color-dark;
-					}
-				}
-			}
+@media screen and (max-width: 991px) {
+	#mainNav {
+
+		.navbar-nav {
+			display: block;
 		}
 	}
 }
@@ -317,6 +354,15 @@ body[class*="xa-"] #footer {
 		
 		> div {
 			height: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.portlet-nested-portlets {
+
+		.col-md-6 + .col-md-6 {
+			margin-top: 15px;
 		}
 	}
 }

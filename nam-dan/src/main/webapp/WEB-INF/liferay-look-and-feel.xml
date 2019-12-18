@@ -30,6 +30,139 @@
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>
 		</color-scheme>
+		<color-scheme id="honglong" name="Xã Hồng Long">
+			<default-cs>true</default-cs>
+			<css-class>xa-honglong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="hungtien" name="Xã Hùng Tiến">
+			<default-cs>true</default-cs>
+			<css-class>xa-hungtien</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khanhson" name="Xã Khánh Sơn">
+			<default-cs>true</default-cs>
+			<css-class>xa-khanhson</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="kimlien" name="Xã Kim Liên">
+			<default-cs>true</default-cs>
+			<css-class>xa-kimlien</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namanh" name="Xã Nam Anh">
+			<default-cs>true</default-cs>
+			<css-class>xa-namanh</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namcat" name="Xã Nam Cát">
+			<default-cs>true</default-cs>
+			<css-class>xa-namcat</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="trannamdan" name="Thị trấn Nam Đàn">
+			<default-cs>true</default-cs>
+			<css-class>xa-trannamdan</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namgiang" name="Xã Nam Giang">
+			<default-cs>true</default-cs>
+			<css-class>xa-namgiang</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namhung" name="Xã Nam Hưng">
+			<default-cs>true</default-cs>
+			<css-class>xa-namhung</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namkim" name="Xã Nam Kim">
+			<default-cs>true</default-cs>
+			<css-class>xa-namkim</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namlinh" name="Xã Nam Lĩnh">
+			<default-cs>true</default-cs>
+			<css-class>xa-namlinh</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namnghia" name="Xã Nam Nghĩa">
+			<default-cs>true</default-cs>
+			<css-class>xa-namnghia</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namthai" name="Xã Nam Thái">
+			<default-cs>true</default-cs>
+			<css-class>xa-namthai</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namthanh" name="Xã Nam Thanh">
+			<default-cs>true</default-cs>
+			<css-class>xa-namthanh</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namxuan" name="Xã Nam Xuân">
+			<default-cs>true</default-cs>
+			<css-class>xa-namxuan</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="xuanhoa" name="Xã Xuân Hòa">
+			<default-cs>true</default-cs>
+			<css-class>xa-xuanhoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="xuanlam" name="Xã Xuân Lâm">
+			<default-cs>true</default-cs>
+			<css-class>xa-xuanlam</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="trungphuccuong" name="Xã Trung Phúc Cường">
+			<default-cs>true</default-cs>
+			<css-class>xa-trungphuccuong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="thuongtanloc" name="Xã Thượng Tân Lộc">
+			<default-cs>true</default-cs>
+			<css-class>xa-thuongtanloc</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
         <portlet-decorator id="borderless" name="Borderless">
             <portlet-decorator-css-class>portlet-borderless</portlet-decorator-css-class>
         </portlet-decorator>
