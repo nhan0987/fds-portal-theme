@@ -40,6 +40,11 @@
 		<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
 		<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 		
+		<div class="subNav">
+			<div class="datetimeWrapper"><span id="current_datetime"></div>
+			<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_knowledge_base_web_portlet_SearchPortlet"/>
+		</div>
+		
 		<div class="notify-wrapper">
 			<div class="notify-title">Thông báo</div>
 			<marquee scrolldelay="200"><span>${marqueeText}</span></marquee>

@@ -63,7 +63,7 @@ body {
 	}
 
 	.panel-header {
-		background-color: $product-menu-body-bg;
+		background-color: $product-menu-panel-body-bg;
 	}
 }
 
@@ -286,7 +286,7 @@ body {
 	.panel {
 		background-color: transparent;
 		border-left-width: 0;
-		border-radius: 0;
+		border-radius: 0 !important;
 		border-right-width: 0;
 		border-top-width: 0;
 		box-shadow: none;
