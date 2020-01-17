@@ -34,3 +34,12 @@ $product-menu-panel-title-color: #FFF !default;
 
 $product-menu-width: 320px !default;
 $product-menu-zindex: 990 !default;
+
+
+
+
+
+// Add-on
+body .navigation-bar-secondary {
+	background-color: $product-menu-panel-body-bg;
+}

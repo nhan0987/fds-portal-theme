@@ -1,9 +1,7 @@
 // Main Variable
-$main-color: #b67702;
-$main-color-light: #ef9c00;
-$main-color-super-light: #f5d405;
-$main-color-dark: #a26a02;
-$main-color-super-dark: #5b3715;
+$main-color: #046fcf;
+$main-color-light: #0083f3;
+$main-color-super-light: #f1f5fe;
 $secondary-color: #df0024;
 $gray-color: #f6f6f6;
 $gray-color-medium: #ebebeb;
@@ -66,6 +64,14 @@ $text-color-2: #939393;
 	background: -webkit-linear-gradient(left,  $first-color 0%,$second-color 100%);
 	background: linear-gradient(to right,  $first-color 0%,$second-color 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=1 );
+}
+@mixin animation($value) {
+	-webkit-animation: $value;
+	animation: $value;
+}
+@mixin animation-pause($value) {
+	-webkit-animation-play-state: $value;
+	animation-play-state: $value;
 }
 
 
@@ -164,8 +170,9 @@ body {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	border-top: 1px solid $main-color-light;
+	border-top: 1px solid $main-color;
 	padding-top: 15px;
+	background-image: url("../images/custom-images/footers/footer-namdan.jpg");
 
 	.row {
 		padding: 0 20px;
@@ -176,7 +183,9 @@ body {
 		font-size: 24px;
 		font-family: 'Oswald', sans-serif;
 		font-weight: bold;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
+		padding: 0 20px;
+		color: $secondary-color;
 	}
 
 	.infos {
@@ -212,6 +221,9 @@ body {
 		@include flex_wrap(wrap);
 		@include flex_align(center);
 		margin-top: 10px;
+		color: white;
+		border-radius: 20px 20px 0 0;
+		background-color: $main-color;
 
 		img {
 			margin-left: auto;
@@ -257,9 +269,8 @@ body {
 	}
 }
 
-.namdan-theme #footer {
+/* .namdan-theme #footer {
 	background-image: url("../images/custom-images/footers/footer-namdan.jpg");
-	color: $main-color-super-dark;
 
 	.sitename {
 		color: $secondary-color;
@@ -279,7 +290,7 @@ body[class*="xa-"] #footer {
 	.copyright {
 		background-color: rgba(91,55,21,0.5);
 	}
-}
+} */
 
 
 
@@ -301,10 +312,11 @@ body[class*="xa-"] #footer {
 				padding: 10px 15px;
 				display: block;
 				white-space: nowrap;
+				font-weight: bold;
 			}
 			
 			&.active, &:hover {
-				background-color: $main-color-dark;
+				background-color: $main-color-light;
 			}
 		}
 
@@ -322,6 +334,68 @@ body[class*="xa-"] #footer {
 		margin: 10px 15px;
 		border: 1px solid white;
 		color: white;
+	}
+}
+
+body .subNav {
+	background-color: $main-color-super-light;
+	padding: 6px 16px;
+	margin-top: -15px;
+	@include d_flex(flex);
+	@include flex_align(center);
+	margin-bottom: 15px;
+
+	.datetimeWrapper {
+		font-weight: bold;
+
+		i {
+			margin-right: 5px;
+		}
+	}
+
+	.portlet-boundary_com_liferay_portal_search_web_search_bar_portlet_SearchBarPortlet_ {
+		margin-left: auto;
+
+		.portlet {
+			margin-bottom: 0;
+		}
+
+		h2 {
+			display: none;
+		}
+
+		.input-group-item {
+
+			input {
+				height: 30px;
+				padding: 0 15px;
+				border-radius: 50px 0 0 50px;
+				font-size: 14px;
+				border: 0;
+				background-color: white;
+				@include box-shadow(none);
+			}
+
+			.search-bar-search-button-wrapper {
+				padding: 0;
+				border-radius: 0 50px 50px 0;
+
+				button {
+					border-radius: 0 50px 50px 0;
+					font-size: 0;
+					background-color: white;
+					border: 0;
+					padding: 0 10px;
+					height: 100%;
+
+					&:before {
+						content: "\f002";
+						font-family: FontAwesome;
+						font-size: 16px;
+					}
+				}
+			}
+		}
 	}
 }
 
