@@ -1,5 +1,4 @@
 body[class*="xa-"] {
-	background-color: $gray-color;
 
 	.notify-wrapper {
 		background-color: $gray-color-medium;
@@ -9,7 +8,7 @@ body[class*="xa-"] {
 
 		.notify-title {
 			font-weight: bold;
-			color: $main-color-light;
+			color: $main-color;
 			padding-right: 10px;
 			margin-right: 10px;
 			border-right: 2px solid $gray-color-dark;
@@ -32,9 +31,8 @@ body[class*="xa-"] {
 	background-color: white;
 
 	.portlet-header {
-		border-bottom: 1px solid $main-color-super-light;
+		border-bottom: 1px solid $main-color;
 		margin-bottom: 0;
-		background-color: $gray-color;
 
 		.autofit-col-expand {
 			@include flex_variables(0 0 auto);
@@ -42,15 +40,14 @@ body[class*="xa-"] {
 
 		h2 {
 			margin: 0;
-			color: $secondary-color;
+			color: $main-color;
 			display: inline-block;
-			padding: 12px 30px 8px 15px;
-			border-top-right-radius: 50px;
+			padding: 10px 30px 10px 40px;
 			text-transform: uppercase;
 			max-width: 100%;
 			font-weight: bold;
-			@include background-gradient($main-color-light, $main-color-super-light);
 			font-size: 14px;
+			background: url("../images/custom-images/icon-title.png") left 10px center no-repeat;
 		}
 	}
 
@@ -119,7 +116,7 @@ body[class*="xa-"] {
 			position: absolute;
 			top: 8px;
 			left: 0;
-			background-color: $main-color-light;
+			background-color: $main-color;
 			width: 6px;
 			height: 6px;
 			@include transform(rotate(45deg));
@@ -158,11 +155,11 @@ body[class*="xa-"] {
 		a {
 			display: inline-block;
 			padding: 5px 15px;
-			border: 1px solid $main-color-light;
-			color: $main-color-light;
+			border: 1px solid $main-color;
+			color: $main-color;
 
 			&:hover {
-				background-color: $main-color-light;
+				background-color: $main-color;
 				color: white;
 			}
 		}
@@ -236,7 +233,7 @@ body[class*="xa-"] {
 			color: $text-color;
 
 			&:hover {
-				color: $main-color-light;
+				color: $main-color;
 			}
 
 			label {
@@ -299,7 +296,7 @@ body[class*="xa-"] {
 			position: relative;
 
 			&:hover {
-				color: $main-color-light;
+				color: $main-color;
 				font-weight: bold;
 			}
 
@@ -308,7 +305,7 @@ body[class*="xa-"] {
 				position: absolute;
 				top: 13px;
 				left: 0;
-				background-color: $main-color-light;
+				background-color: $main-color;
 				width: 6px;
 				height: 6px;
 				@include transform(rotate(45deg));
@@ -339,12 +336,12 @@ body[class*="xa-"] {
 				font-weight: bold;
 				padding: 6px 30px;
 				border-radius: 50px 0;
-				color: $main-color-light;
+				color: $main-color;
 				text-transform: uppercase;
 
 				&.active, &:hover {
-					color: $secondary-color;
-					@include background-gradient($main-color-light, $main-color-super-light);
+					color: white;
+					@include background-gradient($main-color, $main-color-light);
 				}
 			}
 		}
@@ -352,7 +349,7 @@ body[class*="xa-"] {
 
 	.tab-content {
 		padding: 15px 30px;
-		border-top: 2px solid $main-color-super-light;
+		border-top: 2px solid $main-color;
 		background-color: white;
 
 		.tab-pane {
@@ -378,14 +375,14 @@ body[class*="xa-"] {
 						position: absolute;
 						top: 13px;
 						left: 0;
-						background-color: $main-color-light;
+						background-color: $main-color;
 						width: 6px;
 						height: 6px;
 						@include transform(rotate(45deg));
 					}
 
 					&:hover {
-						color: $main-color-light;
+						color: $main-color;
 					}
 				}
 			}

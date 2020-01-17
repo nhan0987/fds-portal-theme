@@ -40,6 +40,11 @@
 		<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
 		<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 		
+		<div class="subNav">
+			<div class="datetimeWrapper"><i class="fa fa-calendar""></i> <span id="current_datetime"></div>
+			<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_portal_search_web_search_bar_portlet_SearchBarPortlet"/>
+		</div>
+		
 		<div class="notify-wrapper">
 			<div class="notify-title">Thông báo</div>
 			<marquee scrolldelay="200"><span>${marqueeText}</span></marquee>
@@ -63,11 +68,11 @@
 		</div>
 		
 		<div id="footer">
+			<div class="sitename">
+				Ủy ban Nhân dân ${sub_owner} - ${main_owner}
+			</div>
 			<div class="row">
 				<div class="col-lg-6">
-					<div class="sitename">
-						Ủy ban Nhân dân ${sub_owner} - ${main_owner}
-					</div>
 					<div class="infos">
 						<div class="address"><i class="fa fa-map-marker"></i><span>${owner_address}</span></div>
 						<div class="mail"><i class="fa fa-envelope-o"></i><span>${owner_mail}</span></div>
@@ -80,9 +85,6 @@
 					</p>
 					<p>
 						<b>Cơ quan chủ quản:</b> ${site_owner}
-					</p>
-					<p>
-						<b>Tổ chức thiết lập:</b> 
 					</p>
 				</div>
 			</div>

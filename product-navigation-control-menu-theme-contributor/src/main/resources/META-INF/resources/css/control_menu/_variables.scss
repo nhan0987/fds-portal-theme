@@ -7,7 +7,7 @@ $control-menu-css-transition: all 0.5s ease !default;
 
 $control-menu-level-1-active-border: #65B6F0 !default;
 $control-menu-level-1-active-border-width: 2px !default;
-$control-menu-level-1-bg: red !default;
+$control-menu-level-1-bg: #025ecf !important;
 $control-menu-level-1-color: #869CAD !default;
 $control-menu-level-1-link-color: #FFF !default;
 $control-menu-level-1-link-hover-color: $control-menu-level-1-link-color !default;
@@ -24,3 +24,46 @@ $has-control-menu-margin-top-mobile: 48px;
 
 $has-customization-menu-margin-top-desktop: 56px;
 $has-customization-menu-margin-top-mobile: 48px;
+
+
+
+
+
+//Custom Backend
+#_panel_app_budget_report_PanelAppBudgetReportPortlet_budgetReportSearchContainer {
+
+	.table-responsive {
+		margin-bottom: 15px;
+	
+		table {
+			border-collapse: collapse;
+		
+			th {
+				min-width: inherit !important;
+				padding: 10px !important;
+				text-align: center;
+				color: #000;
+		
+				&:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+					width: 1%;
+				}
+			}
+		
+			td {
+				white-space: normal;
+				min-width: inherit !important;
+				width: auto !important;
+				padding: 10px !important;
+				word-break: break-all;
+		
+				&:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+					text-align: center;
+				}
+		
+				&:nth-child(2) {
+					word-break: normal;
+				}
+			}
+		}
+	}
+}

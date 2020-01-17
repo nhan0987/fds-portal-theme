@@ -21,8 +21,8 @@
 	<#assign owner_address = 'Phan Bội Châu, thị trấn Huyện Nam Đàn, Nghệ An'/>
 	<#assign owner_mail = 'namdan@nghean.gov.vn'/>
 	<#assign owner_phone = '(0238) 3 822 150'/>
-	<#assign sub_site_content_responsible = ''/>
-	<#assign site_owner = ''/>
+	<#assign sub_site_content_responsible = 'Chủ tịch UBND Huyện'/>
+	<#assign site_owner = 'UBND Huyện Nam Đàn'/>
 <#elseif theme_color_id == "vandien">
 	<#assign site_title = 'Trang thông tin điện tử'/>
 	<#assign banner_img = 'banner-vandien.jpg'/>
