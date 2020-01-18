@@ -8,7 +8,17 @@
 	portlet_id = htmlUtil.escapeAttribute(portlet_display.getId())
 	portlet_title = htmlUtil.escape(portlet_display.getTitle())
 	portlet_decorator_id= portlet_display.getPortletDecoratorId()
+	viewAssetLinkUtil = serviceLocator.findService("backend.portal.datamgt.service.HookAssetVocabularyLocalService")
+	portletPreferences = portal.getPreferences(request)
+	displayUuid = portletPreferences.getValue("rootLayoutUuid","")
 />
+
+<#if displayUuid == "">
+	<#assign  displayUuid = portletPreferences.getValue("targetLayoutUuid","") />
+</#if>
+
+<#assign linkedLayoutURL = viewAssetLinkUtil.getLinkLayoutFriendlyURL(displayUuid,themeDisplay) >
+
 
 <section class="portlet" id="portlet_${portlet_id}">
 	<#if portlet_display.isPortletDecorate() && !portlet_display.isStateMax() && portlet_display.getPortletConfigurationIconMenu()?? && portlet_display.getPortletToolbar()??>
@@ -56,7 +66,13 @@
 		<#if portlet_decorator_id != "borderless">
 			<div class="autofit-float autofit-row portlet-header">
 				<div class="autofit-col autofit-col-expand">
-					<h2 class="portlet-title-text">${portlet_title}</h2>
+					<#if linkedLayoutURL != "" >
+						<a href="${linkedLayoutURL}">
+							<h2 class="portlet-title-text">${portlet_title}</h2>
+						</a>
+						<#else>
+							<h2 class="portlet-title-text">${portlet_title}</h2>
+					</#if>
 				</div>
 	
 				<div class="autofit-col autofit-col-end">
