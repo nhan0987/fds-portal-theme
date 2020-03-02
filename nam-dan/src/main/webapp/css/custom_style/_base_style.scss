@@ -1,153 +1,72 @@
-// Main Variable
-$main-color: #046fcf;
-$main-color-light: #0083f3;
-$main-color-super-light: #f1f5fe;
-$secondary-color: #df0024;
-$gray-color: #f6f6f6;
-$gray-color-medium: #ebebeb;
-$gray-color-dark: #a7a7a7;
-$text-color: #000;
-$text-color-2: #939393;
-
-
-
-//Mixin
-@mixin box-shadow($value) {
-    -webkit-box-shadow: $value;
-    box-shadow: $value;
-}
-@mixin transform($value) {
-	-webkit-transform: $value;
-    transform: $value;
-}
-@mixin transition($value) {
-    -webkit-transition: $value;
-    transition: $value;
-}
-@mixin d_flex($value) {
-  	display: $value;
-}
-@mixin flex_wrap($value) {
-  	-webkit-flex-wrap: $value;
-  	flex-wrap: $value;
-}
-@mixin flex_align($value) {
-  	-webkit-align-items: $value;
-  	align-items: $value;
-}
-@mixin flex_justify($value) {
-  	-webkit-justify-content: $value;
-  	justify-content: $value;
-}
-@mixin flex_variables($value) {
-  	-webkit-flex: $value;
-  	flex: $value;
-}
-@mixin flex_direction($value) {
-  	-webkit-flex-direction: $value;
-  	flex-direction: $value;
-}
-@mixin flex_order($value) {
-  	-webkit-order: $value;
-  	order: $value;
-}
-@mixin flex_direction($value) {
-  	-webkit-flex-direction: $value;
-  	flex-direction: $value;
-}
-@mixin background-opacity($color, $opacity) {
-    background-color: rgba($color, $opacity);
-}
-@mixin background-gradient($first-color, $second-color) {
-    background: $first-color;
-	background: -moz-linear-gradient(left,  $first-color 0%, $second-color 100%);
-	background: -webkit-linear-gradient(left,  $first-color 0%,$second-color 100%);
-	background: linear-gradient(to right,  $first-color 0%,$second-color 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=1 );
-}
-@mixin animation($value) {
-	-webkit-animation: $value;
-	animation: $value;
-}
-@mixin animation-pause($value) {
-	-webkit-animation-play-state: $value;
-	animation-play-state: $value;
-}
-
-
-
 /*---------- Global ----------*/
-body {
-	
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+
+	&:hover, &:focus {
+		text-decoration: none;
+		box-shadow: none !important;
 	}
+}
 
-	a {
+#mWrapper {
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+}
 
-		&:hover, &:focus {
-			text-decoration: none;
-			box-shadow: none !important;
+.journal-content-article {
+
+	dl {
+		margin-bottom: 0;
+		
+		dt {
+			display: none;
 		}
-	}
 
-	#mWrapper {
-		font-size: 14px;
-		font-family: 'Roboto', sans-serif;
-	}
-
-	.journal-content-article {
-
-		dl {
+		dd {
 			margin-bottom: 0;
-			
-			dt {
-				display: none;
-			}
-
-			dd {
-				margin-bottom: 0;
-			}
-		}
-
-		p {
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
-
-	picture {
-
-		img {
-			max-width: 100%;
-			width: 100%;
 		}
 	}
 
 	p {
-		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
+}
+
+picture {
 
 	img {
 		max-width: 100%;
+		width: 100%;
+	}
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.portlet {
+	margin-bottom: 15px;
+
+	.portlet-content {
+		padding: 0;
+		border: 0;
+		background-color: transparent;
 	}
 
-	.portlet {
-		margin-bottom: 15px;
-
-		.portlet-content {
-			padding: 0;
-			border: 0;
-			background-color: transparent;
-		}
-
-		.asset-entries-group-label {
-			display: none;
-		}
+	.asset-entries-group-label {
+		display: none;
 	}
 }
 
@@ -221,13 +140,21 @@ body {
 		@include flex_wrap(wrap);
 		@include flex_align(center);
 		margin-top: 10px;
-		color: white;
+		color: set-text-color($main-color);
 		border-radius: 20px 20px 0 0;
 		background-color: $main-color;
 
 		img {
 			margin-left: auto;
 		}
+	}
+}
+
+&[class*="xa-"] #footer {
+	padding-bottom: 15px;
+
+	.copyright {
+		display: none;
 	}
 }
 
@@ -269,29 +196,6 @@ body {
 	}
 }
 
-/* .namdan-theme #footer {
-	background-image: url("../images/custom-images/footers/footer-namdan.jpg");
-
-	.sitename {
-		color: $secondary-color;
-	}
-
-	.copyright {
-		color: white;
-		border-radius: 20px 20px 0 0;
-		background-color: $main-color;
-	}
-}
-
-body[class*="xa-"] #footer {
-	background-image: url("../images/custom-images/footers/footer-vandien.jpg");
-	color: white;
-
-	.copyright {
-		background-color: rgba(91,55,21,0.5);
-	}
-} */
-
 
 
 /*---------- Navbar ----------*/
@@ -308,7 +212,7 @@ body[class*="xa-"] #footer {
 			}
 			
 			a {
-				color: white;
+				color: set-text-color($main-color);
 				padding: 10px 15px;
 				display: block;
 				white-space: nowrap;
@@ -337,7 +241,7 @@ body[class*="xa-"] #footer {
 	}
 }
 
-body .subNav {
+.subNav {
 	background-color: $main-color-super-light;
 	padding: 6px 16px;
 	margin-top: -15px;
@@ -371,7 +275,6 @@ body .subNav {
 				padding: 0 15px;
 				border-radius: 50px 0 0 50px;
 				font-size: 14px;
-				border: 0;
 				background-color: white;
 				@include box-shadow(none);
 			}

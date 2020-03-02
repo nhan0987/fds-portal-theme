@@ -9,12 +9,23 @@
 	portlet_title = htmlUtil.escape(portlet_display.getTitle())
 	portlet_decorator_id= portlet_display.getPortletDecoratorId()
 	viewAssetLinkUtil = serviceLocator.findService("backend.portal.datamgt.service.HookAssetVocabularyLocalService")
-	portletPreferences = portal.getPreferences(request)
-	displayUuid = portletPreferences.getValue("rootLayoutUuid","")
+	portletPreferences = ""
+	displayUuid = ""
 />
 
-<#if displayUuid == "">
-	<#assign  displayUuid = portletPreferences.getValue("targetLayoutUuid","") />
+<#if request??>
+	<#assign  portletPreferences = (portal.getPreferences(request))!portletPreferences />
+	
+	<#if portletPreferences?has_content>
+	
+		<#assign  displayUuid = portletPreferences.getValue("rootLayoutUuid","") />
+	
+		<#if displayUuid == "">
+			<#assign  displayUuid = portletPreferences.getValue("targetLayoutUuid","") />
+		</#if>
+		
+		<#else>
+	</#if>
 </#if>
 
 <#assign linkedLayoutURL = viewAssetLinkUtil.getLinkLayoutFriendlyURL(displayUuid,themeDisplay) >

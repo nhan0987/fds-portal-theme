@@ -1,687 +1,3 @@
-.namdan-theme {
-	background-color: white;
-
-	.notify-wrapper {
-		display: none;
-	}
-
-
-// Custom portlet
-.custom-portlet {
-	background-color: $gray-color;
-
-	.portlet-header {
-		border-top: 2px solid $main-color;
-		margin-bottom: 0;
-
-		.autofit-col-expand {
-			@include flex_variables(0 0 auto);
-		}
-
-		h2 {
-			margin: 0;
-			font-size: 18px;
-			color: $secondary-color;
-			display: inline-block;
-			padding: 10px 30px 10px 15px;
-			border-bottom-right-radius: 50px;
-			@include box-shadow(2px 2px 5px 0px rgba(0,0,0,0.3));
-			background-color: white;
-			text-transform: uppercase;
-			margin-top: -2px;
-			max-width: 100%;
-			font-weight: bold;
-		}
-	}
-
-	.portlet-body {
-		padding: 15px;
-	}
-
-	&.title-center {
-		border-radius: 6px 6px 0 0;
-
-		.portlet-header {
-			border-top: 0;
-
-			.autofit-col-expand {
-				@include flex_variables(1 0 100%);
-			}
-
-			h2 {
-				margin: 0;
-				font-size: 16px;
-				color: white;
-				background-color: $main-color-light;
-				display: block;
-				padding: 10px 15px;
-				@include box-shadow(none);
-				margin-top: 0;
-				text-align: center;
-				text-overflow: unset;
-			    border-radius: 0;
-			    white-space: normal;
-			    border-radius: 6px 6px 0 0;
-			}
-		}
-	}
-}
-
-.portlet-shadow {
-	@include box-shadow(0px 0px 5px 0px rgba(0,0,0,0.3));
-	background-color: white;
-}
-
-@media screen and (max-width: 991px) {
-	.custom-portlet {
-
-		.portlet-header {
-
-			h2 {
-				font-size: 14px;
-			}
-		}
-	}
-}
-
-
-// Sitemap
-.side-sitemap {
-
-	.portlet {
-		background-color: $gray-color;
-		padding: 10px 15px;
-	}
-
-	li {
-
-		a {
-			display: block;
-			padding: 5px 0 5px 30px;
-			text-decoration: none;
-			color: $text-color;
-			position: relative;
-
-			&:hover {
-				color: $secondary-color;
-				font-weight: bold;
-
-				&:before {
-					color: $secondary-color;
-				}
-			}
-
-			&:before {
-				position: absolute;
-				top: 3px;
-				left: 0;
-				color: $gray-color-dark;
-				font-family: 'FontAwesome';
-				font-size: 18px;
-				width: 20px;
-				text-align: center;
-			}
-		}
-
-		&:nth-child(1) a:before {
-			content: "\f2b5";
-		}
-
-		&:nth-child(2) a:before, &:nth-child(3) a:before {
-			content: "\f15c";
-		}
-
-		&:nth-child(4) a:before {
-			content: "\f0e3";
-		}
-
-		&:nth-child(5) a:before, &:nth-child(6) a:before, &:nth-child(7) a:before {
-			content: "\f0ea";
-		}
-
-		&:nth-child(8) a:before {
-			content: "\f1ea";
-		}
-
-		&:nth-child(9) a:before {
-			content: "\f2b6";
-		}
-	}
-}
-
-
-// Weblink
-.weblink-wrapper {
-	background-color: $gray-color;
-	border-top: 2px solid $main-color;
-
-	.nav-tabs {
-
-		li {
-			position: relative;
-			margin-right: -45px;
-
-			a {
-				display: inline-block;
-				font-weight: bold;
-				font-size: 16px;
-				padding: 10px 45px 10px 15px;
-				border-bottom-right-radius: 50px;
-				background-color: white;
-				color: $text-color-2;
-				text-transform: uppercase;
-				@include box-shadow(2px 2px 5px 0px rgba(0,0,0,0.3) !important);
-				margin-top: -2px;
-				border-top: 2px solid $gray-color-medium;
-
-				&.active, &:hover {
-					color: $secondary-color;
-				}
-			}
-
-			&:not(:first-child) {
-
-				a {
-					padding-left: 60px;
-				}
-			}
-
-			&:nth-child(1) {
-				z-index: 4;
-			}
-
-			&:nth-child(2) {
-				z-index: 3;
-			}
-
-			&:nth-child(3) {
-				z-index: 2;
-			}
-		}
-	}
-
-	.tab-content {
-		padding: 15px 30px;
-
-		.tab-pane {
-			padding: 0 !important;
-			background-color: transparent !important;
-		}
-		
-		ul {
-			overflow: hidden;
-
-			li {
-				width: 25%;
-				float: left;
-
-				a {
-					display: block;
-					position: relative;
-					padding: 5px 15px;
-					color: $text-color;
-
-					&:before {
-						content: "\f111";
-						position: absolute;
-						top: 14px;
-						left: 0;
-						color: $secondary-color;
-						font-family: 'FontAwesome';
-						font-size: 6px;
-					}
-
-					&:hover {
-						color: $secondary-color;
-					}
-				}
-			}
-		}
-	}
-}
-
-
-// List News - First- with image
-.first-with-image-left {
-
-	.hot-news {
-		overflow: hidden;
-
-		.hot-news-image {
-			width: 50%;
-			margin-right: 15px;
-			float: left;
-
-			a {
-				display: block;
-				width: 100%;
-				position: relative;
-				padding-top: 75%;
-				overflow: hidden;
-			}
-
-			img {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				@include transform(translate(-50%,-50%));
-				min-width: 100%;
-				max-width: inherit;
-				min-height: 100%;
-				width: 100%;
-			}
-		}
-
-		.hot-news-title a {
-			font-weight: bold;
-			margin-bottom: 10px;
-			display: block;
-			color: $text-color;
-		}
-	}
-
-	.other-news {
-
-		a {
-			position: relative;
-			padding: 5px 0 5px 15px;
-			color: $text-color;
-			display: block;
-
-			&:before {
-				content: "\f111";
-				position: absolute;
-				top: 13px;
-				left: 0;
-				color: $secondary-color;
-				font-family: 'FontAwesome';
-				font-size: 6px;
-			}
-
-			&:hover {
-				color: $secondary-color;
-			}
-		}
-	}
-}
-
-
-// List news - List with image with first one big
-.list-with-image-first-big {
-	background-color: $gray-color;
-	padding: 15px;
-
-	.left-news {
-
-		a {
-
-			&:hover {
-
-				span {
-					color: $secondary-color;
-				}
-			}
-		}
-
-		img {
-			width: 100%;
-		}
-
-		span {
-			display: block;
-			margin-top: 10px;
-			font-weight: bold;
-			color: $text-color;
-		}
-	}
-
-	.right-news {
-
-		> div:not(:first-child) {
-			margin-top: 15px;
-		}
-
-		a {
-			@include d_flex(flex);
-
-			&:hover {
-				cursor: pointer;
-
-				label {
-					color: $secondary-color;
-					cursor: pointer;
-				}
-			}
-		}
-
-		img {
-			width: 40%;
-			margin-right: 10px;
-		}
-
-		label {
-			font-weight: bold;
-			margin-bottom: 0;
-		}
-
-		span {
-			display: none;
-		}
-	}
-}
-
-@media screen and (max-width: 991px) {
-	.list-with-image-first-big {
-
-		.left-news {
-			margin-bottom: 30px;
-		}
-
-		.right-news {
-
-			> div:not(:first-child) {
-				margin-top: 15px;
-			}
-
-			a {
-				@include d_flex(flex);
-
-				&:hover {
-					cursor: pointer;
-
-					label {
-						color: $secondary-color;
-						cursor: pointer;
-					}
-				}
-			}
-
-			img {
-				width: 40%;
-				margin-right: 10px;
-			}
-
-			label {
-				font-weight: bold;
-				margin-bottom: 0;
-			}
-
-			span {
-				display: none;
-			}
-		}
-	}
-}
-
-
-// List news - Only list
-/* .advertise {
-
-	li {
-
-		a {
-			position: relative;
-			padding: 5px 0 5px 15px;
-			color: $text-color;
-			display: block;
-
-			&:before {
-				content: "\f111";
-				position: absolute;
-				top: 13px;
-				left: 0;
-				color: $secondary-color;
-				font-family: 'FontAwesome';
-				font-size: 6px;
-			}
-
-			&:hover {
-				color: $secondary-color;
-			}
-		}
-	}
-} */
-
-.legislation-documents {
-
-	li {
-
-		a {
-			position: relative;
-			padding: 5px 0 5px 22px;
-			color: $text-color;
-			display: block;
-
-			&:before {
-				content: "\f15c";
-				position: absolute;
-				top: 3px;
-				left: 0;
-				color: $gray-color-dark;
-				font-family: 'FontAwesome';
-				font-size: 18px;
-			}
-
-			&:hover {
-				color: $secondary-color;
-
-				&:before {
-					color: $secondary-color;
-				}
-			}
-		}
-	}	
-}
-
-
-// Video
-.video-player-default-style {
-
-	.video-playlist {
-		position: relative;
-		padding: 0 10px 30px;
-
-		> div > div {
-			position: inherit;
-
-			&:first-child {
-				max-width: 100%;
-			    flex-basis: 100%;
-			    padding-right: 24px;
-			}
-		}
-
-		&:before {
-			content: "\f0dd";
-			font-family: 'FontAwesome';
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 24px;
-			text-align: center;
-			color: $gray-color-dark;
-		}
-
-		select {
-			background-color: transparent;
-		    border: 0;
-		    position: absolute;
-		    right: 0;
-		    top: 0;
-		    width: 24px;
-		    max-width: inherit !important;
-		    -moz-appearance: none;
-		    -webkit-appearance: none;
-		    text-indent: 24px;
-		}
-	}
-
-	.icon-detail {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		font-family: 'Roboto', sans-serif;
-	}
-}
-
-.portlet-boundary_web_video_link_VideoLinkPortlet_ {
-
-	.video-box {
-		margin-bottom: 15px;
-
-		.video-title {
-
-			a {
-				display: block;
-				margin-top: 5px;
-				color: $text-color;
-
-				&:hover {
-					color: $main-color;
-				}
-			}
-		}
-	}
-}
-
-
-// Asset publisher
-.news-abstract {
-	@include d_flex(flex);
-	@include flex_wrap(wrap);
-	margin: 0 -15px;
-	
-	.asset-abstract {
-		margin-bottom: 15px !important;
-		padding: 0 15px;
-		width: 50%;
-
-		> span {
-			display: none;
-		}
-
-		> div:nth-child(2) {
-			margin-bottom: 0;
-		}
-
-		h4 {
-			margin: 0 0 10px !important;
-			font-size: 16px;
-			font-weight: bold;
-			line-height: normal;
-
-			a {
-				font-size: 16px;
-
-				&:hover {
-					color: $secondary-color;
-				}
-			}
-		}
-
-		.metadata-author {
-			font-size: 13px;
-			margin-bottom: 15px !important;
-			font-style: italic;
-			color: $gray-color-medium;
-
-			.autofit-col-expand {
-				@include flex_direction(inherit);
-			}
-
-			.asset-view-count-info {
-
-				&:before {
-					content: "  - ";
-					white-space: pre;
-				}
-			}
-		}
-
-		.asset-content {
-			margin-bottom: 0 !important;
-		}
-
-		.asset-summary {
-			@include d_flex(flex);
-		}
-
-		.cover-image {
-			margin: 0 15px 15px 0 !important;
-			width: 200px;
-			height: 150px;
-			padding-bottom: 0;
-			@include flex_variables(0 0 auto);
-		}
-	}
-}
-
-.asset-full-content {
-	margin-bottom: 0 !important;
-
-	> span {
-		display: none;
-	}
-
-	> div:nth-child(2) {
-		margin-bottom: 0;
-	}
-
-	h4 {
-		margin: 0 0 10px !important;
-		font-weight: bold;
-		line-height: normal;
-
-		.header-back-to {
-			width: 20px;
-    		display: inline-block;
-    		font-size: 14px;
-		}
-
-		.asset-title {
-			font-size: 18px;
-		}
-	}
-
-	.metadata-author {
-		font-size: 13px;
-		margin-bottom: 15px !important;
-		font-style: italic;
-		color: $gray-color-medium;
-
-		.autofit-col-expand {
-			@include flex_direction(inherit);
-			@include flex_wrap(wrap);
-
-			> div:first-child {
-				width: 100%;
-			}
-		}
-
-		.user-info {
-			color: $main-color;
-		}
-
-		.asset-view-count-info {
-
-			&:before {
-				content: "  - ";
-				white-space: pre;
-			}
-		}
-	}
-
-	.asset-content {
-		margin-bottom: 0 !important;
-	}
-}
-
-
-}
-
-
-
-
 // Sitemap
 .main-sitemap {
 
@@ -1312,6 +628,77 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 
 			&:nth-child(2) {
 				word-break: normal;
+			}
+		}
+	}
+}
+
+
+// Video
+.video-player-default-style {
+
+	.video-playlist {
+		position: relative;
+		padding: 0 10px 30px;
+
+		> div > div {
+			position: inherit;
+
+			&:first-child {
+				max-width: 100%;
+			    flex-basis: 100%;
+			    padding-right: 24px;
+			}
+		}
+
+		&:before {
+			content: "\f0dd";
+			font-family: 'FontAwesome';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 24px;
+			text-align: center;
+			color: $gray-color-dark;
+		}
+
+		select {
+			background-color: transparent;
+		    border: 0;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    width: 24px;
+		    max-width: inherit !important;
+		    -moz-appearance: none;
+		    -webkit-appearance: none;
+		    text-indent: 24px;
+		}
+	}
+
+	.icon-detail {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		font-family: 'Roboto', sans-serif;
+	}
+}
+
+.portlet-boundary_web_video_link_VideoLinkPortlet_ {
+
+	.video-box {
+		margin-bottom: 15px;
+
+		.video-title {
+
+			a {
+				display: block;
+				margin-top: 5px;
+				color: $text-color;
+
+				&:hover {
+					color: $main-color;
+				}
 			}
 		}
 	}

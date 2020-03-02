@@ -72,13 +72,6 @@
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>
 		</color-scheme>
-		<color-scheme id="trannamdan" name="Thị trấn Nam Đàn">
-			<default-cs>true</default-cs>
-			<css-class>xa-trannamdan</css-class>
-			<color-scheme-images-path>
-				${images-path}/custom-images/color-schemes/${css-class}
-			</color-scheme-images-path>
-		</color-scheme>
 		<color-scheme id="namgiang" name="Xã Nam Giang">
 			<default-cs>true</default-cs>
 			<css-class>xa-namgiang</css-class>
@@ -128,13 +121,6 @@
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>
 		</color-scheme>
-		<color-scheme id="namxuan" name="Xã Nam Xuân">
-			<default-cs>true</default-cs>
-			<css-class>xa-namxuan</css-class>
-			<color-scheme-images-path>
-				${images-path}/custom-images/color-schemes/${css-class}
-			</color-scheme-images-path>
-		</color-scheme>
 		<color-scheme id="xuanhoa" name="Xã Xuân Hòa">
 			<default-cs>true</default-cs>
 			<css-class>xa-xuanhoa</css-class>
@@ -149,16 +135,51 @@
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>
 		</color-scheme>
-		<color-scheme id="trungphuccuong" name="Xã Trung Phúc Cường">
+		<color-scheme id="namcuong" name="Xã Nam Cường">
 			<default-cs>true</default-cs>
-			<css-class>xa-trungphuccuong</css-class>
+			<css-class>xa-namcuong</css-class>
 			<color-scheme-images-path>
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>
 		</color-scheme>
-		<color-scheme id="thuongtanloc" name="Xã Thượng Tân Lộc">
+		<color-scheme id="namlinh" name="Xã Nam Linh">
 			<default-cs>true</default-cs>
-			<css-class>xa-thuongtanloc</css-class>
+			<css-class>xa-namlinh</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namloc" name="Xã Nam Lộc">
+			<default-cs>true</default-cs>
+			<css-class>xa-namloc</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namphuc" name="Xã Nam Phúc">
+			<default-cs>true</default-cs>
+			<css-class>xa-namphuc</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namtan" name="Xã Nam Tân">
+			<default-cs>true</default-cs>
+			<css-class>xa-namtan</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namthuong" name="Xã Nam Thượng">
+			<default-cs>true</default-cs>
+			<css-class>xa-namthuong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="namtrung" name="Xã Nam Trung">
+			<default-cs>true</default-cs>
+			<css-class>xa-namtrung</css-class>
 			<color-scheme-images-path>
 				${images-path}/custom-images/color-schemes/${css-class}
 			</color-scheme-images-path>

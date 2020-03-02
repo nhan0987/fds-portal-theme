@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 7.0.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_7_0_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>7.2.0+</version>
+	</compatibility>
+	<theme id="netnam" name="Netnam">
+		<template-extension>ftl</template-extension>
+		<settings>
+	    	<setting type="select" configurable="true" 
+	        	key="theme_type" 
+	    	    options="home,page,login"                   
+		        value="page" >
+		    </setting>
+        </settings>
+		<page-theme>true</page-theme>
+        <portlet-decorator id="borderless" name="Borderless">
+            <portlet-decorator-css-class>portlet-borderless</portlet-decorator-css-class>
+        </portlet-decorator>
+		<portlet-decorator id="barebone" name="Barebone">
+            <portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
+        </portlet-decorator>
+        <portlet-decorator id="decorate" name="Decorate">
+            <default-portlet-decorator>true</default-portlet-decorator>
+            <portlet-decorator-css-class>portlet-decorate</portlet-decorator-css-class>
+        </portlet-decorator>
+	</theme>
+</look-and-feel>
