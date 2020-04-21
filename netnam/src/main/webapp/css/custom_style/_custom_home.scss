@@ -21,7 +21,7 @@
 			position: relative;
 			display: inline-block;
 			padding-bottom: 15px;
-			font-weight: 500;
+			font-weight: 700;
 			
 			&:before {
 				content: "";
@@ -676,9 +676,8 @@ body {
 				top: 50%;
 				left: 50%;
 				@include transform(translate(-50%,-50%));
-				max-width: inherit;
-				min-height: 100%;
-				min-width: 100%;
+				max-height: 100%;
+				max-width: 100%;
 			}
 		}
 		

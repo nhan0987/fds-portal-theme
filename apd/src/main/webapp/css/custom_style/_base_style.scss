@@ -1,0 +1,383 @@
+/*---------- Global ----------*/
+body {
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	background-color: white;
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	a {
+	
+		&:hover, &:focus {
+			text-decoration: none;
+			box-shadow: none !important;
+		}
+	}
+
+	.journal-content-article {
+	
+		dl {
+			margin-bottom: 0;
+			
+			dt {
+				display: none;
+			}
+	
+			dd {
+				margin-bottom: 0;
+			}
+		}
+	
+		p {
+	
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	picture {
+	
+		img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	
+	p {
+		margin-bottom: 10px;
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	
+	.portlet {
+		margin-bottom: 15px;
+	
+		.portlet-content {
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+		}
+	
+		.asset-entries-group-label {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	body {
+
+		#mWrapper {
+			padding: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	body {
+
+		#content {
+			padding: 0 15px;
+		}
+	}
+}
+
+
+
+/*---------- Header ----------*/
+#banner {
+	position: relative;
+
+	img {
+		max-width: 100%;
+		display: block;
+		width: 100%;
+	}
+
+	.e-site {
+		position: absolute;
+		right: 15px;
+		bottom: 15px;
+
+		img {
+			border: 2px solid white;
+			width: 30px;
+		}
+	}
+}
+
+
+
+/*---------- Footer ----------*/
+#footer {
+	color: white;
+	background-color: $main-color;
+	padding: 15px;
+
+	.copyright {
+		font-weight: bold;
+		font-size: 14px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	.address {
+
+		.fa-fax {
+			margin-left: 15px;
+		}
+	}
+
+	/* p {
+		margin-bottom: 5px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	} */
+
+	a {
+		color: white;
+		text-decoration: underline;
+	}
+
+	.icon-group {
+		font-size: 26px;
+		text-align: center;
+
+		a {
+
+			&:nth-child(2) {
+				margin: 0 15px;
+			}
+		}
+	}
+
+	.developer {
+		@include d_flex(flex);
+		@include flex_align(flex-end);
+		@include flex_justify(center);
+		text-align: center;
+
+		img {
+			margin-left: 5px;
+		}
+	}	
+	
+	.portlet {
+		margin-bottom: 0 !important;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#footer {
+		
+		.copyright {
+			font-size: 14px;
+		}
+
+		.icon-group {
+			margin-top: 15px;
+			text-align: left;
+		}
+
+		.developer {
+			@include flex_justify(flex-start);
+		}
+	}
+}
+
+
+
+/*---------- Navbar ----------*/
+#mainNav {
+	background-color: $main-color;
+	position: relative;
+	
+	ul {
+		
+		li {
+			position: relative;
+
+			&:hover .child-menu {
+				display: block;
+			}
+			
+			a {
+				/* color: set-text-color($main-color); */
+				color: white;
+				padding: 10px 15px;
+				display: block;
+				white-space: nowrap;
+				text-transform: uppercase;
+				position: relative;
+			}
+			
+			&.active, &:hover {
+
+				> a {
+					background-color: $secondary-color;
+				}
+			}
+
+			&.active {
+
+				> a {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.child-menu {
+			background-color: white;
+			@include box-shadow(0px 0px 5px 0px rgba(0,0,0,0.3));
+			display: none;
+			position: absolute;
+			z-index: 1;
+			top: 100%;
+			left: 0;
+
+			a {
+				color: $text-color;
+				padding: 5px 15px 5px 30px;
+				text-transform: none;
+
+				&:before {
+					content: "\f0da";
+					font-family: FontAwesome;
+					position: absolute;
+					left: 15px;
+					top: 5px;
+					color: $gray-color;
+				}
+
+				&.active, &:hover {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.navbar-toggler {
+		margin: 10px 15px;
+		border: 1px solid white;
+		color: white;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#mainNav {
+		
+		ul {
+			@include flex_direction(column);
+			
+			li {
+
+				&:hover .child-menu {
+					display: none;
+				}
+			}
+
+			.child-menu {
+				background-color: $main-color;
+				@include box-shadow(none);
+				position: relative;
+				top: 0;
+
+				a {
+					color: white;
+					padding-left: 45px;
+
+					&:before {
+						left: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/*---------- Other ----------*/
+
+// Nested portlet
+.portlet-nested-portlets {
+
+	> .portlet {
+		margin-bottom: 15px;
+
+		.portlet {
+			margin-bottom: 0;
+		}
+	}
+
+	.columns-2 > div > div > div {
+		height: 100%;
+		
+		> div {
+			height: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.portlet-nested-portlets {
+
+		.col-md-6 + .col-md-6 {
+			margin-top: 15px;
+		}
+	}
+}
+
+// Image ratio 4:3
+.img-wrapper {
+	position: relative;
+	padding-top: 75%;
+	overflow: hidden;
+	display: block;
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%,-50%));
+		min-width: 100%;
+		min-height: 100%;
+		max-width: inherit;
+		width: 100%;
+	}
+
+	&.r169 {
+		padding-top: 56.25%;
+	}
+}
+
+//Pagination
+.taglib-page-iterator {
+	margin-top: 30px;
+	
+	.btn {
+		font-size: inherit;
+		
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+//Btn Change Content Web Display Portlet
+.autofit-col-end {
+
+	.lfr-icon-menu {
+		width: 24px;
+		height: 24px;
+	}
+}

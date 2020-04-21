@@ -8,7 +8,7 @@
 
 		.notify-title {
 			font-weight: bold;
-			color: $main-color;
+			color: $main-text-color;
 			padding-right: 10px;
 			margin-right: 10px;
 			border-right: 2px solid $gray-color-dark;
@@ -40,7 +40,7 @@
 
 		h2 {
 			margin: 0;
-			color: $main-color;
+			color: $main-text-color;
 			display: inline-block;
 			padding: 10px 30px 10px 40px;
 			text-transform: uppercase;
@@ -90,6 +90,23 @@
 
 	a {
 		display: block;
+		
+		&:first-child {
+			position: relative;
+		    padding-top: 75%;
+		    overflow: hidden;
+
+			img {
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    @include transform(translate(-50%, -50%));
+			    min-width: 100%;
+			    min-height: 100%;
+			    max-width: inherit;
+			    width: 100%;
+			}
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 10px;
@@ -116,7 +133,7 @@
 			position: absolute;
 			top: 8px;
 			left: 0;
-			background-color: $main-color;
+			background-color: $main-text-color;
 			width: 6px;
 			height: 6px;
 			@include transform(rotate(45deg));
@@ -156,7 +173,7 @@
 			display: inline-block;
 			padding: 5px 15px;
 			border: 1px solid $main-color;
-			color: $main-color;
+			color: $main-text-color;
 
 			&:hover {
 				background-color: $main-color;
@@ -233,7 +250,7 @@
 			color: $text-color;
 
 			&:hover {
-				color: $main-color;
+				color: $main-text-color;
 			}
 
 			label {
@@ -296,7 +313,7 @@
 			position: relative;
 
 			&:hover {
-				color: $main-color;
+				color: $main-text-color;
 				font-weight: bold;
 			}
 
@@ -336,7 +353,7 @@
 				font-weight: bold;
 				padding: 6px 30px;
 				border-radius: 50px 0;
-				color: $main-color;
+				color: $main-text-color;
 				text-transform: uppercase;
 
 				&.active, &:hover {
@@ -382,7 +399,7 @@
 					}
 
 					&:hover {
-						color: $main-color;
+						color: $main-text-color;
 					}
 				}
 			}
@@ -520,6 +537,39 @@
 	.asset-content {
 		margin-bottom: 0 !important;
 	}
+}
+
+
+// Legislation Documents
+.legislation-documents {
+
+	li {
+
+		a {
+			position: relative;
+			padding: 5px 0 5px 25px;
+			display: block;
+			color: $text-color;
+
+			&:before {
+				content: "\f15c";
+				position: absolute;
+				top: 3px;
+				left: 0;
+				color: $gray-color-dark;
+				font-family: 'FontAwesome';
+				font-size: 16px;
+			}
+
+			&:hover {
+				color: $main-text-color;
+
+				&:before {
+					color: $main-text-color;
+				}
+			}
+		}
+	}	
 }
 
 

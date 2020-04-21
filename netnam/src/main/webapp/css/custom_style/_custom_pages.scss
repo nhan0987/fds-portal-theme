@@ -2868,6 +2868,10 @@ body.page-theme .mTheme {
 	margin-top: 90px;
 	margin-bottom: 150px;
 	
+	.main-content-card {
+		@include box-shadow(none);
+	}
+	
 	.lfr-ddm-form-page {
 		padding-bottom: 0;
 	}
@@ -2893,11 +2897,11 @@ body.page-theme .mTheme {
 		margin-bottom: 10px;
 	}
 	
-	.lfr-ddm-form-pagination-controls {
+	.button-holder {
 		padding: 0;
 		text-align: center;
 		
-		.lfr-ddm-form-submit {
+		.btn-primary {
 			background-color: $main-color;
 			border: 0;
 		    border-radius: 6px;
@@ -2905,6 +2909,10 @@ body.page-theme .mTheme {
 		    float: none !important;
 		}
 	}
+}
+
+.g-recaptcha {
+	display: inline-block;
 }
 
 html:lang(vi-VN) .contact-form .lfr-ddm-form-submit {
@@ -2987,6 +2995,13 @@ html:lang(vi-VN) .contact-form .lfr-ddm-form-submit {
 	max-width: 1600px;
 	margin: 0 auto 30px;
 	padding: 0 15px;
+	
+	.list-group-item {
+		
+		> div:first-child {
+			display: none;
+		}
+	}
 
 	.search-total-label {
 		margin-top: 0;
