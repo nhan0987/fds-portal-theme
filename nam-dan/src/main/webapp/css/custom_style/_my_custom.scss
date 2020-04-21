@@ -1,5 +1,286 @@
-@import "base_style";
-@import "custom_style";
-@import "override_style";
+body {
+	
+	&.namdan-theme {
+		$main-color: #046fcf;
+		$secondary-color: #df0024;
+		$main-text-color: #046fcf;
+		
+		background-color: white;
 
-/*@import "backend_override";*/
+		.notify-wrapper {
+			display: none;
+		}
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "namdan_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-honglong {
+		$main-color: #f9de71;
+		$secondary-color: #c90126;
+		$main-text-color: #bf9f1f;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-hungtien {
+		$main-color: #10406d;
+		$secondary-color: #fff001;
+		$main-text-color: #10406d;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-khanhson {
+		$main-color: #ddffbb;
+		$secondary-color: #d30201;
+		$main-text-color: #458406;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-kimlien {
+		$main-color: #ff6d00;
+		$secondary-color: #ff0113;
+		$main-text-color: #ff6d00;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namanh {
+		$main-color: #349dfb;
+		$secondary-color: #004a8d;
+		$main-text-color: #349dfb;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namcat {
+		$main-color: #5cb85c;
+		$secondary-color: #0101ff;
+		$main-text-color: #5cb85c;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namcuong {
+		$main-color: #1b6ccb;
+		$secondary-color: #fff001;
+		$main-text-color: #1b6ccb;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namgiang {
+		$main-color: #f1bf76;
+		$secondary-color: #d20100;
+		$main-text-color: #f1bf76;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namhung {
+		$main-color: #fdb31d;
+		$secondary-color: #bf2b26;
+		$main-text-color: #fdb31d;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namkim {
+		$main-color: #c9302c;
+		$secondary-color: #fff001;
+		$main-text-color: #c9302c;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namlinh {
+		$main-color: #0642a6;
+		$secondary-color: #fff001;
+		$main-text-color: #0642a6;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namloc {
+		$main-color: #137f8f;
+		$secondary-color: #e80621;
+		$main-text-color: #137f8f;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namnghia {
+		$main-color: #feb011;
+		$secondary-color: #ef0430;
+		$main-text-color: #feb011;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namphuc {
+		$main-color: #ff4a43;
+		$secondary-color: #fff001;
+		$main-text-color: #ff4a43;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namtan {
+		$main-color: #3ab1fc;
+		$secondary-color: #fff001;
+		$main-text-color: #3ab1fc;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namthai {
+		$main-color: #9dd223;
+		$secondary-color: #00844d;
+		$main-text-color: #9dd223;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namthanh {
+		$main-color: #2593ee;
+		$secondary-color: #fff001;
+		$main-text-color: #2593ee;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namthuong {
+		$main-color: #df4803;
+		$secondary-color: #fff001;
+		$main-text-color: #df4803;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-namtrung {
+		$main-color: #35b34b;
+		$secondary-color: #bb0707;
+		$main-text-color: #35b34b;		
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-vandien {
+		$main-color: #05a0cf;
+		$secondary-color: #fb020e;
+		$main-text-color: #05a0cf;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-xuanhoa {
+		$main-color: #025a9b;
+		$secondary-color: #fff001;
+		$main-text-color: #025a9b;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+	
+	&.xa-xuanlam {
+		$main-color: #fcf358;
+		$secondary-color: #05577f;
+		$main-text-color: #fcf358;
+	
+		@import "main_variables";
+		@import "mixin";
+		@import "base_style";
+		@import "custom_style";
+		@import "override_style";
+	}
+
+}
