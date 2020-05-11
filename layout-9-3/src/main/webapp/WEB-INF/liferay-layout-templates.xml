@@ -3,7 +3,7 @@
 
 <layout-templates>
 	<custom>
-		<layout-template id="layout-9-3" name="2 Columns (75/25)">
+		<layout-template id="layout-9-3" name="Layout 9-3">
 			<template-path>/layout-9-3.ftl</template-path>
 			<thumbnail-path>/layout-9-3.png</thumbnail-path>
 		</layout-template>

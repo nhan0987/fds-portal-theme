@@ -1,0 +1,7 @@
+Bundle-Name: netnam-product-naviagtion-control-menu-theme-contributor
+Bundle-SymbolicName: netnam.product.naviagtion.control.menu.theme.contributor
+Bundle-Version: 4.0.6
+Liferay-Theme-Contributor-Type: netnam-product-naviagtion-control-menu-theme-contributor
+Web-ContextPath: /netnam-product-naviagtion-control-menu-theme-contributor-theme-contributor
+
+Liferay-Theme-Contributor-Weight: 9999

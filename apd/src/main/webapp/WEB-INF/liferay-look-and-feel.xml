@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 7.0.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_7_0_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>7.2.0+</version>
+	</compatibility>
+	<theme id="apd" name="APD">
+		<template-extension>ftl</template-extension>
+		<settings>
+	    	<setting type="select" configurable="true" 
+	        	key="theme_type" 
+	    	    options="home,page"                   
+		        value="page">
+		    </setting>
+		    <setting configurable="true" key="m_address" type="text" value=""></setting>
+		    <setting configurable="true" key="m_phone" type="text" value=""></setting>
+		    <setting configurable="true" key="m_fax" type="text" value=""></setting>
+        </settings>
+		<page-theme>true</page-theme>
+        <color-scheme id="page-chung" name="Chung">
+			<default-cs>true</default-cs>
+			<css-class>style-chung</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="phong-tchc" name="P.Tổ chức Hành chính">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="phong-qldt" name="P.Quản lý đào tạo">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="phong-khtc" name="P.Kế hoạch Tài chính">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="phong-qlkhvht" name="P.Quản lý khoa học và Hợp tác">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="phong-ctvctsv" name="P.Chính trị và công tác sinh viên">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khoa-csc" name="Kh.Chính sách công">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khoa-ktpt" name="K.Kinh tế phát triển">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khoa-tcdt" name="K.Tài chính đầu tư">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khoa-ktqt" name="K.Kinh tế quốc tế">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khoa-qtkd" name="K.Quản trị kinh doanh">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khoa-lkt" name="K.Luật kinh tế">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khoa-kt" name="K.Kinh tế">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="khoa-cb" name="K.Cơ bản">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="vien-dtqt" name="V.Đào tạo quốc tế">
+			<default-cs>true</default-cs>
+			<css-class>style-khoa</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="trungtam-ktvdbcl" name="TT.Khảo thí và Đảm bảo chất lượng">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="trungtam-bdtvvpbcs" name="TT.Bồi dưỡng tư vấn và Phản biện chính sách">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="trungtam-htdt" name="TT.Hỗ trợ đào tạo">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+		<color-scheme id="trungtam-cntttvvtt" name="TT.CNTT, TV, Truyền thông">
+			<default-cs>true</default-cs>
+			<css-class>style-phong</css-class>
+			<color-scheme-images-path>
+				${images-path}/custom-images/color-schemes/${css-class}
+			</color-scheme-images-path>
+		</color-scheme>
+        <portlet-decorator id="borderless" name="Borderless">
+            <portlet-decorator-css-class>portlet-borderless</portlet-decorator-css-class>
+        </portlet-decorator>
+		<portlet-decorator id="barebone" name="Barebone">
+            <portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
+        </portlet-decorator>
+        <portlet-decorator id="decorate" name="Decorate">
+            <default-portlet-decorator>true</default-portlet-decorator>
+            <portlet-decorator-css-class>portlet-decorate</portlet-decorator-css-class>
+        </portlet-decorator>
+	</theme>
+</look-and-feel>
