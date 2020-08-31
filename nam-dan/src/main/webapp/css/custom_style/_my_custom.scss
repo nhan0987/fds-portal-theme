@@ -29,9 +29,11 @@ body {
 		@import "base_style";
 		@import "custom_style";
 		@import "override_style";
+		
+		#mainNav ul li a {color: white;}
 	}
 	
-	&.xa-hungtien {
+	&.xa-hungtien, &.xa-namxuan, &.xa-thuongtanloc, &.xa-trungphuccuong {
 		$main-color: #10406d;
 		$secondary-color: #fff001;
 		$main-text-color: #10406d;
@@ -53,6 +55,8 @@ body {
 		@import "base_style";
 		@import "custom_style";
 		@import "override_style";
+		
+		#mainNav ul li a {color: #046fcf;}
 	}
 	
 	&.xa-kimlien {
@@ -77,6 +81,8 @@ body {
 		@import "base_style";
 		@import "custom_style";
 		@import "override_style";
+		
+		#mainNav ul li a {color: white;}
 	}
 	
 	&.xa-namcat {
@@ -89,18 +95,8 @@ body {
 		@import "base_style";
 		@import "custom_style";
 		@import "override_style";
-	}
-	
-	&.xa-namcuong {
-		$main-color: #1b6ccb;
-		$secondary-color: #fff001;
-		$main-text-color: #1b6ccb;
-	
-		@import "main_variables";
-		@import "mixin";
-		@import "base_style";
-		@import "custom_style";
-		@import "override_style";
+		
+		#mainNav ul li a {color: white;}
 	}
 	
 	&.xa-namgiang {
@@ -113,6 +109,8 @@ body {
 		@import "base_style";
 		@import "custom_style";
 		@import "override_style";
+		
+		#mainNav ul li a {color: white;}
 	}
 	
 	&.xa-namhung {
@@ -125,6 +123,8 @@ body {
 		@import "base_style";
 		@import "custom_style";
 		@import "override_style";
+		
+		#mainNav ul li a {color: white;}
 	}
 	
 	&.xa-namkim {
@@ -151,18 +151,6 @@ body {
 		@import "override_style";
 	}
 	
-	&.xa-namloc {
-		$main-color: #137f8f;
-		$secondary-color: #e80621;
-		$main-text-color: #137f8f;
-	
-		@import "main_variables";
-		@import "mixin";
-		@import "base_style";
-		@import "custom_style";
-		@import "override_style";
-	}
-	
 	&.xa-namnghia {
 		$main-color: #feb011;
 		$secondary-color: #ef0430;
@@ -173,30 +161,8 @@ body {
 		@import "base_style";
 		@import "custom_style";
 		@import "override_style";
-	}
-	
-	&.xa-namphuc {
-		$main-color: #ff4a43;
-		$secondary-color: #fff001;
-		$main-text-color: #ff4a43;
-	
-		@import "main_variables";
-		@import "mixin";
-		@import "base_style";
-		@import "custom_style";
-		@import "override_style";
-	}
-	
-	&.xa-namtan {
-		$main-color: #3ab1fc;
-		$secondary-color: #fff001;
-		$main-text-color: #3ab1fc;
-	
-		@import "main_variables";
-		@import "mixin";
-		@import "base_style";
-		@import "custom_style";
-		@import "override_style";
+		
+		#mainNav ul li a {color: white;}
 	}
 	
 	&.xa-namthai {
@@ -221,36 +187,14 @@ body {
 		@import "base_style";
 		@import "custom_style";
 		@import "override_style";
+		
+		#mainNav ul li a {color: white;}
 	}
 	
-	&.xa-namthuong {
-		$main-color: #df4803;
-		$secondary-color: #fff001;
-		$main-text-color: #df4803;
-	
-		@import "main_variables";
-		@import "mixin";
-		@import "base_style";
-		@import "custom_style";
-		@import "override_style";
-	}
-	
-	&.xa-namtrung {
-		$main-color: #35b34b;
-		$secondary-color: #bb0707;
-		$main-text-color: #35b34b;		
-	
-		@import "main_variables";
-		@import "mixin";
-		@import "base_style";
-		@import "custom_style";
-		@import "override_style";
-	}
-	
-	&.xa-vandien {
-		$main-color: #05a0cf;
-		$secondary-color: #fb020e;
-		$main-text-color: #05a0cf;
+	&.xa-trannamdan {
+		$main-color: #0a5702;
+		$secondary-color: #57c915;
+		$main-text-color: #0a5702;
 	
 		@import "main_variables";
 		@import "mixin";
@@ -272,9 +216,9 @@ body {
 	}
 	
 	&.xa-xuanlam {
-		$main-color: #fcf358;
+		$main-color: #ef0632;
 		$secondary-color: #05577f;
-		$main-text-color: #fcf358;
+		$main-text-color: #ef0632;
 	
 		@import "main_variables";
 		@import "mixin";
@@ -283,4 +227,11 @@ body {
 		@import "override_style";
 	}
 
+
+
+	@media screen and (max-width: 767px) {
+		#banner, #mainNav, .subNav, #footer {
+			margin: 0 -12px;
+		}
+	}
 }

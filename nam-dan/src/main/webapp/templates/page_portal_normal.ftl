@@ -31,13 +31,13 @@
 <#assign scope_group = theme_display.getScopeGroup() />
 
 	<div id="mWrapper" class="container">
-		<div id="banner">
-			<a href="/" class="mLogo">
-				<img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/banners/${banner_img}" class="">
-			</a>
+		<div id="banner">			
+			<div class="hidden-banner">
+				<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="${theme_name}_banner"/>
+			</div>
 		</div>
 		
-		<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
 		<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 		
 		<div class="subNav">
@@ -66,30 +66,9 @@
 			<div class="clear"></div>
 		</div>
 		
-		<div id="footer">
-			<div class="sitename">
-				Ủy ban Nhân dân ${sub_owner} - ${main_owner}
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="infos">
-						<div class="address"><i class="fa fa-map-marker"></i><span>${owner_address}</span></div>
-						<div class="mail"><i class="fa fa-envelope-o"></i><span>${owner_mail}</span></div>
-						<div class="phone"><i class="fa fa-phone"></i><span>${owner_phone}</span></div>					
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<p>
-						<b>Người chịu trách nhiệm:</b> ${sub_site_content_responsible}
-					</p>
-					<p>
-						<b>Cơ quan chủ quản:</b> ${site_owner}
-					</p>
-				</div>
-			</div>
-			<div class="copyright">
-				<span>@2019 Bản quyền thuộc về UBND Huyện Nam Đàn - Tỉnh Nghệ An</span>
-				<!--<img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/logo-fds.png">-->
+		<div id="footer">			
+			<div class="hidden-footer">
+				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="${theme_name}_footer"/>
 			</div>
 		</div>
 	</div>
