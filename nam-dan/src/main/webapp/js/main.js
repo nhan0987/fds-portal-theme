@@ -84,3 +84,12 @@ function getCurrentDateTime(){
 		currentTimeWrapper.innerHTML = currentTimeValue;
 	}
 }
+
+
+//Nav actions
+$("<i class='fa fa-caret-down'></i>").insertBefore("#mainNav .child-menu");
+
+$('#mainNav li i').on('click', function() {
+	$(this).toggleClass('fa-caret-down fa-caret-up');
+	$(this).parent().toggleClass('open');
+});

@@ -43,3 +43,7 @@ $product-menu-zindex: 990 !default;
 body .navigation-bar-secondary {
 	background-color: $product-menu-panel-body-bg;
 }
+
+body .dropdown-menu-personal-menu li:not(:nth-child(-n+2)):not(:nth-child(11)):not(:last-child) {
+	display: none;
+}

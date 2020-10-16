@@ -126,6 +126,13 @@ body {
 		font-size: 14px;
 		text-transform: uppercase;
 		margin-bottom: 10px;
+		
+		~ p {
+			
+			.fa {
+				margin-right: 2px;
+			}
+		}
 	}
 
 	.address {
@@ -190,6 +197,15 @@ body {
 
 		.developer {
 			@include flex_justify(flex-start);
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#footer {
+		
+		.fa-fax {
+			margin-left: 10px;
 		}
 	}
 }
