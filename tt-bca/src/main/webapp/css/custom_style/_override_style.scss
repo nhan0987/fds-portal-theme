@@ -29,6 +29,98 @@
 
 // Custom portlet
 .custom-portlet {
+
+	.portlet {
+		border: 1px solid #dadada;
+		border-top: 0;
+	}
+
+	.portlet-header {
+		border-top: 1px solid #ce1212;
+		margin-bottom: 0;
+
+		.autofit-col-expand {
+			@include flex_variables(0 0 auto);
+		}
+
+		h2 {
+			margin: 0;
+			font-size: 14px;
+			color: white;
+			display: inline-block;
+			padding: 10px 10px 10px 15px;
+			background-color: #ce1212;
+			text-transform: uppercase;
+			margin-top: -1px;
+			max-width: 100%;
+			font-weight: normal;
+			position: relative;
+			overflow: visible;
+			
+			&:after {
+				content: "";
+				display: block;
+			    width: 0;
+			    height: 0;
+			    border-top: 36px solid #ce1112;
+			    border-right: 36px solid transparent;
+			    position: absolute;
+			    top: 0;
+			    left: 100%;
+			}
+		}
+	}
+
+	.portlet-body {
+		padding: 15px;
+	}
+
+	&.title-center {
+		border-radius: 6px 6px 0 0;
+
+		.portlet-header {
+			border-top: 0;
+
+			.autofit-col-expand {
+				@include flex_variables(1 0 100%);
+			}
+
+			h2 {
+				margin: 0;
+				font-size: 16px;
+				color: white;
+				background-color: $main-color-light;
+				display: block;
+				padding: 10px 15px;
+				@include box-shadow(none);
+				margin-top: 0;
+				text-align: center;
+				text-overflow: unset;
+			    border-radius: 0;
+			    white-space: normal;
+			    border-radius: 6px 6px 0 0;
+			}
+		}
+	}
+}
+
+.portlet-shadow {
+	@include box-shadow(0px 0px 5px 0px rgba(0,0,0,0.3));
+	background-color: white;
+}
+
+@media screen and (max-width: 991px) {
+	.custom-portlet {
+
+		.portlet-header {
+
+			h2 {
+				font-size: 14px;
+			}
+		}
+	}
+}
+/*.custom-portlet {
 	background-color: white;
 
 	.portlet-header {
@@ -83,7 +175,7 @@
 			}
 		}
 	}
-}
+}*/
 
 
 // List News - First- with image
@@ -137,7 +229,7 @@
 			background-color: $main-text-color;
 			width: 6px;
 			height: 6px;
-			@include transform(rotate(45deg));
+			/*@include transform(rotate(45deg));*/
 		}
 	}
 }

@@ -15,7 +15,7 @@ a {
 
 #mWrapper {
 	font-size: 14px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lora', serif;
 }
 
 .journal-content-article {
@@ -71,6 +71,13 @@ img {
 }
 
 
+@media screen and (min-width: 1300px) {
+    .container {
+        min-width: 1300px;
+    }
+}
+
+
 
 /*---------- Header ----------*/
 &.signed-in #banner {
@@ -98,19 +105,39 @@ img {
 
 /*---------- Footer ----------*/
 #footer {
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	border-top: 1px solid $main-color;
-	padding-top: 15px;
-	/*background-image: url("../images/custom-images/footers/footer-namdan.jpg");*/
-	background-color: white;
-
-	.row {
-		padding: 0 20px;
+	padding: 20px 15px 10px;
+    background: url('../images/bg-footer.jpg') left bottom no-repeat;
+    background-size: cover;
+    color: #246e48;
+    
+    .site-info {
+	    display: flex;
+	}
+	
+	 img {
+	    margin-right: 20px;
+	    margin-top: -15px;
 	}
 	
 	.sitename {
+	    text-transform: uppercase;
+	}
+	
+	.infos {
+	
+		> div {
+		    display: flex;
+		    align-items: baseline;
+		}
+		
+		i {
+		    margin-right: 10px;
+		    width: 14px;
+		    text-align: center;
+		}
+	}
+	
+	/*.sitename {
 		text-transform: uppercase;
 		font-size: 24px;
 		font-family: 'Oswald', sans-serif;
@@ -160,7 +187,7 @@ img {
 		img {
 			margin-left: auto;
 		}
-	}
+	}*/
 	
 	.portlet-header {
 		display: none;
@@ -232,6 +259,154 @@ img {
 
 /*---------- Navbar ----------*/
 #mainNav {
+    background: rgb(91,3,3);
+    background: -moz-linear-gradient(left,  rgba(91,3,3,1) 0%, rgba(223,0,35,1) 100%);
+    background: -webkit-linear-gradient(left,  rgba(91,3,3,1) 0%,rgba(223,0,35,1) 100%);
+    background: linear-gradient(to right,  rgba(91,3,3,1) 0%,rgba(223,0,35,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b0303', endColorstr='#df0023',GradientType=1 );
+    margin-bottom: 20px;
+    
+    li {
+    
+    	a {
+    		color: white;
+		    padding: 10px 15px;
+		    display: block;
+		    text-decoration: none;
+    	}
+    	
+    	> i {
+    		display: none;
+    	}
+    	
+    	.child-menu {
+		    display: none;
+		    position: absolute;
+		    top: 100%;
+		    background: rgb(91,3,3);
+		    background: -moz-linear-gradient(left,  rgba(91,3,3,1) 0%, rgba(223,0,35,1) 100%);
+		    background: -webkit-linear-gradient(left,  rgba(91,3,3,1) 0%,rgba(223,0,35,1) 100%);
+		    background: linear-gradient(to right,  rgba(91,3,3,1) 0%,rgba(223,0,35,1) 100%);
+		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b0303', endColorstr='#df0023',GradientType=1 );
+		    z-index: 2;
+		    list-style: none;
+		    padding: 0;
+		}
+		
+		&:hover {
+			
+			.child-menu {
+				display: block;
+			}
+			
+			> a {
+				font-weight: bold;
+			}
+		}
+		
+		&.active {
+			
+			> a {
+				font-weight: bold;
+			}
+		}
+    }
+    
+    .navbar-nav {
+    	
+    	> li:first-child {
+    		position: relative;
+			background-color: #72b71f;
+			margin-left: 10px;
+			
+			&:before {
+				content: "";
+			    width: 0;
+			    height: 0;
+			    border-bottom: 5px solid #304b04;
+			    border-left: 5px solid transparent;
+			    position: absolute;
+			    top: -5px;
+			    left: -5px;
+			}
+			
+			&:after {
+				content: "";
+			    width: 0;
+			    height: 0;
+			    width: 0;
+			    height: 0;
+			    border-left: 20px solid transparent;
+			    border-right: 20px solid transparent;
+			    border-top: 10px solid #72b71f;
+			    position: absolute;
+			    top: 100%;
+			    left: 0;
+			}
+			
+			> a {
+				font-size: 0;
+			    padding: 10px 20px;
+			    height: 100%;
+			    position: relative;
+			    
+			    &:before {
+			    	content: "";
+				    position: absolute;
+				    bottom: 100%;
+				    left: 0;
+				    right: 0;
+				    background-color: #72b71f;
+				    height: 5px;
+			    }
+			    
+			    &:after {
+			    	content: "\f015";
+				    font-family: FontAwesome;
+				    font-size: 24px;
+				    font-weight: normal;
+				    position: absolute;
+				    top: 50%;
+				    left: 50%;
+				    transform: translate(-50%,-50%);
+			    }
+			}
+    	}
+    }
+    
+    /*--- Search ---*/
+    .search {
+	    display: -webkit-box;
+	    display: flex;
+	    position: relative;
+	    margin-right: 15px;
+	    
+	    input {
+	    	border: 0;
+		    border-radius: 4px;
+		    box-shadow: none;
+		    width: 260px;
+		    font-size: 14px;
+		    height: 26px;
+		    background-color: white;
+		    margin: 8px 0;
+	    }
+	    
+	    .bt_search {
+	    	background-color: transparent;
+		    border: 0;
+		    color: #c7141e;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    width: 34px;
+		    height: 100%;
+		    padding: 0;
+	    }
+	}
+}
+
+/*#mainNav {
 	background-color: $main-color;
 	
 	ul {
@@ -403,7 +578,7 @@ img {
 			width: 100%;
 		}
 	}
-}
+}*/
 
 
 
