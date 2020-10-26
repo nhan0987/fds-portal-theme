@@ -65,13 +65,13 @@
 </#if>
 
 <#if mPhone == ''>
-	<#assign ftl_phone = '(04) 3747 3186'/>
+	<#assign ftl_phone = '(024) 3747 3186'/>
 <#else>
 	<#assign ftl_phone =  theme_display.getThemeSetting('m_phone')/>
 </#if>
 
 <#if mFax == ''>
-	<#assign ftl_fax = '(04) 37475217'/>
+	<#assign ftl_fax = '(024) 3747 5217'/>
 <#else>
 	<#assign ftl_fax =  theme_display.getThemeSetting('m_fax')/>
 </#if>

@@ -74,7 +74,7 @@
 					<div class="developer">
 						<span>Designed and Developed by</span> <img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/icon-fds.png">
 					</div>
-					<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="portalsessiontracking_WAR_portalsessiontracking"/>
+					<!--<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="portalsessiontracking_WAR_portalsessiontracking"/>-->
 				</div>
 			</div>
 		</div>

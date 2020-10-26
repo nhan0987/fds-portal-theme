@@ -96,6 +96,15 @@ body.page-theme .mTheme {
 					font-size: 8px;
 					font-weight: bold;
 				}
+				
+				&.list-title {
+					padding: 15px 0 5px;
+					font-weight: bold;					
+					
+					&:before {
+						display: none;
+					}
+				}
 			}
 		}
 		
@@ -594,6 +603,8 @@ body.page-theme .mTheme {
 				li {
 					
 					a {
+						font-size: 16px;
+						padding: 10px 15px;
 						
 						span {
 							display: none;
@@ -658,6 +669,10 @@ body.page-theme .mTheme {
 
 					&:before {
 						font-size: 6px;
+					}
+				
+					&.list-title:first-child {
+						padding-top: 0;
 					}
 				}
 			}
@@ -1213,7 +1228,8 @@ body.page-theme .mTheme {
 	.service-two-wrapper, 
 	.service-three-wrapper, 
 	.service-four-wrapper, 
-	.service-five-wrapper {
+	.service-five-wrapper, 
+	.service-eight-wrapper {
 		margin-bottom: 60px;
 	}
 }
@@ -1223,7 +1239,8 @@ body.page-theme .mTheme {
 	.service-two-wrapper, 
 	.service-three-wrapper, 
 	.service-four-wrapper, 
-	.service-five-wrapper {
+	.service-five-wrapper, 
+	.service-eight-wrapper {
 		margin-bottom: 30px;
 	}
 }
@@ -1233,8 +1250,232 @@ body.page-theme .mTheme {
 	.service-two-wrapper, 
 	.service-three-wrapper, 
 	.service-four-wrapper, 
-	.service-five-wrapper {
+	.service-five-wrapper, 
+	.service-eight-wrapper {
 		margin-bottom: 15px;
+	}
+}
+
+
+/*------------------------------
+		  Service 8
+------------------------------*/
+.service-eight-wrapper {
+	padding-bottom: 90px;
+
+	.nav-pills {
+
+		li {
+			@include flex_variables(1 0 auto);
+		}
+	}
+
+	#tab1, #tab4 {
+
+		.col-sm-6:first-child {
+			padding-right: 90px;
+		}
+	}
+
+	.title {
+		margin-bottom: 60px;
+	}
+	
+	.subtitle {
+		margin: 30px 0 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		+ ul {
+			margin-bottom: 60px;
+
+			li {
+				position: relative;
+				padding-left: 25px;
+
+				&:before {
+					content: "\f00c";
+					font-family: FontAwesome;
+					color: $main-color;
+					position: absolute;
+					top: 3px;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	.contact-info {
+		margin-top: 60px;
+
+		span {
+			display: block;
+		}
+	}
+
+	#tab4 {
+
+		label {
+			width: 100%;
+			text-align: center;
+			margin: 45px 0;
+		}
+	}
+
+	table {
+		background-color: $white-grey;
+		font-size: 16px;
+
+		tr {
+
+			&:nth-child(even) td {
+				background-color: $light-grey-2;
+			}
+		}
+
+		th {
+			background-color: $dark-grey-3;
+			color: white;
+			padding: 20px !important;
+			text-align: center;
+			text-transform: uppercase;
+
+			&:not(:last-child) {
+				border-right: 1px solid $light-grey-3;
+			}
+		}
+
+		td {
+			padding: 15px 20px !important;
+
+			&:not(:last-child) {
+				border-right: 1px solid $light-grey-3;
+			}
+		}
+
+		.fa-check {
+			color: $light-grey-3;
+
+			&.icon-green {
+				color: $main-color;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.service-eight-wrapper {		
+
+		#tab1 {
+
+			.col-offset-lg-2 {
+				
+				img {
+					height: 100px;
+				}
+			}
+		}
+
+		table {
+			font-size: 13px;
+		}		
+
+		#tab4 {
+
+			label {
+				font-size: 18px;
+			}
+
+			img {
+				height: 80px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.service-eight-wrapper {		
+
+		#tab4 {
+
+			.col-sm-6:last-child > div > div {
+				max-width: 100%;
+				@include flex_variables(0 0 100%);
+
+				&:last-child {
+
+					img {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			label {
+				margin: 0 0 15px;
+			}
+
+			img {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.service-eight-wrapper {
+
+		table {
+
+			th {
+				padding: 10px 15px !important;
+			}
+
+			td {
+				padding: 10px 15px !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.service-eight-wrapper {
+
+		#tab1 + div {
+
+			.col-sm-6:last-child {
+				margin-top: 10px;
+			}
+
+			.subtitle {
+
+				+ ul {
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		#tab2 + div {
+
+			.title {
+				margin-bottom: 15px;
+			}
+		}
+
+		#tab4 + div {
+
+			.contact-info {
+				margin-top: 15px;
+			}
+
+			label {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+
+			img {
+				height: 80px;
+			}
+		}
 	}
 }
 

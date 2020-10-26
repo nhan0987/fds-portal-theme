@@ -73,12 +73,24 @@ img {
 
 
 /*---------- Header ----------*/
+&.signed-in #banner {
+	padding-top: 100px;
+}
+		
 #banner {
 
 	img {
 		max-width: 100%;
 		display: block;
 		width: 100%;
+	}
+	
+	.portlet-header {
+		display: none;
+	}
+			
+	.portlet {
+		margin-bottom: 0 !important;
 	}
 }
 
@@ -91,7 +103,8 @@ img {
 	background-repeat: no-repeat;
 	border-top: 1px solid $main-color;
 	padding-top: 15px;
-	background-image: url("../images/custom-images/footers/footer-namdan.jpg");
+	/*background-image: url("../images/custom-images/footers/footer-namdan.jpg");*/
+	background-color: white;
 
 	.row {
 		padding: 0 20px;
@@ -148,6 +161,14 @@ img {
 			margin-left: auto;
 		}
 	}
+	
+	.portlet-header {
+		display: none;
+	}
+			
+	.portlet {
+		margin-bottom: 0 !important;
+	}
 }
 
 &[class*="xa-"] #footer {
@@ -180,7 +201,7 @@ img {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	#footer {
 
 		.sitename {
@@ -191,6 +212,17 @@ img {
 
 			img {
 				margin: 10px 0 5px;
+			}
+		}
+		
+		.infos {
+			
+			> div {
+				width: 100%;
+			}
+			
+			.phone {
+				margin: 0;
 			}
 		}
 	}
@@ -221,6 +253,19 @@ img {
 			
 			&.active, &:hover {
 				background-color: $main-color-light;
+			}
+			
+			> i {
+				display: none;
+				color: set-text-color($main-color);
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				z-index: 1;
 			}
 		}
 
@@ -311,6 +356,55 @@ img {
 	}
 }
 
+@media screen and (max-width: 767px) {
+	#mainNav {
+
+		ul {
+		
+			li {
+				
+				> i {
+					display: block;
+				}
+				
+				&.open {
+					
+					.child-menu {
+						display: block;
+					}
+				}
+			}
+		}
+			
+		#mNav {
+			max-height: 50vh;
+			overflow: auto;
+			
+			.child-menu {
+				position: relative;
+					
+				 a {
+				 	padding-left: 30px;
+				 }
+			}
+		}
+	}
+	
+	.subNav {
+		@include flex_wrap(wrap);
+		
+		.datetimeWrapper {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		
+		.portlet-boundary_com_liferay_portal_search_web_search_bar_portlet_SearchBarPortlet_ {
+			margin: 0;
+			width: 100%;
+		}
+	}
+}
+
 
 
 /*---------- Other ----------*/
@@ -364,5 +458,19 @@ img {
 
 	&.r169 {
 		padding-top: 56.25%;
+	}
+}
+
+// Fix Admin
+.asset-full-content {
+
+	h4 {
+		
+		.asset-title {
+		
+			+ * {
+				display: none !important;
+			}
+		}
 	}
 }

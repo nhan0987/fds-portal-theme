@@ -5,6 +5,7 @@
 		padding: 10px;
 		@include d_flex(flex);
 		margin-bottom: 15px;
+		display: none;
 
 		.notify-title {
 			font-weight: bold;
@@ -115,7 +116,7 @@
 		&:hover {
 
 			label {
-				color: $secondary-color;
+				color: #046fcf;
 				cursor: pointer;
 			}
 		}
@@ -151,7 +152,7 @@
 		&:hover {
 
 			label {
-				color: $secondary-color;
+				color: #046fcf;
 				cursor: pointer;
 			}
 		}
@@ -232,6 +233,7 @@
 				background-color: rgba(0,0,0,0.3);
 				color: white;
 				font-weight: bold;
+				width: 100%;
 			}
 		}
 	}
@@ -243,6 +245,13 @@
 			@include flex_justify(space-around);
 			@include flex_direction(column);
 		    height: 100%;
+		    
+		    li {
+		    	
+		    	&:not(:last-child) {
+		    		margin-bottom: 15px;
+		    	}
+		    }
 		}
 
 		a {
@@ -313,7 +322,7 @@
 			position: relative;
 
 			&:hover {
-				color: $main-text-color;
+				color: #046fcf;
 				font-weight: bold;
 			}
 
@@ -358,7 +367,8 @@
 
 				&.active, &:hover {
 					color: white;
-					@include background-gradient($main-color, $main-color-light);
+					/*@include background-gradient($main-color, $main-color-light);*/
+					background-color: $main-text-color;
 				}
 			}
 		}
@@ -437,7 +447,7 @@
 				font-size: 16px;
 
 				&:hover {
-					color: $secondary-color;
+					color: #046fcf;
 				}
 			}
 		}
@@ -562,7 +572,7 @@
 			}
 
 			&:hover {
-				color: $main-text-color;
+				color: #046fcf;
 
 				&:before {
 					color: $main-text-color;

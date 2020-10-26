@@ -95,7 +95,7 @@
 			position: relative;
 
 			&:hover {
-				color: $secondary-color;
+				color: #046fcf;
 				font-weight: bold;
 
 				&:before {
@@ -167,7 +167,7 @@
 				border-top: 2px solid $gray-color-medium;
 
 				&.active, &:hover {
-					color: $secondary-color;
+					color: #046fcf;
 				}
 			}
 
@@ -224,7 +224,7 @@
 					}
 
 					&:hover {
-						color: $secondary-color;
+						color: #046fcf;
 					}
 				}
 			}
@@ -270,6 +270,10 @@
 			margin-bottom: 5px;
 			display: block;
 			color: $text-color;
+			
+			&:hover {
+				color: #046fcf;
+			}
 		}
 	}
 
@@ -292,7 +296,7 @@
 			}
 
 			&:hover {
-				color: $secondary-color;
+				color: #046fcf;
 			}
 		}
 	}
@@ -311,7 +315,7 @@
 			&:hover {
 
 				span {
-					color: $secondary-color;
+					color: #046fcf;
 				}
 			}
 		}
@@ -429,7 +433,7 @@
 			}
 
 			&:hover {
-				color: $secondary-color;
+				color: #046fcf;
 			}
 		}
 	}
@@ -456,10 +460,10 @@
 			}
 
 			&:hover {
-				color: $secondary-color;
+				color: #046fcf;
 
 				&:before {
-					color: $secondary-color;
+					color: #046fcf;
 				}
 			}
 		}
@@ -496,7 +500,7 @@
 				font-size: 16px;
 
 				&:hover {
-					color: $secondary-color;
+					color: #046fcf;
 				}
 			}
 		}
