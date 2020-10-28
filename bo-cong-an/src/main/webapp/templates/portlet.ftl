@@ -76,15 +76,28 @@
 		
 		<#if portlet_decorator_id != "borderless">
 			<div class="autofit-float autofit-row portlet-header">
-				<div class="autofit-col autofit-col-expand">
-					<#if linkedLayoutURL != "" >
+			
+				<#if linkedLayoutURL != "" >	
+					<div class="autofit-col autofit-col-expand">
 						<a href="${linkedLayoutURL}">
 							<h2 class="portlet-title-text">${portlet_title}</h2>
 						</a>
-						<#else>
-							<h2 class="portlet-title-text">${portlet_title}</h2>
-					</#if>
-				</div>
+
+					</div>
+					
+		            <a href="${linkedLayoutURL}" class="view_more">
+		            	${languageUtil.get(request, "view-more")}
+		            	<i class="fa fa-angle-right"></i>
+		            </a>
+		            
+		            <#else>
+	            	<div class="autofit-col autofit-col-expand">
+						<h2 class="portlet-title-text">${portlet_title}</h2>
+					</div>
+	            
+	            </#if>
+	            
+	            
 	
 				<div class="autofit-col autofit-col-end">
 					<div class="autofit-section">

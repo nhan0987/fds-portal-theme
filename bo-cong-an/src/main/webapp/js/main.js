@@ -65,7 +65,7 @@ function getCurrentDateTime(){
 	} 
 	
 	var currentDateValue = day_of_week[currentDay] + ", " + currentDate + "/" + month_of_year[currentMonth] + "/" + currentYear;
-	var currentDateTimeValue = day_of_week[currentDay] + ", ngày " + currentDate + " / " + month_of_year[currentMonth] + " / " + currentYear;
+	var currentDateTimeValue = day_of_week[currentDay] + ", ngày " + currentDate + "/" + month_of_year[currentMonth] + "/" + currentYear;
 	var currentTimeValue = currentHour + ":" + currentMinute + ":" + currentSecond;
 	
 	var currentDateWrapper = document.getElementById("current_date");
@@ -93,3 +93,31 @@ $('#mainNav li i').on('click', function() {
 	$(this).toggleClass('fa-caret-down fa-caret-up');
 	$(this).parent().toggleClass('open');
 });
+
+
+//Search bar in Navbar
+// window.onload = function() {
+//     document.getElementById('searchInput').onkeypress = function searchKeyPress(event) {
+//        if (event.keyCode == 13) {
+//            document.getElementById('btnSearch').click();
+//        }
+//    };
+// }
+
+Liferay.provide(window, 'doSearch',function(){
+	var A = AUI();
+	var searchInput = A.one("#searchInput");
+
+if(searchInput) {
+	var keywords = searchInput.val();
+	keywords = keywords.replace(/^\s+|\s+$/,"");
+
+			if(keywords !== "") {
+			var url = '/web/cong-thanh-tra/search/-/search/' + keywords;
+			
+			window.location.href = url;
+			};
+		}
+	}, 
+	['aui-base']
+);
