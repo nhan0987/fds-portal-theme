@@ -75,10 +75,9 @@
 			position: absolute;
 			top: 8px;
 			left: 0;
-			background-color: $main-color;
+			background-color: $main-text-color;
 			width: 6px;
 			height: 6px;
-			border-radius: 6px;
 			/*@include transform(rotate(45deg));*/
 		}
 	}

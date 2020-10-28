@@ -35,6 +35,7 @@
 	    color: #004b18;
 	    padding: 10px 15px;
 	    white-space: nowrap;
+	    min-width: 190px;
 	}
 }
 
@@ -420,7 +421,6 @@
 			color: $gray-color-dark;
 			font-style: italic;
 			margin-bottom: 5px;
-			display: none;
 		}
 	}
 }
@@ -433,6 +433,10 @@
 			width: 100px;
 			float: left;
 			margin-right: 10px;
+
+			.img-wrapper {
+				padding-top: 75%;
+			}
 		}
 
 		.news-title {
@@ -699,7 +703,7 @@
 		margin-bottom: 0;
 		position: relative;
 		padding-left: 15px;
-		line-height: normal;
+		line-height: 20px;
 
 		&:before {
 			content: "";
@@ -737,6 +741,7 @@
 	.news-wrapper {
 		width: 25%;
 		padding: 0 15px;
+		margin-bottom: 0;
 
 		.box-img {
 			width: 100% !important;
@@ -787,7 +792,7 @@
 			label {
 				color: white;
 				font-weight: normal;
-				line-height: normal;
+				line-height: 20px;
 
 				&:hover {
 					text-decoration: underline;
@@ -819,7 +824,7 @@
 			&:before {
 				content: "";
 				position: absolute;
-				top: 12px;
+				top: 14px;
 				left: 0;
 				background-color: $main-color;
 				width: 6px;
@@ -1382,7 +1387,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 
 	.video-playlist {
 		position: relative;
-		padding: 0 10px 30px;
+		padding: 0 10px 15px;
 
 		> div > div {
 			position: inherit;
@@ -1424,6 +1429,17 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		bottom: 0;
 		right: 0;
 		font-family: 'Roboto', sans-serif;
+		color: $text-color-2;
+		
+		&:after {
+			content: "\f105";
+			font-family: FontAwesome;
+			margin-left: 5px;
+		}
+		
+		&:hover {
+			color: $main-color;
+		}
 	}
 }
 
@@ -1491,6 +1507,17 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	    }
 	}
 }
+
+
+//Weblink
+.weblink-wrapper {
+	
+	.form-group {
+		margin-bottom: 0;
+	}
+}
+
+
 // Hỏi đáp 
 
 .hoi-dap-left{
