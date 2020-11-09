@@ -448,6 +448,41 @@
 	}
 }
 
+.asset-full-content {
+	
+	> .mb-2 {
+		margin-bottom: 0 !important;
+		
+		+ div {
+			margin-bottom: 10px !important;
+			
+			.date-info {
+				margin-left: -8px;
+			}
+		}
+	}
+	
+	.component-title {
+		color: $main-color;
+		margin: 0;
+		
+		.header-back-to {
+			
+			a {
+				color: $main-color;
+			}
+		}
+		
+		.asset-title {
+			font-size: 18px;
+		}
+	}
+	
+	#blind-support i {
+	    color: $main-color;
+	}
+}
+
 .taglib-social-bookmarks {
 	
 	.btn-monospaced {
@@ -474,6 +509,7 @@
 		margin: 30px 0 5px;
 		font-weight: bold;
 		text-transform: uppercase;
+		color: $main-color;
 	}
 
 	ul {
@@ -1569,25 +1605,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	border-color: #ce1212!important;
 }
 
-.news-event{
-	.component-title{
-		color: #ce1212;
-		span{
-			color: #ce1212;
-		}
-		.header-back-to{
-			font-size: 1.5rem;
-			a {
-				color: #ce1212!important;
-			}
-		}
-	}
 
-	.related_asset_title {
-		color: #ce1212!important;
-	}
-
-}
 .truncate-text{
 	white-space: normal!important;
 }
@@ -1645,66 +1663,9 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	}
 
 }
-// .related_asset  {
-// 	li {
-// 		padding-left: 16px;
-// 		margin-bottom: 2px;
-// 		position: relative;
-
-// 		&:before {
-// 			content: "";
-// 			position: absolute;
-// 			top: 12px;
-// 			left: 0;
-// 			background-color:red;
-// 			width: 6px;
-// 			height: 6px;
-// 		}
-
-// 		&:after {
-// 			content: "";
-// 			position: absolute;
-// 			top: 14px;
-// 			left: 2px;
-// 			background-color: white;
-// 			width: 2px;
-// 			height: 2px;
-// 		}
-
-// 		a {
-// 			display: block;
-// 			color: $text-color;
-// 			padding: 5px 0 5px 15px;
-// 			position: relative;
-
-// 			&:before {
-// 				display: none!important;
-// 				content: "\f111";
-// 				font-family: FontAwesome;
-// 				font-size: 8px;
-// 				color: $gray-color-dark;
-// 				position: absolute;
-// 				top: 10px;
-// 				left: 0;
-// 			}
-
-// 			&:hover, &:focus {
-// 				color: $main-color;
-
-// 				&:before {
-// 					color: $main-color;
-// 				}
-// 			}
-// 		}
-// 	}
-
-// }
 .other-questions-title {
 	color: $main-color;
 	margin-top: 100px;
-}
-#blind-support i {
-    color: $main-color;
 }
 .van-ban-phap-luat table th, .van-ban-phap-luat table td {
     border: 1px solid $border-color;
