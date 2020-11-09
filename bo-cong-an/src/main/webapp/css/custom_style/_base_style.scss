@@ -355,31 +355,38 @@ img {
 /*---------- Other ----------*/
 
 // Nested portlet
-#content .portlet-nested-portlets {
+#content .portlet-nested-portlets.outer-most {
 
 	> .portlet {
-		margin-bottom: 15px;
-		border: 0;
-
-		> div > div > .portlet-body {
-			padding: 0;
-		}
-
-		.portlet {
-			margin-bottom: 0;
-		}
+		margin-bottom: 0;
 	}
 
-	.columns-2, .columns-3 {
-
-		> div > div > div {
-			height: 100%;
-			
-			> div {
+	.portlet-nested-portlets {
+	
+		> .portlet {
+			margin-bottom: 15px;
+			border: 0;
+	
+			> div > div > .portlet-body {
+				padding: 0;
+			}
+	
+			.portlet {
+				margin-bottom: 0;
+			}
+		}
+	
+		.columns-2, .columns-3 {
+	
+			> div > div > div {
 				height: 100%;
-
-				> .portlet {
+				
+				> div {
 					height: 100%;
+	
+					> .portlet {
+						height: 100%;
+					}
 				}
 			}
 		}
