@@ -23,7 +23,9 @@
 
 <body class="${css_class} home-theme">
 
-<@liferay.control_menu />
+<#if permissionChecker.isOmniadmin()>
+	<@liferay.control_menu />
+</#if>
 
 <@liferay_ui["quick-access"] contentId="#main-content" />
 
