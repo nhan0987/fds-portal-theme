@@ -5,7 +5,7 @@
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 
 <head>
-	<title>Cổng TTĐT Thanh tra Bộ Công an</title>
+	<title>Cổng TTĐT Ba Đình</title>
 	
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
 
@@ -46,11 +46,13 @@
 		<div id="content">
 		
 			<div class="notify-wrapper">
-				<div class="notify-title">Thông báo</div>
+				<div id="notify-title">
+					<span id="current_datetime"></span> | <span id="current_time"></span>
+				</div>
 				<div class="marquee">
 					<marquee scrolldelay="200"><span>${marqueeText}</span></marquee>
 				</div>
-				<span id="current_datetime"><span id="current_datetime"> - <span id="current_time"></span>
+				
 			</div>
 			
 			<#if selectable>

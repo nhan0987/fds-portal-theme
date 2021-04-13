@@ -1,8 +1,8 @@
 //Global
 #content {
-	border-left: 1px solid $border-color;
-	border-right: 1px solid $border-color;
-	padding: 20px 10px 0;
+	//border-left: 1px solid $border-color;
+	//border-right: 1px solid $border-color;
+	padding: 20px 0 0;
 	margin-top: -20px;
 }
 
@@ -10,29 +10,46 @@
 //Notify
 .notify-wrapper {
     display: flex;
-    background-color: #dfe4d7;
+   //background-color: #dfe4d7;
     margin-bottom: 15px;
-    
+    border: 1px solid #1a7cf2;
+    border-radius: 24px;
     .notify-title {
 	    white-space: nowrap;
 	    color: white;
-	    background-color: $secondary-color;
+	    //background-color: $secondary-color;
 	    padding: 10px;
 	}
 	
 	.marquee {
-	    color: #004b18;
-	    border-right: 1px solid $secondary-color;
+	    //color: #004b18;
+	    //border-right: 1px solid $secondary-color;
 	    padding: 10px;
-		font-weight: bold;
+		//font-weight: bold;
 		width: 100%;
 		display: flex;
 		align-items: center;
+		padding-left: 47px;
+	}
+	
+	#notify-title {
+	   border-left: 1px solid white;
+	    color: $main-color;
+	    padding: 10px 15px;
+	    white-space: nowrap;
+	    min-width: 190px;
 	}
 	
 	#current_datetime {
 	    border-left: 1px solid white;
-	    color: #004b18;
+	    color: $main-color;
+	    padding: 10px 15px;
+	    white-space: nowrap;
+	    min-width: 190px;
+	}
+	#current_time {
+	    border-left: 1px solid white;
+	    color: $main-color;
 	    padding: 10px 15px;
 	    white-space: nowrap;
 	    min-width: 190px;
@@ -41,67 +58,171 @@
 
 
 // Portlet
-#content .portlet {
-	border-top: 0;
-	border: 1px solid #dadada;
-
-	.portlet-header {
-		border-top: 1px solid $main-color;
-		margin-bottom: 0;
-		position: relative;
-		z-index: 1;
-
-		.view_more {
-			position: absolute;
-		    top: 50%;
-		    right: 15px;
-		    @include transform(translateY(-50%));
-		    color: $text-color-2;
-
-		    &:hover {
-		    	color: $main-color;
-		    }
-
-		    i {
-		    	margin-left: 5px;
-		    }
+#content {
+	.portlet-barebone {
+		
+		section.portlet{
+			border: 1px solid $main-color;
+	   	 	border-top: 0;
+	   	 	.portlet-header{
+	   	 		border-bottom: 1px solid $main-color;
+				margin-bottom: 0;
+				position: relative;
+				z-index: 1;
+				.view_more {
+					position: absolute;
+				    top: 50%;
+				    right: 15px;
+				    @include transform(translateY(-50%));
+				    color: $text-color-2;
+		
+				    &:hover {
+				    	color: $main-color;
+				    }
+		
+				    i {
+				    	margin-left: 5px;
+				    }
+				}
+		
+				.autofit-col-expand {
+					@include flex_variables(0 0 auto);
+				}
+		
+				h2 {
+					margin: 0;
+					font-size: 14px;
+					color: white;
+					display: inline-block;
+					padding: 10px 12px;
+					background-color: $main-color;
+					text-transform: uppercase;
+					margin-top: -1px;
+					max-width: 100%;
+					font-weight: normal;
+					position: relative;
+					overflow: visible;
+					border-radius: 0 14px 0 0;
+					
+				}
+	   	 		&:after {
+					content: "";
+					display: block;
+				    width: 1px;
+				    background-color:white;
+				    z-index:5;
+				    height: 100%;
+				    position: absolute;
+				    top: 0;
+				    left: 100%;
+				}
+	   	 	}
+	   	 	
 		}
-
-		.autofit-col-expand {
-			@include flex_variables(0 0 auto);
-		}
-
-		h2 {
-			margin: 0;
-			font-size: 14px;
-			color: white;
-			display: inline-block;
-			padding: 10px 12px;
-			background-color: $main-color;
-			text-transform: uppercase;
-			margin-top: -1px;
-			max-width: 100%;
-			font-weight: normal;
-			position: relative;
-			overflow: visible;
-			
-			&:after {
-				content: "";
-				display: block;
-			    width: 0;
-			    height: 0;
-			    border-top: 36px solid $main-color;
-			    border-right: 36px solid transparent;
-			    position: absolute;
-			    top: 0;
-			    left: 100%;
-			}
+	}
+	.portlet-decorate {
+		section.portlet{
+			border: 1px solid $main-color;
+	   	 	.portlet-header{
+			   	
+				margin-bottom: 0;
+				position: relative;
+				z-index: 1;
+				.view_more {
+					position: absolute;
+				    top: 50%;
+				    right: 15px;
+				    @include transform(translateY(-50%));
+				    color: $text-color-2;
+		
+				    &:hover {
+				    	color: $main-color;
+				    }
+		
+				    i {
+				    	margin-left: 5px;
+				    }
+				}
+		
+				.autofit-col-expand {
+					@include flex_variables(0 0 auto);
+				}
+		
+				h2 {
+					margin: 0;
+					font-size: 16px;
+					color: $main-color;
+					display: inline-block;
+					padding: 10px 12px;
+					text-transform: uppercase;
+					margin-top: -1px;
+					max-width: 100%;
+					font-weight: normal;
+					position: relative;
+					overflow: visible;
+					font-weight: bold;
+				
+				}
+	   	 	}
+	   	 	
 		}
 	}
 
 	.portlet-body {
-		padding: 12px;
+		padding: 9px 12px 12px 12px;
 	}
+}
+
+.pages-theme #content {
+	.portlet-barebone {
+		section.portlet{
+			border:0 !important;
+			background-color: #f9f9f9;
+	   	 	.portlet-header{
+	   	 		border-bottom: 2px solid $main-color;
+				margin-bottom: 0;
+				position: relative;
+				z-index: 1;
+				.view_more {
+					position: absolute;
+				    top: 50%;
+				    right: 15px;
+				    @include transform(translateY(-50%));
+				    color: $text-color-2;
+		
+				    &:hover {
+				    	color: $main-color;
+				    }
+		
+				    i {
+				    	margin-left: 5px;
+				    }
+				}
+		
+				.autofit-col-expand {
+					@include flex_variables(0 0 auto);
+				}
+		
+				h2 {
+					margin: 0;
+					font-size: 20px;
+					color: $main-color;
+					display: inline-block;
+					padding: 10px 12px;
+					text-transform: uppercase;
+					margin-top: -1px;
+					max-width: 100%;
+					font-weight: normal;
+					position: relative;
+					overflow: visible;
+					background-color:white !important;
+				}
+	   	 		
+	   	 	}
+	   	 	
+		}
+	}
+	
 }
 
 #content .title-center .portlet {
@@ -341,10 +462,11 @@
 
 	a {
 		display: block;
-		color: #004b18;
-		padding-left: 15px;
+		color: black;
+		//padding-left: 15px;
 		position: relative;
-
+		
+		/*
 		&:before {
 			content: "";
 			position: absolute;
@@ -355,6 +477,7 @@
 			height: 6px;
 			border-radius: 6px;
 		}
+		*/
 
 		// &:after {
 		// 	content: "";
@@ -378,6 +501,13 @@
 	> span {
 		display: block;
 		padding-left: 15px;
+	}
+}
+
+table .legislation-documents {
+
+	thead>tr>th{
+		font-size:13px;
 	}
 }
 
@@ -425,6 +555,47 @@
 	}
 }
 
+//Hiển thị phường ngang 4 tin
+.asset-publisher-list-4-wrapper {
+	padding: 12px 14px 0 0;
+	.news-wrapper {
+		overflow: hidden;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.box-img {
+			width: 200px;
+			float: left;
+			margin-right: 10px;
+
+			.img-wrapper {
+				padding-top: 56.25%;
+			}
+		}
+
+		.news-title {
+
+			a {
+				font-weight: bold;
+				display: block;
+				color: $text-color;
+
+				&:hover, &:focus {
+					color: $main-color;
+				}
+			}
+		}
+
+		.sub-info {
+			color: $gray-color-dark;
+			font-style: italic;
+			margin-bottom: 5px;
+		}
+	}
+}
 .home-theme .asset-publisher-list-wrapper {
 
 	.news-wrapper {
@@ -548,18 +719,37 @@
 // List news - Slide with side list
 .slide-with-side-list {
 	position: relative;
+    margin: 0 0px 0 0px;
 
 	.news-with-side-list-slider {
+		padding-left:11px;
+		.slick-dots {
+			left: 11px;
+			text-align:left !important;
+			bottom: 19px;
+			.slick-active{
+				button:before{
+					content:"\f0c8";
+					transform: rotate(45deg);
+				}
+			}
+			
+			button:before{
+				content:"\f096";
+				transform: rotate(45deg);
+			}
+		}
 
 		.slick-dotted {
 			margin-bottom: 0;
 		}
 
 		.slick-slide {
-
+			position:relative;
+			margin:0 !important;
 			.bg-transparents {
 				position: absolute;
-				bottom: 0;
+				bottom: 5px;
 				left: 0;
 				padding: 10px 15px 30px;
 				display: block;
@@ -579,39 +769,48 @@
 					color: $text-color-2;
 				}
 			}
+			img {
+				height:400px;
+				width: 100%;
+			}
 		}
 	}
 
 	.side-news-list {
-
+		padding:0 0 0 0;
 		ul {
-			@include d_flex(flex);
+			border: 1px solid $main-color;
+			//@include d_flex(flex);
 			@include flex_justify(space-around);
 			@include flex_direction(column);
-		    height: 100%;
-		    
+		    //height: 100%;
+		    height: 400px;
 		    li {
-		    	
+		    	padding:  17px 3px 18px 3px;
 		    	&:not(:last-child) {
-		    		margin-bottom: 15px;
+		    		border-bottom: 1px solid $border-color;
 		    	}
+		    	
+		    	a {
+					display: block;
+					color: $text-color;
+		
+					&:hover {
+						color: $main-color;
+		    			font-weight: bold;
+					}
+		
+					label {
+						font-weight: normal;
+						margin: 0;
+						cursor: pointer;
+					}
+				}
+		    	
 		    }
 		}
 
-		a {
-			display: block;
-			color: $text-color;
-
-			&:hover {
-				color: $main-text-color;
-			}
-
-			label {
-				font-weight: normal;
-				margin: 0;
-				cursor: pointer;
-			}
-		}
+		
 	}
 
 	.bottom-news-list {
@@ -887,6 +1086,7 @@
 
 
 //Custom Sitemap (Tin tức sự kiện)
+/*
 .nav-news {
 
 	li {
@@ -939,7 +1139,7 @@
 		}
 	}
 }
-
+*/
 
 //VBPQ
 .van-ban-phap-luat {
@@ -1342,7 +1542,7 @@
 
 	.tracking-value {
 		font-weight: bold;
-		color: $secondary-color;
+		color: $main-text-color;
 	}
 }
 
@@ -1432,9 +1632,12 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 				max-width: 100%;
 			    flex-basis: 100%;
 			    padding-right: 24px;
+			    padding-top: 6px;
+    			padding-bottom: 6px;
 			}
 		}
-
+		
+		/*
 		&:before {
 			content: "\f0dd";
 			font-family: 'FontAwesome';
@@ -1445,7 +1648,9 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			text-align: center;
 			color: $gray-color-dark;
 		}
-
+		*/
+		
+		/*
 		select {
 			background-color: transparent;
 		    border: 0;
@@ -1458,6 +1663,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		    -webkit-appearance: none;
 		    text-indent: 24px;
 		}
+		*/
 	}
 
 	.icon-detail {
@@ -1601,8 +1807,8 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 }
 
 .btn-primary{
-	background-color: #ce1212!important;
-	border-color: #ce1212!important;
+	background-color: $main-color!important;
+	border-color: $main-color!important;
 }
 
 
@@ -1670,4 +1876,45 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 .van-ban-phap-luat table th, .van-ban-phap-luat table td {
     border: 1px solid $border-color;
     box-shadow: none !important;
+}
+
+.banner-lich-lam-viec {
+	.p-1 {
+		
+		div{
+			border: 1px solid $main-color;
+			height:76px;
+			padding: 10px 0 0 0;
+			background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(26,124,242,0.1) 100%);
+			&p>a:hover{
+				border: 2px solid $main-color;
+				font-weight:bold;
+			}
+			&:hover {
+				border: 2px solid $main-color;
+				font-weight: bold;
+			}
+		}
+		width:100%;
+		height:86px;
+		p.icon{
+			width:26px;
+		}
+	}
+}
+
+.pages-theme .banner-lich-lam-viec {
+	.p-1 {
+		div{
+			height:93px;
+		}
+		height:102px;
+	}
+}
+.banner-bando {
+	border:1px solid $main-color;
+	img {
+		padding:6px 6px 6px 6px;
+	}
+	
 }

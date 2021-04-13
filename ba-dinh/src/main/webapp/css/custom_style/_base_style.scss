@@ -112,7 +112,7 @@ img {
 	padding: 20px 15px 10px;
     background: url('../images/bg-footer.jpg') left bottom no-repeat;
     background-size: cover;
-    color: $secondary-color-dark;
+    color: white;
     
     .site-info {
 	    display: flex;
@@ -206,7 +206,7 @@ img {
 
 /*---------- Navbar ----------*/
 #mainNav {
-	@include background-gradient(#5b0303, #df0023);
+	background-color:#1a7cf2;
     margin-bottom: 20px;
     
     li {
@@ -226,7 +226,7 @@ img {
 		    display: none;
 		    position: absolute;
 		    top: 100%;
-		    @include background-gradient(#5b0303, #df0023);
+		    background-color:#1a7cf2;
 		    z-index: 2;
 		    list-style: none;
 		    padding: 0;
@@ -255,8 +255,10 @@ img {
     	
     	> li:first-child {
     		position: relative;
-			background-color: $secondary-color;
+			//background-color: $secondary-color;
 			margin-left: 10px;
+			
+			/*
 			
 			&:before {
 				content: "";
@@ -269,7 +271,7 @@ img {
 			    left: -5px;
 			}
 			
-			&:after {
+			&:before {
 				content: "";
 			    width: 0;
 			    height: 0;
@@ -282,13 +284,14 @@ img {
 			    top: 100%;
 			    left: 0;
 			}
-			
+			*/
 			> a {
-				font-size: 0;
-			    padding: 10px 20px;
+				//font-size: 0;
+			    padding: 10px 20px 10px 34px;
 			    height: 100%;
 			    position: relative;
 			    
+			    /*
 			    &:before {
 			    	content: "";
 				    position: absolute;
@@ -298,7 +301,18 @@ img {
 				    background-color: $secondary-color;
 				    height: 5px;
 			    }
-			    
+			    */
+			    &:before {
+			    	content: "\f015";
+				    font-family: FontAwesome;
+				    font-size: 24px;
+				    font-weight: normal;
+				    position: absolute;
+				    top: 46%;
+				    left: 16px;
+				    transform: translate(-50%,-50%);
+			    }
+			    /*
 			    &:after {
 			    	content: "\f015";
 				    font-family: FontAwesome;
@@ -309,6 +323,7 @@ img {
 				    left: 50%;
 				    transform: translate(-50%,-50%);
 			    }
+			    */
 			}
     	}
     }
@@ -499,6 +514,61 @@ img {
 				}
 			}
 		}
+	}
+}
+
+.basic-list{
+	overflow: hidden;
+	>li{
+		width: 50%;
+    	float: left;
+    	a {
+    		display: block;
+		    position: relative;
+		    padding: 5px 15px;
+		    color: #000;
+		    font-size: 12px;
+    		&:before{
+    			content: "\f111";
+			    position: absolute;
+			    top: 14px;
+			    left: 0;
+			    color: black;
+			    font-family: 'FontAwesome';
+			    font-size: 6px;
+    		}
+    		&:hover{
+    		color: $main-color !important;
+    		font-weight:bold;
+    	}
+    	}
+    	
+	}
+}
+.side-menu-list{
+	overflow: hidden;
+	>li{
+    	a {
+    		display: block;
+		    position: relative;
+		    padding: 5px 15px;
+		    color: #000;
+		    font-size: 12px;
+    		&:before{
+    			content: "\f111";
+			    position: absolute;
+			    top: 14px;
+			    left: 0;
+			    color: black;
+			    font-family: 'FontAwesome';
+			    font-size: 6px;
+    		}
+    		&:hover{
+    		color: $main-color !important;
+    		font-weight:bold;
+    	}
+    	}
+    	
 	}
 }
 
