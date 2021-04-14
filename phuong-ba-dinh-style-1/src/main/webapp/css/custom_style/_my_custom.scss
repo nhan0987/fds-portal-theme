@@ -1,0 +1,28 @@
+@import "main_variables";
+@import "mixin";
+@import "base_style";
+@import "custom_style";
+
+body {
+	
+	&.namdan-theme {
+		
+		
+		background-color: white;
+
+		.notify-wrapper {
+			display: none;
+		}
+		
+		@import "namdan_style";
+		@import "override_style";
+	}
+
+
+
+	@media screen and (max-width: 767px) {
+		#banner, #mainNav, .subNav, #footer {
+			margin: 0 -12px;
+		}
+	}
+}
