@@ -998,7 +998,9 @@ table .legislation-documents {
 		overflow: hidden;
 
 		.hot-news-image {
-			width: 100%;
+			width: 50%;
+		    float: left;
+		    padding-right: 16px;
 
 			a {
 				display: block;
@@ -1917,4 +1919,10 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		padding:6px 6px 6px 6px;
 	}
 	
+}
+.album-one-image {
+	img {
+		height: 256px;
+    	width: 384px;
+	}
 }
