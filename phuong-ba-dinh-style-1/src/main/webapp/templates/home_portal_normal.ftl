@@ -33,13 +33,14 @@
 
 <#assign scope_group = theme_display.getScopeGroup() />
 
-	<div id="mWrapper" class="container">
-		<div id="banner">
-			<div class="hidden-banner">
-				<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
-				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="banner"/>
-			</div>
+	<div id="banner">
+		<div class="hidden-banner">
+			<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+			<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="banner"/>
 		</div>
+	</div>
+	<div id="mWrapper" class="container">
+		
 		
 		<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 		

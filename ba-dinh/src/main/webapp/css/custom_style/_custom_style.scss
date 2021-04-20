@@ -2,7 +2,7 @@
 #content {
 	//border-left: 1px solid $border-color;
 	//border-right: 1px solid $border-color;
-	padding: 20px 0 0;
+	padding: 11px 0 0;
 	margin-top: -20px;
 }
 
@@ -11,7 +11,7 @@
 .notify-wrapper {
     display: flex;
    //background-color: #dfe4d7;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     border: 1px solid #1a7cf2;
     border-radius: 24px;
     .notify-title {
@@ -33,7 +33,7 @@
 	}
 	
 	#notify-title {
-	   border-left: 1px solid white;
+	   //border-left: 1px solid white;
 	    color: $main-color;
 	    padding: 10px 15px;
 	    white-space: nowrap;
@@ -61,6 +61,9 @@
 #content {
 	.portlet-barebone {
 		
+		.portlet-body {
+			padding: 17px 24px 17px 24px;
+		}
 		section.portlet{
 			border: 1px solid $main-color;
 	   	 	border-top: 0;
@@ -94,7 +97,7 @@
 					font-size: 14px;
 					color: white;
 					display: inline-block;
-					padding: 10px 12px;
+					padding: 13px 13px 11px 13px;
 					background-color: $main-color;
 					text-transform: uppercase;
 					margin-top: -1px;
@@ -121,6 +124,10 @@
 		}
 	}
 	.portlet-decorate {
+		
+		.portlet-body {
+			padding: 0px 24px 17px 24px;
+		}
 		section.portlet{
 			border: 1px solid $main-color;
 	   	 	.portlet-header{
@@ -153,7 +160,8 @@
 					font-size: 16px;
 					color: $main-color;
 					display: inline-block;
-					padding: 10px 12px;
+					
+					padding: 13px 13px 11px 13px;
 					text-transform: uppercase;
 					margin-top: -1px;
 					max-width: 100%;
@@ -167,10 +175,12 @@
 	   	 	
 		}
 	}
-
+	
+	/*
 	.portlet-body {
-		padding: 9px 12px 12px 12px;
+		padding: 0px 12px 0px 12px;
 	}
+	*/
 }
 
 .pages-theme #content {
@@ -208,11 +218,11 @@
 					font-size: 20px;
 					color: $main-color;
 					display: inline-block;
-					padding: 10px 12px;
+					padding: 13px 13px 11px 13px;
 					text-transform: uppercase;
 					margin-top: -1px;
 					max-width: 100%;
-					font-weight: normal;
+					font-weight: bold;
 					position: relative;
 					overflow: visible;
 					background-color:white !important;
@@ -451,6 +461,35 @@
 	}
 }
 
+.home-theme .legislation-documents {
+	thead>tr>th{
+		
+		color:black;
+		padding: 0px 0px 8px 0px;
+		border-bottom: 1px solid $main-color-super-light;
+		&:first-child{
+    		width: 23%;
+		}
+		&:nth-child(2){
+    		width: 23%;
+		}
+		
+	}
+	tbody>tr{
+		
+		&:last-child {
+			
+			td {
+				border-bottom:0;
+				padding-bottom: 0px;
+			}
+		}
+		td {
+			padding: 12px  1px  10px  0px;
+			border-color:$main-color-super-light;
+		}
+	}
+}
 .legislation-documents {
 
 	li {
@@ -530,7 +569,10 @@ table .legislation-documents {
 			margin-right: 10px;
 
 			.img-wrapper {
-				padding-top: 56.25%;
+				//padding-top: 56.25%;
+				.background-image{
+					height: 138px;
+				}
 			}
 		}
 
@@ -579,7 +621,7 @@ table .legislation-documents {
 		.news-title {
 
 			a {
-				font-weight: bold;
+				font-weight: normal;
 				display: block;
 				color: $text-color;
 
@@ -718,11 +760,14 @@ table .legislation-documents {
 
 // List news - Slide with side list
 .slide-with-side-list {
+
 	position: relative;
     margin: 0 0px 0 0px;
-
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 	.news-with-side-list-slider {
 		padding-left:11px;
+		height: 360px;
 		.slick-dots {
 			left: 11px;
 			text-align:left !important;
@@ -747,6 +792,9 @@ table .legislation-documents {
 		.slick-slide {
 			position:relative;
 			margin:0 !important;
+			.background-image {
+				height: 360px;
+			}
 			.bg-transparents {
 				position: absolute;
 				bottom: 5px;
@@ -778,15 +826,23 @@ table .legislation-documents {
 
 	.side-news-list {
 		padding:0 0 0 0;
+		height: 360px;
+    	border: 1px solid $main-color;
+    	padding-left: 0 !important;
+   	 	padding-right: 0 !important;
 		ul {
-			border: 1px solid $main-color;
+			//border: 1px solid $main-color;
 			//@include d_flex(flex);
 			@include flex_justify(space-around);
 			@include flex_direction(column);
 		    //height: 100%;
-		    height: 400px;
+		    
 		    li {
-		    	padding:  17px 3px 18px 3px;
+		    	padding: 10px 16px 1rem 16px;
+		    	
+		    	div>div{
+		    		padding:0 !important;
+		    	}
 		    	&:not(:last-child) {
 		    		border-bottom: 1px solid $border-color;
 		    	}
@@ -804,6 +860,10 @@ table .legislation-documents {
 						font-weight: normal;
 						margin: 0;
 						cursor: pointer;
+						&:hover {
+							color: $main-color;
+		    				font-weight: bold;
+						}
 					}
 				}
 		    	
@@ -871,6 +931,10 @@ table .legislation-documents {
 		}
 	}
 }
+
+.pages-theme .slide-with-side-list .side-news-list>ul>li {
+	padding: 10px 16px 1.25rem 16px;
+} 
 
 
 // List News - First- with image
@@ -1039,7 +1103,7 @@ table .legislation-documents {
 		}
 
 		.hot-news-title a {
-			font-weight: bold;
+			font-weight: normal;
 			margin-bottom: 5px;
 			display: block;
 			color: $text-color;
@@ -1481,12 +1545,12 @@ table .legislation-documents {
 			pointer-events: none;
 			position: absolute;
 			left: 0;
-			bottom: 0;
+			bottom: 5px;
 			width: 100%;
 			background-color: rgba(0,0,0,0.5);
 			color: white;
 			margin: 0;
-			padding: 5px 10px;
+			padding: 7px 10px;
 
 			&:hover {
 				text-decoration: underline;
@@ -1619,14 +1683,24 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	}
 }
 
+.no-view_more .view-more{
+	display:none;
+}
+.home-select-box {
+	background-color:white;
+	border-color:$main-color;
+	border-radius:0;
+}
 
 // Video
 .video-player-default-style {
-
+	
+	
 	.video-playlist {
-		position: relative;
+		//position: relative;
 		padding: 0 10px 15px;
-
+		
+		/*
 		> div > div {
 			position: inherit;
 
@@ -1639,7 +1713,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			}
 		}
 		
-		/*
+		
 		&:before {
 			content: "\f0dd";
 			font-family: 'FontAwesome';
@@ -1650,9 +1724,8 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			text-align: center;
 			color: $gray-color-dark;
 		}
-		*/
 		
-		/*
+		
 		select {
 			background-color: transparent;
 		    border: 0;
@@ -1665,13 +1738,11 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		    -webkit-appearance: none;
 		    text-indent: 24px;
 		}
+		
 		*/
-	}
 
-	.icon-detail {
-		position: absolute;
-		bottom: 0;
-		right: 0;
+	}
+	.view-more {
 		font-family: 'Roboto', sans-serif;
 		color: $text-color-2;
 		
@@ -1885,44 +1956,67 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		
 		div{
 			border: 1px solid $main-color;
-			height:76px;
-			padding: 10px 0 0 0;
+			height:90px;
+			padding:0.5rem 1rem 0.5rem 1rem;
 			background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(26,124,242,0.1) 100%);
+			
+			/*
 			&p>a:hover{
 				border: 2px solid $main-color;
 				font-weight:bold;
+				font-size:13px;
 			}
+			*/
 			&:hover {
 				border: 2px solid $main-color;
 				font-weight: bold;
+				font-size:13px;
 			}
 		}
 		width:100%;
-		height:86px;
+		height:100px;
 		p.icon{
 			width:26px;
 		}
 	}
+}
+.pages-theme .banner-cong-bao .p-1>p{
+	margin-bottom:1px;
 }
 
 .pages-theme .banner-lich-lam-viec {
 	.p-1 {
 		div{
 			height:93px;
+			padding:0.5rem 1rem 0.5rem 1rem;
 		}
 		height:102px;
 	}
 }
 .banner-bando {
 	border:1px solid $main-color;
-	img {
+	height:360px;
+	font-size:18px;
+	color:$main-color;
+	&p>picture>img {
 		padding:6px 6px 6px 6px;
 	}
 	
+	
+}
+.background-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .album-one-image {
+	
+	.background-image {
+		height: 212px;
+	}
 	img {
-		height: 256px;
+		//height: 256px;
     	width: 384px;
 	}
 }
+

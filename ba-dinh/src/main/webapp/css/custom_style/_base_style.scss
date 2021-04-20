@@ -113,7 +113,7 @@ img {
     background: url('../images/bg-footer.jpg') left bottom no-repeat;
     background-size: cover;
     color: white;
-    
+    text-shadow: 2px 2px 4px #000000;
     .site-info {
 	    display: flex;
 	}
@@ -421,7 +421,7 @@ img {
 // Image ratio 4:3
 .img-wrapper {
 	position: relative;
-	padding-top: 75%;
+	//padding-top: 75%;
 	overflow: hidden;
 	display: block;
 
@@ -527,7 +527,7 @@ img {
 		    position: relative;
 		    padding: 5px 15px;
 		    color: #000;
-		    font-size: 12px;
+		    font-size: 14px;
     		&:before{
     			content: "\f111";
 			    position: absolute;
