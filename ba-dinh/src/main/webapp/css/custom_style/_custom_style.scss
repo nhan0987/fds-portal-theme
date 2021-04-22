@@ -21,6 +21,11 @@
 	    padding: 10px;
 	}
 	
+	@media (max-width:768px){
+		.marquee {
+			display:none !important;
+		}
+	}
 	.marquee {
 	    //color: #004b18;
 	    //border-right: 1px solid $secondary-color;
@@ -826,7 +831,7 @@ table .legislation-documents {
 
 	.side-news-list {
 		padding:0 0 0 0;
-		height: 360px;
+	
     	border: 1px solid $main-color;
     	padding-left: 0 !important;
    	 	padding-right: 0 !important;
@@ -836,7 +841,9 @@ table .legislation-documents {
 			@include flex_justify(space-around);
 			@include flex_direction(column);
 		    //height: 100%;
-		    
+		    @media (min-width:768px){
+		    	height:360px
+		    }
 		    li {
 		    	padding: 10px 16px 1rem 16px;
 		    	
@@ -1123,14 +1130,14 @@ table .legislation-documents {
 			display: block;
 
 			&:before {
-				content: "";
+				content: "\f0c8";
+    			transform: rotate(45deg);
 				position: absolute;
-				top: 14px;
+				top: 9px;
 				left: 0;
-				background-color: $main-color;
-				width: 6px;
-				height: 6px;
-				border-radius: 6px;
+				color: $main-color;
+				font-size:8px;
+				font-family: 'FontAwesome';
 			}
 
 			// &:after {
@@ -1980,8 +1987,16 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		}
 	}
 }
-.pages-theme .banner-cong-bao .p-1>p{
-	margin-bottom:1px;
+.pages-theme .banner-cong-bao{
+ 
+	justify-content: center; 
+	.p-1{
+		width: 100%;
+		>p{
+			margin-bottom:1px;
+			
+		}
+	}
 }
 
 .pages-theme .banner-lich-lam-viec {

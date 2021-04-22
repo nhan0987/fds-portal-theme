@@ -2,6 +2,7 @@
 @import "mixin";
 @import "base_style";
 @import "custom_style";
+@import "override_style";
 
 body {
 	
@@ -18,11 +19,4 @@ body {
 		@import "override_style";
 	}
 
-
-
-	@media screen and (max-width: 767px) {
-		#banner, #mainNav, .subNav, #footer {
-			margin: 0 -12px;
-		}
-	}
 }

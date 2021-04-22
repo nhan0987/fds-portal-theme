@@ -2,7 +2,7 @@
 #content {
 	//border-left: 1px solid $border-color;
 	//border-right: 1px solid $border-color;
-	padding: 20px 0 0;
+	padding: 11px 0 0;
 	margin-top: -20px;
 }
 
@@ -21,6 +21,11 @@
 	    padding: 10px;
 	}
 	
+	@media (max-width:768px){
+		.marquee {
+			display:none !important;
+		}
+	}
 	.marquee {
 	    //color: #004b18;
 	    //border-right: 1px solid $secondary-color;
@@ -35,7 +40,7 @@
 	#notify-title {
 	   //border-left: 1px solid white;
 	    color: $main-color;
-	    padding: 4px 0px;
+	    padding: 10px 15px;
 	    white-space: nowrap;
 	    min-width: 190px;
 	}
@@ -61,6 +66,9 @@
 #content {
 	.portlet-barebone {
 		
+		.portlet-body {
+			padding: 17px 24px 17px 24px;
+		}
 		section.portlet{
 			border: 1px solid $main-color;
 	   	 	border-top: 0;
@@ -94,7 +102,7 @@
 					font-size: 14px;
 					color: white;
 					display: inline-block;
-					padding: 10px 12px;
+					padding: 13px 13px 11px 13px;
 					background-color: $main-color;
 					text-transform: uppercase;
 					margin-top: -1px;
@@ -121,6 +129,11 @@
 		}
 	}
 	.portlet-decorate {
+	
+		.portlet-body {
+			padding: 0px 24px 17px 24px;
+		}
+		
 		section.portlet{
 			border: 1px solid $main-color;
 	   	 	.portlet-header{
@@ -153,7 +166,7 @@
 					font-size: 16px;
 					color: $main-color;
 					display: inline-block;
-					padding: 10px 12px;
+					padding: 13px 13px 11px 13px;
 					text-transform: uppercase;
 					margin-top: -1px;
 					max-width: 100%;
@@ -167,10 +180,12 @@
 	   	 	
 		}
 	}
-
+	
+	/*
 	.portlet-body {
 		padding: 9px 12px 12px 12px;
 	}
+	*/
 }
 
 .pages-theme #content {
@@ -208,11 +223,11 @@
 					font-size: 20px;
 					color: $main-color;
 					display: inline-block;
-					padding: 10px 12px;
+					padding: 13px 13px 11px 13px;
 					text-transform: uppercase;
 					margin-top: -1px;
 					max-width: 100%;
-					font-weight: normal;
+					font-weight: bold;
 					position: relative;
 					overflow: visible;
 					background-color:white !important;
@@ -530,7 +545,10 @@ table .legislation-documents {
 			margin-right: 10px;
 
 			.img-wrapper {
-				padding-top: 56.25%;
+				//padding-top: 56.25%;
+				.background-image{
+					height: 138px;
+				}
 			}
 		}
 
@@ -614,6 +632,12 @@ table .legislation-documents {
 
 			a {
 				font-weight: normal;
+				display: block;
+				color: $text-color;
+
+				&:hover, &:focus {
+					color: $main-color;
+				}
 			}
 		}
 	}
@@ -720,7 +744,8 @@ table .legislation-documents {
 .slide-with-side-list {
 	position: relative;
     margin: 0 0px 0 0px;
-
+	margin-right: 0 !important;
+    margin-left: 0 !important;
 	.news-with-side-list-slider {
 		padding-left:11px;
 		.slick-dots {
@@ -747,6 +772,9 @@ table .legislation-documents {
 		.slick-slide {
 			position:relative;
 			margin:0 !important;
+			.background-image {
+				height: 360px;
+			}
 			.bg-transparents {
 				position: absolute;
 				bottom: 5px;
@@ -822,6 +850,7 @@ table .legislation-documents {
 				color: white;
 				font-weight: bold;
 				width: 100%;
+				cursor:pointer;
 				.btn-primary {
 					padding: 4px;
 				    font-size: 10px;
@@ -833,6 +862,7 @@ table .legislation-documents {
 					font-weight: bold;
 					display: block;
 					margin-bottom: 0;
+					cursor:pointer;
 				}
 
 				span {
@@ -846,19 +876,29 @@ table .legislation-documents {
 			}
 		}
 	}
+	
 
 	.side-news-list {
 		padding:0 0 0 0;
+		//height: 360px;
+    	//border: 1px solid $main-color;
+    	padding-left: 0 !important;
+   	 	padding-right: 0 !important;
 		ul {
 			border: 1px solid $main-color;
 			//@include d_flex(flex);
 			@include flex_justify(space-around);
 			@include flex_direction(column);
 		    //height: 100%;
-		    height: 400px;
+		    
+		    @media (min-width:768px){
+		    	height: 361px;
+		    }
 		    li {
-		    	padding:  17px 3px 18px 3px;
-		    	padding-left: 10px;
+		    	padding: 10px 16px 1rem 16px;
+		    	div>div{
+		    		padding:0 !important;
+		    	}
 		    	&:not(:last-child) {
 		    		border-bottom: 1px solid $border-color;
 		    		
@@ -877,6 +917,10 @@ table .legislation-documents {
 						font-weight: normal;
 						margin: 0;
 						cursor: pointer;
+						&:hover {
+							color: $main-color;
+		    				font-weight: bold;
+						}
 					}
 				}
 		    	
@@ -885,7 +929,7 @@ table .legislation-documents {
 	}
 	
 	.side-news-list-2 {
-		padding:0 0 0 0;
+		padding-right:0px !important;
 		ul {
 			//border: 1px solid $main-color;
 			//@include d_flex(flex);
@@ -896,7 +940,16 @@ table .legislation-documents {
 		    li {
 		    	//padding:  17px 3px 18px 3px;
 		    	height: 264px;
-		    	padding-left: 12px;
+		    	
+		    	@media (min-width:768px) {
+		    		padding-left: 12px;
+		    	}
+		    	@media (max-width:768px) {
+		    		padding-left: 4px;
+		    		padding-right: 4px;
+   					padding-top: 5px;
+		    	}
+		    	
 		    	&:not(:last-child) {
 		    		//border-bottom: 1px solid $border-color;
 		    		margin-bottom: 8px;
@@ -952,6 +1005,7 @@ table .legislation-documents {
 				font-weight: bold;
 				display: block;
 				margin-bottom: 0;
+				cursor:pointer;
 			}
 
 			span {
@@ -1019,6 +1073,10 @@ table .legislation-documents {
 		}
 	}
 }
+
+.pages-theme .slide-with-side-list .side-news-list>ul>li {
+	padding: 10px 16px 1.25rem 16px;
+} 
 
 
 // List News - First- with image
@@ -1187,7 +1245,7 @@ table .legislation-documents {
 		}
 
 		.hot-news-title a {
-			font-weight: bold;
+			font-weight: normal;
 			margin-bottom: 5px;
 			display: block;
 			color: $text-color;
@@ -1207,14 +1265,15 @@ table .legislation-documents {
 			display: block;
 
 			&:before {
-				content: "";
+				content: "\f0c8";
+    			transform: rotate(45deg);
 				position: absolute;
-				top: 14px;
+				top: 9px;
 				left: 0;
-				background-color: $main-color;
-				width: 6px;
-				height: 6px;
-				border-radius: 6px;
+				color: $main-color;
+				font-size:8px;
+				font-family: 'FontAwesome';
+				
 			}
 
 			// &:after {
@@ -1629,12 +1688,12 @@ table .legislation-documents {
 			pointer-events: none;
 			position: absolute;
 			left: 0;
-			bottom: 0;
+			bottom: 5px;
 			width: 100%;
 			background-color: rgba(0,0,0,0.5);
 			color: white;
 			margin: 0;
-			padding: 5px 10px;
+			padding: 7px 10px;
 
 			&:hover {
 				text-decoration: underline;
@@ -1767,6 +1826,15 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	}
 }
 
+.no-view_more .view-more{
+	display:none;
+}
+.home-select-box {
+	background-color:white;
+	border-color:$main-color;
+	border-radius:0;
+}
+
 
 // Video
 .video-player-default-style {
@@ -1774,7 +1842,8 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	.video-playlist {
 		position: relative;
 		padding: 0 10px 15px;
-
+		
+		/*
 		> div > div {
 			position: inherit;
 
@@ -1787,7 +1856,6 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			}
 		}
 		
-		/*
 		&:before {
 			content: "\f0dd";
 			font-family: 'FontAwesome';
@@ -1798,9 +1866,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			text-align: center;
 			color: $gray-color-dark;
 		}
-		*/
-		
-		/*
+
 		select {
 			background-color: transparent;
 		    border: 0;
@@ -1816,10 +1882,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		*/
 	}
 
-	.icon-detail {
-		position: absolute;
-		bottom: 0;
-		right: 0;
+	.view-more {
 		font-family: 'Roboto', sans-serif;
 		color: $text-color-2;
 		
@@ -2033,17 +2096,22 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		
 		div{
 			border: 1px solid $main-color;
-			height:92px;
-			padding: 10px 0 0 0;
+			height:90px;
+			padding:0.5rem 1rem 0.5rem 1rem;
 			background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(249,217,217,1) 100%);
+			
+			/*
 			&p>a:hover{
 				border: 2px solid $main-color;
 				font-weight:bold;
 			}
+			*/
 			&:hover {
 				border: 2px solid $main-color;
 				font-weight: bold;
+				font-size:13px;
 			}
+			
 		}
 		width:100%;
 		height:100px;
@@ -2057,6 +2125,20 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	}
 }
 
+.banner-cong-bao {
+
+	justify-content: center; 
+	.p-1 {
+		padding : 0px 0px 2px 0px !important;
+		width: 100%;
+	}
+}
+
+/*
+.pages-theme .banner-cong-bao .p-1>p{
+	margin-bottom:1px;
+}
+*/
 .pages-theme .banner-lich-lam-viec {
 	.p-1 {
 		div{
@@ -2072,9 +2154,18 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	}
 	
 }
+.background-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
 .album-one-image {
+	
+	.background-image {
+		height: 178px;
+	}
 	img {
-		height: 256px;
+		
     	width: 384px;
 	}
 }

@@ -208,7 +208,10 @@ img {
 #mainNav {
 	background-color:#1a7cf2;
     margin-bottom: 20px;
-    
+    .navbar-toggler {
+    	margin: 4px 28px;
+    	color: white !important;
+    }
     li {
     
     	a {

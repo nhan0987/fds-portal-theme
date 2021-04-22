@@ -4,12 +4,33 @@
     margin-left: -10px;
 }
 
-body *[class*="col-"]:not(.autofit-col) {
-    padding-left: 10px;
-    padding-right: 10px;
+@media (min-width:768px) {
+	body *[class*="col-"]:not(.autofit-col) {
+	    padding-left: 10px;
+	    padding-right: 10px;
+	}
+}
+@media (max-width:768px) {
+	body *[class*="col-"]:not(.autofit-col) {
+	    padding-left: 10px;
+	    padding-right: 10px;
+	}
+	
+	body {
+		//padding-right: 2px;
+    	//padding-left: 35px;
+	}
+	
+	#content {
+		padding: 11px 14px 0px 14px;
+	}
 }
 
 .container {
 	padding-right:0 !important;
 	padding-left:0 !important;
+}
+
+strong{
+	font-weight:bold !important;
 }
