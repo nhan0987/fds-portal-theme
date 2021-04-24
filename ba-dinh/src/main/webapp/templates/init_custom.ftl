@@ -9,3 +9,10 @@
 
 <#assign theme_type = theme_display.getThemeSetting('theme_type')/>
 <#assign marqueeText = theme_display.getThemeSetting('marquee-text')/>
+<#assign theme_color_id = theme_display.getColorSchemeId()/>
+
+<#assign allow_display_language_icon= false />
+
+<#if theme_color_id == "quan-ba-dinh">
+	<#assign allow_display_language_icon = true/>
+</#if>
