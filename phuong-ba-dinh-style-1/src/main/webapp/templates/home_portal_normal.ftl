@@ -23,7 +23,7 @@
 
 <body class="${css_class} home-theme">
 
-<#if permissionChecker.isOmniadmin()>
+<#if permissionChecker.isSignedIn()>
 	<@liferay.control_menu />
 </#if>
 
