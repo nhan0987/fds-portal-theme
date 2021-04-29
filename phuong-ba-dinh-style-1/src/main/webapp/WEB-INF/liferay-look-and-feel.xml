@@ -10,7 +10,7 @@
 		<settings>
 	    	<setting type="select" configurable="true" 
 	        	key="theme_type" 
-	    	    options="home,page"                   
+	    	    options="home,page,login"                   
 		        value="page" >
 		    </setting>
 		    <setting configurable="true" key="marquee-text" type="text" value=""></setting>
