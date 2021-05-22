@@ -10,6 +10,7 @@
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+	<meta content="/o/ba-dinh/images/no-images-logo.jpg" name="og:image" />
 	
 	<base href="/">
 
