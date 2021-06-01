@@ -887,7 +887,12 @@ table .legislation-documents {
 		}
 	}
 	
-
+	.left-4 {
+		ul>li{
+			padding: 10px 16px 10px 16px;
+			height:90px;
+		}
+	}
 	.side-news-list {
 		padding:0 0 0 0;
 		//height: 360px;
@@ -902,10 +907,9 @@ table .legislation-documents {
 		    //height: 100%;
 		    
 		    @media (min-width:768px){
-		    	height: 361px;
+		    	height: 360px;
 		    }
 		    li {
-		    	padding: 10px 16px 1rem 16px;
 		    	div>div{
 		    		padding:0 !important;
 		    	}
@@ -927,6 +931,15 @@ table .legislation-documents {
 						font-weight: normal;
 						margin: 0;
 						cursor: pointer;
+						@media (max-width:1366px){
+					    	font-size:13px;
+					    }
+					    @media (max-width:768px){
+					    	font-size:10px;
+					    }
+					    @media (max-width:540px){
+					    	font-size:100%;
+					    }
 						&:hover {
 							color: $main-color;
 		    				font-weight: bold;
@@ -1085,9 +1098,9 @@ table .legislation-documents {
 	}
 }
 
-.pages-theme .slide-with-side-list .side-news-list>ul>li {
-	padding: 10px 16px 1.25rem 16px;
-} 
+//.pages-theme .slide-with-side-list .side-news-list>ul>li {
+//	padding: 10px 16px 1.25rem 16px;
+//} 
 
 
 // List News - First- with image
@@ -2129,8 +2142,16 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		p.icon{
 			width:26px;
 		}
-		.title>a{
-			color:$main-color;
+		p.title{
+			a{
+				color:$main-color;
+			}
+			@media (max-width:540px){
+				font-size:100%;
+			}
+			@media (max-width:1280px){
+				font-size: 11px;
+			}
 		}
 		
 	}
@@ -2282,4 +2303,18 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	    	
 	    }
 	}
+}
+
+.news-label {
+	padding: 4px;
+    font-size: 10px;
+    border-radius: 0;
+    color: white !important;
+    font-weight: normal;
+    background-color: red !important;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    cursor: pointer;
 }
