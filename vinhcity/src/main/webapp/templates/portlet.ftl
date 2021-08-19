@@ -18,7 +18,7 @@
 	
 	<#if portletPreferences?has_content>
 	
-		<#assign  displayUuid = portletPreferences.getValue("rootLayoutUuid","") />
+		<#assign  displayUuid = portletPreferences.getValue("viewMoreLayoutUuid","") />
 	
 		<#if displayUuid == "">
 			<#assign  displayUuid = portletPreferences.getValue("targetLayoutUuid","") />

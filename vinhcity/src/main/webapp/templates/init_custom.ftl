@@ -13,6 +13,6 @@
 
 <#assign allow_display_language_icon= false />
 
-<#if theme_color_id == "quan-ba-dinh">
+<#if theme_color_id == "VinhCity">
 	<#assign allow_display_language_icon = true/>
 </#if>
