@@ -18,7 +18,7 @@
 	
 	<#if portletPreferences?has_content>
 	
-		<#assign  displayUuid = portletPreferences.getValue("rootLayoutUuid","") />
+		<#assign  displayUuid = portletPreferences.getValue("viewMoreLayoutUuid","") />
 	
 		<#if displayUuid == "">
 			<#assign  displayUuid = portletPreferences.getValue("targetLayoutUuid","") />
@@ -85,16 +85,23 @@
 
 					</div>
 					
+					<!--
 		            <a href="${linkedLayoutURL}" class="view_more">
 		            	${languageUtil.get(request, "view-more")}
 		            	<i class="fa fa-angle-right"></i>
 		            </a>
+		            -->
+		            <span class="icon-asset material-icons-outlined icon d-block mx-auto view_more"> 
+		            	<a href="${linkedLayoutURL}">launch</a>
+		            </span>
+	            
 		            
 		            <#else>
 	            	<div class="autofit-col autofit-col-expand">
 						<h2 class="portlet-title-text">${portlet_title}</h2>
 					</div>
-	            
+					
+					
 	            </#if>
 	            
 	            

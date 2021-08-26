@@ -65,7 +65,7 @@ function getCurrentDateTime(){
 	} 
 	
 	var currentDateValue = day_of_week[currentDay] + ", " + currentDate + "/" + month_of_year[currentMonth] + "/" + currentYear;
-	var currentDateTimeValue = day_of_week[currentDay] + ", ngày " + currentDate + "/" + month_of_year[currentMonth] + "/" + currentYear;
+	var currentDateTimeValue = day_of_week[currentDay] + ", ngày " + currentDate + " tháng " + month_of_year[currentMonth] + " năm " + currentYear;
 	var currentTimeValue = currentHour + ":" + currentMinute + ":" + currentSecond;
 	
 	var currentDateWrapper = document.getElementById("current_date");

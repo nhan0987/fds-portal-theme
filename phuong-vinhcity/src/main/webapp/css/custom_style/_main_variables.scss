@@ -1,0 +1,38 @@
+// Main Variable
+$main-color: #0D5A00;
+$second-color: #638F04;
+$background-second-color: #F6FBF0;
+
+$main-color-light: lighten($main-color, 30%);
+$main-color-super-light: lighten($main-color, 30%);
+$secondary-color: #004b18;
+$secondary-color-dark: #004b18;
+$main-text-color: #2a2a2a;
+$gray-color: #EDEDED;
+$gray-color-medium: #ebebeb;
+$gray-color-dark: #a7a7a7;
+$text-color: #000;
+$text-color-2: #939393;
+
+$portlet-border-color:#C4C4C4;
+
+$navigation-menu-color:$main-color;
+$navigation-menu-hover-color:#0D5A00;
+$navigation-menu-text-color:#DEFFB5;
+@mixin navigation-menu-hover-color() {
+    background: linear-gradient(0deg, #0D5A00 0%, #7EB60B 100%);
+}
+
+
+$portlet-header-border-bottom-color:#74AB00;
+$portlet-header-h2-border-bottom-color:#74AB00;
+
+@mixin footer-background-color() {
+    background: linear-gradient(0deg, #0D5A00 0%, #7EB60B 100%);
+}
+
+@mixin btn-button-login-background-color() {
+     background: linear-gradient(90deg, #0D5A00 0%, #7EB60B 100%)
+}
+
+$portlet-view-more-color:#74AB00;
