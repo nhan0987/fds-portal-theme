@@ -100,6 +100,7 @@ jQuery( document ).ready(function( $ ) {
 	$('.tab-responsive .tab-responsive-heading').on('click', function(event){
 		$(this).next().slideToggle();
 	});
+
 	
 	
 	//Toggle Box
