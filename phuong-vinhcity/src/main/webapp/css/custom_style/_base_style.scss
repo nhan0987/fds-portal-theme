@@ -304,15 +304,15 @@ img {
 		    text-decoration: none;
     	}
     	
-    	> i {
-    		display: none;
+    	.fa-caret-down {
+    		color: $navigation-menu-text-color;
     	}
     	
     	.child-menu {
 		    display: none;
 		    position: absolute;
 		    top: 100%;
-		    background-color:#1a7cf2;
+		    background-color:$navigation-menu-color;
 		    z-index: 2;
 		    list-style: none;
 		    padding: 0;
