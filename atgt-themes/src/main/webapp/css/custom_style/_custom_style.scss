@@ -137,6 +137,114 @@
 	}
 }
 
+.portlet-decorate {
+	
+	.portlet-body { 
+   	 	padding: 4px 10px 15px 10px;
+ 	}
+ 	
+	section.portlet{
+	
+		border-top: 0;
+		border: 1px solid $main-color;
+		
+		.portlet-header{
+			margin-bottom: 0;
+			position: relative;
+			z-index: 1;
+	
+			.autofit-col-expand {
+				@include flex_variables(0 0 auto);
+			}
+			
+	
+			h2 {
+				margin: 0;
+				font-size: 14px;
+				color: white;
+				display: inline-block;
+				padding: 9px 9px 7px 9px;
+				//text-transform: uppercase;
+				margin-top: -1px;
+				max-width: 100%;
+				font-weight: bold;
+				position: relative;
+				overflow: visible;
+				background-color: #C50A0A;
+				white-space: nowrap !important;
+				margin-left: -5px !important;
+				top: 5px !important;
+				
+				&:before {
+					content: "";
+					border-top: 0px solid transparent;
+				    border-right: 5px solid black;
+				    border-bottom: 8px solid transparent;
+				    position: absolute;
+					top: 100%;;
+					width: 0;
+					height: 0;
+					left:0;
+				}
+					
+				&:after {
+					content: "";
+					border-top: 16px solid transparent;
+				    border-left: 24px solid #C50A0A;
+				    border-bottom: 16px solid transparent;
+				    position: absolute;
+					top: 0;
+					width: 0;
+					height: 0;
+					right: -24px;
+					
+				}
+
+			}
+   	 	}
+   	 	
+   	 	
+	}
+}
+
+.portlet-decorate-red .portlet-header h2{
+
+	background-color: #C50A0A !important;
+		
+	&:after {
+
+	    border-left: 24px solid #C50A0A !important;
+		
+	}
+	
+}
+
+.portlet-decorate-blue .portlet-header h2{
+
+	background-color: #1567B3 !important;
+		
+	&:after {
+
+	    border-left: 24px solid #1567B3 !important;
+		
+	}
+	
+}
+
+.portlet-decorate-green .portlet-header h2{
+
+	background-color: #0095B6 !important;
+		
+	&:after {
+
+	    border-left: 24px solid #0095B6 !important;
+		
+	}
+	
+}
+
+
+
 .portlet-decorate-2-extend{
 	padding: 8px 8px 8px 8px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -146,9 +254,11 @@
 .portlet-decorate-2 {
 
 	.portlet-body { 
+	
 		height: 338px;
    	 	padding: 15px 6px 15px 6px;
    	 	border: 1px solid transparent;
+   	 	
    	 	.hot-news{
    	 		.hot-news-image {
 				width: 164px;
@@ -164,6 +274,9 @@
    	 			float: left;
 			    padding-left: 10px;
 			    width: 256px;
+			    &:first-letter{
+					text-transform: uppercase;
+				}
 	   	 		.hot-news-summary {
 				    color:#939393;
 				    margin-bottom: 3px;	
@@ -177,7 +290,12 @@
    	 	
    	 	.background-image{
    	 		height:123px;
-   	 		border-radius: 8px;
+   	 	}
+   	 	
+   	 	.other-news{
+   	 		&:first-letter{
+				text-transform: uppercase;
+			}
    	 	}
  	}
 	
@@ -549,6 +667,8 @@ table .legislation-documents {
 // Asset Publisher
 .asset-publisher-list-wrapper {
 
+	padding-top: 24px;
+
 	.news-wrapper {
 		overflow: hidden;
 		padding-bottom: 10px;
@@ -559,112 +679,63 @@ table .legislation-documents {
 		}
 
 		.box-img {
-			width: 200px;
-			float: left;
-			margin-right: 10px;
-
-			.img-wrapper {
-				//padding-top: 56.25%;
-				.background-image{
-					height: 138px;
-				}
-			}
-		}
-
-		.news-title {
-
-			a {
-				font-weight: bold;
-				display: block;
-				color: $text-color;
-
-				&:hover, &:focus {
-					color: $main-color;
-				}
-			}
-		}
-
-		.sub-info {
-			color: $gray-color-dark;
-			font-style: italic;
-			margin-bottom: 5px;
-		}
-	}
-}
-
-//Hiển thị phường ngang 4 tin
-.asset-publisher-list-4-wrapper {
-	padding: 12px 14px 0 0;
-	.news-wrapper {
-		overflow: hidden;
-		padding-bottom: 10px;
-		margin-bottom: 10px;
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-		.box-img {
-			width: 200px;
-			float: left;
-			margin-right: 10px;
-
-			.img-wrapper {
-				padding-top: 56.25%;
-			}
-		}
-
-		.news-title {
-
-			a {
-				font-weight: normal;
-				display: block;
-				color: $text-color;
-
-				&:hover, &:focus {
-					color: $main-color;
-				}
-			}
-		}
-
-		.sub-info {
-			color: $gray-color-dark;
-			font-style: italic;
-			margin-bottom: 5px;
-		}
-	}
-}
-.pages-theme .asset-publisher-list-wrapper {
-
-	.news-wrapper {
-
-		.box-img {
-			width: 20%;
+			width: 40%;
 			float: left;
 			margin-right: 0px;
 
 			.img-wrapper {
-				.background-image {
-					height:120px;
-					border-radius: 18px;
+				
+				.background-image{
+					height: 120px;
 				}
 			}
 		}
 		
 		.box-info{
-			width:80%;
-			display:inline-block;
-			padding-left:12px;
+		
+			width: 60%;
+		    display: inline-block;
+		    padding-left: 12px;
+		    
 			.news-title {
-	
-				a {
-					font-weight: normal;
+				padding-bottom: 8px;
+				line-height: 16px;
+				&:first-letter{
+					text-transform: uppercase;
 				}
+				a {
+					font-weight: bold;
+					display: block;
+					color: $text-color;
+	
+					&:hover, &:focus {
+						color: $main-color;
+					}
+				}
+			}
+			
+			.sub-info {
+				color: $gray-color-dark;
+				font-style: italic;
+				margin-bottom: 5px;
+			}
+			
+			.news-summary{
+				&:first-letter{
+					text-transform: uppercase;
+				}
+				font-size: 12px;
+    			font-style: italic;
+    			line-height: 14px;
+    			padding-bottom: 6px;
 			}
 		}
 
 		
 	}
 }
+
+
 
 .asset-full-content {
 	
@@ -2617,6 +2688,58 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 				a{
 					color:$text-color;
 				}
+			}
+		}
+	}
+}
+
+.asset-publisher-list-wrapper-with-big-background {
+
+	.news-wrapper-with-big-background{
+
+		padding-bottom: 24px;
+	    border-bottom: 1px solid #C4C4C4;
+	    padding-top: 24px;
+	    
+	    &:last-child {
+			 border-bottom: none;
+		}
+	
+		.img-wrapper{
+		
+			.background-image{
+				height: 408px;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			    background-position: center;
+			}
+			.bg-transparents{
+			
+				background: linear-gradient(180deg, rgba(16, 16, 16, 0) 0%, rgba(16, 16, 16, 0.83) 100%);
+			    position: absolute;
+			    left: 0;
+			    bottom: 0px;
+			    padding: 10px 15px 10px;
+			    width: 100%;
+			    
+			    .news-title{
+			    	&:first-letter{
+						text-transform: uppercase;
+					}
+			    	color: white;
+				    font-size: 16px;
+				    text-transform: uppercase;
+			    }
+			    
+			    .news-summary {
+				    &:first-letter{
+						text-transform: uppercase;
+					}
+			    	color: white;
+				    font-size: 13px;
+				    font-style: italic;
+			    }
+				    
 			}
 		}
 	}
