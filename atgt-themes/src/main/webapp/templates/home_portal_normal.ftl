@@ -50,24 +50,10 @@
 		<div id="banner">
 			<div class="hidden-banner">
 			
-				<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+				<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "borderless") />
 				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="banner"/>
 				
 			</div>
-			
-			<#if allow_display_language_icon == true >
-			
-				<div class="language-banner_datetime">
-					<span id="current_datetime"></span>
-				</div>
-				
-				<a class="language-banner_vi" href="/trang-chu">
-					<img src="${images_folder}/custom-images/VN.png"/>
-				</a>
-				<a class="language-banner_en" href="/trang-chu">
-					<img src="${images_folder}/custom-images/ENG.png"/>
-				</a>
-			</#if>
 			
 		</div>
 		
