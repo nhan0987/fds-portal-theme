@@ -629,10 +629,25 @@
 }
 .legislation-documents {
 
-	li {
+	ul{
+		padding-top: 12px;
 
-		&:not(:first-child) {
-			margin-top: 10px;
+		li {
+	
+			&:not(:first-child) {
+				margin-top: 10px;
+			}
+			
+			a{
+				&:before{
+					content:url('../images/folder.png');
+					position:absolute;
+				}
+				span{
+					padding-left: 27px;
+					font-weight: 700;
+				}
+			}
 		}
 	}
 
@@ -3010,6 +3025,22 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 				    
 			}
 		}
+	}
+}
+
+.video-box-one-video{
+
+	margin-bottom: 8px;
+	
+	.video-thumbnail{
+		
+	}
+	.video-title{
+		padding: 6px 0px;
+	}
+	.view-more{
+		float:right;
+		font-style: italic;
 	}
 }
 
