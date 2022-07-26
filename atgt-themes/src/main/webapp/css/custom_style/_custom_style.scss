@@ -2382,6 +2382,51 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	}
 }
 
+.list-basic-2-faq {
+
+	ul{
+		padding-top: 12px;
+
+		li {
+	
+			&:not(:first-child) {
+				margin-top: 10px;
+			}
+			
+			a{
+				padding-left:28px;
+				display: block;
+				position: relative;
+		
+				&:hover, &:focus {
+					color: $main-color;
+		
+					&:before {
+						background-color: $main-color;
+					}
+				}
+				
+				&:before{
+					content:url('../images/question.png');
+					position:absolute;
+					left:0;
+				}
+				
+			}
+		}
+	}
+	
+	.view-more{
+		float:right;
+		font-style:italic;
+	}
+
+	> span {
+		display: block;
+		padding-left: 15px;
+	}
+}
+
 
 // Budget Report
 .portlet-boundary_frondend_web_budget_report_FrondendWebBudgetReportPortlet_, .portlet-boundary_com_fds_budget_FrontendWebBudgetReportPortlet_ {
@@ -3042,5 +3087,9 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		float:right;
 		font-style: italic;
 	}
+}
+
+.polls-body{
+	padding: 8px 6px 6px 6px;
 }
 
