@@ -170,6 +170,10 @@ img {
     	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.30);
     	padding: 16px 0px 16px 0px;
     	
+    	@media(max-width:768px){
+    		padding: 16px 36px 16px 36px;
+    	}
+    	
     	.address{
     		padding-left:16px;
     		&:before{
@@ -324,7 +328,7 @@ img {
 	top: -56px;
 }
 #mainNav {
-	background-color:$navigation-menu-color;
+	background-color:transparent;
     margin-bottom: 20px;
     
     position: absolute;
@@ -333,11 +337,19 @@ img {
     left: 38px;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-
+	z-index:9999;
     
+    @media(max-width:768px){
+    	top: -43px;
+    	left: 26px;
+    }
     .navbar-toggler {
-    	margin: 4px 28px;
+    	margin: 1px 0px;
     	color: white !important;
+    	background-color:$navigation-menu-color;
+    }
+    .navbar-collapse{
+    	background-color:$navigation-menu-color;
     }
     li {
     
@@ -384,13 +396,16 @@ img {
 		&.active {
 			
 			> a {
-				&:before{
-					content: "";
-					border-bottom: 5px solid white;
-					position:absolute;
-					width: 100%;
-				    bottom: 0px;
-				    left: 0px;
+			
+				@media(min-width:768px){
+					&:before{
+						content: "";
+						border-bottom: 5px solid white;
+						position:absolute;
+						width: 100%;
+					    bottom: 0px;
+					    left: 0px;
+					}
 				}
 				font-weight: bold;
 			}
@@ -403,18 +418,21 @@ img {
     		position: relative;
     		
 			> a {
-			
-				font-size: 0;
-			    padding: 10px 26px;
+				
 			    height: 100%;
 			    position: relative;
-			    &:after{
-			    	content: url('data:image/svg+xml;utf8,<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 3.70591L16.4166 8.58091V17.0417H14.25V10.5417H7.74996V17.0417H5.58329V8.58091L11 3.70591ZM11 0.791748L0.166626 10.5417H3.41663V19.2084H9.91663V12.7084H12.0833V19.2084H18.5833V10.5417H21.8333L11 0.791748Z" fill="white"/></svg>');			
-				    position: absolute;
-				    top: -1%;
-				    left: 8%;
-				    transform: translate(50%, 50%);
-				    
+	
+			    @media(min-width:768px){
+			    	font-size: 0;
+			    	padding: 20px 26px;
+				    &:after{
+				    	content: url('data:image/svg+xml;utf8,<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 3.70591L16.4166 8.58091V17.0417H14.25V10.5417H7.74996V17.0417H5.58329V8.58091L11 3.70591ZM11 0.791748L0.166626 10.5417H3.41663V19.2084H9.91663V12.7084H12.0833V19.2084H18.5833V10.5417H21.8333L11 0.791748Z" fill="white"/></svg>');			
+					    position: absolute;
+					    top: -1%;
+					    left: 8%;
+					    transform: translate(50%, 50%);
+					    
+				    }
 			    }
 			}
     	}

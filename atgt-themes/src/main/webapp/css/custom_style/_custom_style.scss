@@ -256,6 +256,10 @@
 	.portlet-body { 
 	
 		height: 338px;
+		@media(max-width:768px){
+			height:auto;
+		}
+		
    	 	padding: 15px 6px 15px 6px;
    	 	border: 1px solid transparent;
    	 	
@@ -271,9 +275,15 @@
    	 		}
    	 		
    	 		.hot-news-title {
+   	 		
    	 			float: left;
 			    padding-left: 10px;
 			    width: 256px;
+			    
+			    @media(max-width:768px){
+			    	padding-top:6px
+			    }
+			    
 			    &:first-letter{
 					text-transform: uppercase;
 				}
@@ -349,7 +359,7 @@
 				    top: 0px;
 				    width: 0;
 				    height: 0;
-				    border-bottom: 34px solid $main-color;
+				    border-bottom: 33px solid $main-color;
 				    border-right: 30px solid transparent;
 				}
 	   	 		
@@ -1322,19 +1332,7 @@ table .legislation-documents {
 			    color: white;
 			    background-color: #C50A0A;
 			    padding: 6px;
-			    
-			    
-			    //&:after{
-			    //	  content: "";
-				//      position: absolute;
-				//      left: 0;
-				//      bottom: 0;
-				//      width: 0;
-				//      height: 0;
-				//      border-bottom: 13px solid #eee;
-				//      border-left: 55px solid transparent;
-				//      border-right: 55px solid transparent;
-			   // }
+	
 			    
 			}
 			
@@ -1379,6 +1377,10 @@ table .legislation-documents {
 	.left-5 {
 		ul>li{
 			padding: 0px 0px 10px 13px;
+			
+			@media (max-width:768px){
+		    	padding: 14px 0px 10px 0px;
+		    }
 		}
 	}
 	.left-4 {
