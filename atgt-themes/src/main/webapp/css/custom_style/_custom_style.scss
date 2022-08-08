@@ -53,6 +53,10 @@
 	}
 }
 
+.portlet-journal-content.portlet-barebone .portlet .portlet-header{
+	right: 0px !important;
+	top: 0px !important;
+} 
 
 .portlet-barebone {
 	
@@ -640,7 +644,7 @@
 .legislation-documents {
 
 	ul{
-		padding-top: 12px;
+		padding-top: 42px;
 
 		li {
 	
@@ -3095,3 +3099,24 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	padding: 8px 6px 6px 6px;
 }
 
+.navdrops{
+	padding: 10px 6px 6px 32px;
+	.nav-item{
+		.child-menu{
+			padding: 0px 0px 10px 16px;
+			li{
+				padding: 6px 6px 0px 0px;
+				
+				a{
+					padding: 6px 6px 0px 0px;
+					color: black;
+		    		font-size: 13px;
+		    		&:hover{
+		    			color:#0B5FFF;
+		    		}
+				}
+			}
+		}
+		
+	}
+}
