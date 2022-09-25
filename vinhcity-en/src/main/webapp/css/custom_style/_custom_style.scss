@@ -62,6 +62,15 @@
 }
 
 
+.portlet-border-less{ 
+	.portlet-body{
+		border: 0px solid transparent !important;
+		box-shadow: none !important;
+		border-radius: 0px !important;
+		
+	}
+}
+
 // Portlet
 #content {
 	.portlet-barebone {
@@ -2843,6 +2852,52 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 				
 				a{
 					color:$text-color;
+				}
+			}
+		}
+	}
+}
+
+.help-info-wrapper {
+	.container {
+		@include d_flex(flex);
+		@include flex_wrap(wrap);
+		@include flex_justify(space-between);
+		
+		.box-icon {
+			display: block;
+			&:hover {
+		
+				img {
+					@include transform(scale(1.2));
+				}
+			}
+			.service-name {
+				font-size: 14px;
+				text-align: center;
+			    margin-top: 4px;
+			    padding: 18px 0;
+			    position: relative;
+			    color:black;
+			    span {
+			    	position: relative;
+			    	z-index: 1;
+			    }
+			}
+			
+			&:first-child {
+			
+				.service-name {
+			    
+				    &:before {
+				    	content: "";
+				    	position: absolute;
+				    	top: 0;
+				    	left: -200%;
+				    	width: 5000%;
+				    	height: 100%;
+				    	pointer-events: none;
+				    }
 				}
 			}
 		}

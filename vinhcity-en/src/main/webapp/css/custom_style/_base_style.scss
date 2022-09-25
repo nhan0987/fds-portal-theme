@@ -1,3 +1,57 @@
+
+
+//Mixin
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    box-shadow: $value;
+}
+@mixin transform($value) {
+    -webkit-transform: $value;
+    transform: $value;
+}
+@mixin transition($value) {
+    -webkit-transition: $value;
+    transition: $value;
+}
+@mixin d_flex($value) {
+	display: -webkit-box;
+  	display: $value;
+}
+@mixin flex_wrap($value) {
+  	-webkit-flex-wrap: $value;
+  	flex-wrap: $value;
+}
+@mixin flex_align($value) {
+  	-webkit-align-items: $value;
+  	align-items: $value;
+}
+@mixin flex_justify($value) {
+  	-webkit-justify-content: $value;
+  	justify-content: $value;
+}
+@mixin flex_variables($value) {
+  	-webkit-flex: $value;
+  	flex: $value;
+}
+@mixin flex_order($value) {
+  	-webkit-order: $value;
+  	order: $value;
+}
+@mixin flex_direction($value) {
+	-webkit-flex-direction: $value;
+	flex-direction: $value;
+}
+@mixin background-opacity($color, $opacity) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+@mixin text-border($value) {
+	text-shadow: -1px -1px 0 $value, 
+				 1px -1px 0 $value, 
+				 -1px 1px 0 $value, 
+				 1px 1px 0 $value;
+}
+
 /*---------- Global ----------*/
 body {
 	background-color: white;

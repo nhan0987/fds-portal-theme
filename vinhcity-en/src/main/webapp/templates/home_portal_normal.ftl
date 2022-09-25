@@ -63,15 +63,15 @@
 				</div>	
 				<div id="line-4">
 					<div class="d-flex flex-wrap">
-						<div class="p1"><a href="/"><img src="${images_folder}/lich-lam-viec/Group 56.png" /></a></div>
-						<div class="p1"><a href="/"><img src="${images_folder}/lich-lam-viec/Group 58.png" /></a></div>
-						<div class="p1"><a href="/"><img src="${images_folder}/lich-lam-viec/Group 57.png" /></a></div>
-						<div class="p1"><a href="/"><img src="${images_folder}/lich-lam-viec/Group 55.png" /></a></div>
-						<div class="p1"><a href="/"><img src="${images_folder}/lich-lam-viec/Group 53.png" /></a></div>
-						<div class="p1"><a href="/"><img src="${images_folder}/lich-lam-viec/Group 54.png" /></a></div>
+						<div class="p1"><a href="/web/vinh-city/public-service"><img src="${images_folder}/lich-lam-viec/Group 56.png" /></a></div>
+						<div class="p1"><a href="/web/vinh-city/organizational-structure"><img src="${images_folder}/lich-lam-viec/Group 58.png" /></a></div>
+						<div class="p1"><a href="/web/vinh-city/spokesperson-information"><img src="${images_folder}/lich-lam-viec/Group 57.png" /></a></div>
+						<div class="p1"><a href="/web/vinh-city/the-eader-work-schedule"><img src="${images_folder}/lich-lam-viec/Group 55.png" /></a></div>
+						<div class="p1"><a href="/web/vinh-city/reception-schedule"><img src="${images_folder}/lich-lam-viec/Group 53.png" /></a></div>
+						<div class="p1"><a href="/web/vinh-city/legal-documents"><img src="${images_folder}/lich-lam-viec/Group 54.png" /></a></div>
 						<div class="p1">
-					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/thong-tin-nguoi-phat-ngon">account_box </a></span></div>
-					      <p class="title"><a href="/thong-tin-nguoi-phat-ngon">Spokesperson Information</a></p>
+					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/web/vinh-city/spokesperson-information">account_box </a></span></div>
+					      <p class="title"><a href="/web/vinh-city/spokesperson-information">Spokesperson Information</a></p>
 					   </div>
 					   <div class="p1">
 					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/thong-bao-ket-qua-tiep-dan">assignment</a></span></div>
@@ -79,23 +79,23 @@
 					   </div>
 					   
 					   <div class="p1">
-					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/danh-muc-thu-tuc-hanh-chinh">record_voice_over</a></span></div>
-					      <p class="title"><a href="/danh-muc-thu-tuc-hanh-chinh">Resolve the complaint report</a></p>
+					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/web/vinh-city/resolve-the-complaint-report">record_voice_over</a></span></div>
+					      <p class="title"><a href="/web/vinh-city/resolve-the-complaint-report">Resolve the complaint report</a></p>
 					   </div>
 					   
 					   <div class="p1">
-					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/diem-bao">assignment_late</a></span></div>
-					      <p class="title"><a href="/diem-bao">Newsletter</a></p>
+					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/web/vinh-city/newsletter">assignment_late</a></span></div>
+					      <p class="title"><a href="/web/vinh-city/newsletter">Newsletter</a></p>
 					   </div>
 					   
 					   <div class="p1">
-					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/tuyen-truyen-giao-duc-pho-bien-phap-luat">bookmarks</a></span></div>
-					      <p class="title"><a href="/tuyen-truyen-giao-duc-pho-bien-phap-luat">List of administrative procedures</a></p>
+					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/web/vinh-city/list-of-administrative-procedures">bookmarks</a></span></div>
+					      <p class="title"><a href="/web/vinh-city/list-of-administrative-procedures">List of administrative procedures</a></p>
 					   </div>
 					   
 					   <div class="p1">
-					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/giai-quyet-khieu-nai-to-cao">contact_support</a></span></div>
-					      <p class="title"><a href="/giai-quyet-khieu-nai-to-cao">Propagating and disseminating legal education</a></p>
+					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/web/vinh-city/propagating-and-disseminating-legal-education">contact_support</a></span></div>
+					      <p class="title"><a href="/web/vinh-city/propagating-and-disseminating-legal-education">Propagating and disseminating legal education</a></p>
 					   </div>
 					</div>
 				</div>
@@ -104,29 +104,31 @@
 		</div>
 		
 		
+		<div class="container">
 		
-		<div id="content" class="container">
-		
-			<#if selectable>
-				<@liferay_util["include"] page=content_include />
-			<#else>
-				${portletDisplay.recycle()}
-
-				${portletDisplay.setTitle(the_title)}
-
-				<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+			<div id="content">
+			
+				<#if selectable>
 					<@liferay_util["include"] page=content_include />
-				</@>
-			</#if>
-
-			<div class="clear"></div>
-		</div>
-		
-		<div id="footer">
-			<div class="border-dashed">
-				<div class="border-solid">
-					<div class="hidden-footer">
-						<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
+				<#else>
+					${portletDisplay.recycle()}
+	
+					${portletDisplay.setTitle(the_title)}
+	
+					<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+						<@liferay_util["include"] page=content_include />
+					</@>
+				</#if>
+	
+				<div class="clear"></div>
+			</div>
+			
+			<div id="footer">
+				<div class="border-dashed">
+					<div class="border-solid">
+						<div class="hidden-footer">
+							<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
+						</div>
 					</div>
 				</div>
 			</div>
