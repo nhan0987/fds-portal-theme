@@ -154,6 +154,10 @@ img {
 	
 }
 
+.has-control-menu #p_p_id_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_ {
+	padding-top: 100px;
+}
+
 		
 #banner {
 
@@ -344,6 +348,9 @@ img {
     background-size: cover;
     background-position: center;
     height:790px;
+    @media screen and (max-width: 640px) {
+		height:1320px;
+	}
     
     #bg-header-center{
     	padding: 34px 0px 4px 0px;
@@ -365,6 +372,10 @@ img {
 		    text-align: center;
 		    padding: 12px 0px 42px 0px;
   			text-shadow: -1px -1px 0 white,1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  			
+  			@media screen and (max-width: 640px) {
+				line-height: 55px;
+			}
 	    }
 	    #line-3{
 	    	font-weight: 700;
@@ -374,6 +385,15 @@ img {
 		    text-transform: uppercase;
 		    width:796px;
 		    margin-left: 255px;
+		    
+		    @media screen and (max-width: 640px) {
+				 margin-left: 14px;
+				 width: 361px;
+			}
+		    
+		    @media screen and (max-width: 1024px) {
+				margin-left: 70px;
+			}
 		    
 		    .search-bar-search-button-wrapper{
 		    	padding: 0;
@@ -392,6 +412,13 @@ img {
 	    }
 	    #line-4{
 	    	padding: 24px 155px 0px 155px;
+	    	
+	    	@media screen and (max-width: 1024px) {
+				padding: 24px 0px 0px 130px;
+			}
+			@media screen and (max-width: 640px) {
+				padding: 24px 0px 0px 38px;
+			}
 	    	
 	    	.icon-asset {
 				color:white;
@@ -454,7 +481,6 @@ img {
 /*---------- Navbar ----------*/
 #mainNav {
 
-
 	background-color:$navigation-menu-color;
     margin-bottom: -20px;
     .navbar-toggler {
@@ -463,6 +489,9 @@ img {
     }
     #mNav {
 	    padding: 0px 306px 0px 306px;
+	    @media (max-width:1366px){
+	    	padding: 0px 200px 0px 200px;
+	    }
 	    text-transform: uppercase;
     }
     li {
@@ -480,6 +509,15 @@ img {
 		    line-height: 23.44px;
 		    font-weight: 700 !important;
 		    padding: 26px 17px 26px 21px;
+		    
+		    @media (max-width:1366px){
+		    	font-size: 16px;
+		    	padding: 26px 8px 26px 8px;
+		    }
+		     @media (max-width:1680px){
+		    	font-size: 16px;
+		    	padding: 26px 8px 26px 8px;
+		    }
     	}
     	
     	> i {
@@ -542,16 +580,7 @@ img {
 		.portlet {
 			margin-bottom: 0px!important;
 		}
-	    input {
-	    	// border: 0;
-		    // border-radius: 4px;
-		    // box-shadow: none;
-		    // width: 260px;
-		    // font-size: 14px;
-		    // height: 26px;
-		    // background-color: white;
-		    // margin: 8px 0;
-	    }
+
 	    .form-control {
 			height: 26px;
     		font-size: 0.875rem;
@@ -580,6 +609,137 @@ img {
 	}
 }
 
+/*---------- Navbar ----------*/
+
+.pages-theme{
+	.custom-pages{
+		#mainNav {
+			#mNav{
+				padding:0px !important;
+				text-transform: capitalize
+			}
+	
+			background-color:$navigation-menu-color;
+		    margin-bottom: 20px;
+		    .navbar-toggler {
+		    	margin: 4px 28px;
+		    	color: white !important;
+		    }
+		    li {
+		    	&:hover{
+					//background-color:$navigation-menu-hover-color;
+					background: linear-gradient(0deg, #003397 0%, #0861C9 100%);
+					
+				}
+		    	a {
+		    		color: $navigation-menu-text-color;
+				    padding: 10px 15px;
+				    display: block;
+				    text-decoration: none;
+				    font-size: 14px;
+				    line-height: 23.44px;
+				    font-weight: 300 !important;
+		    	}
+		    	
+		    	> i {
+		    		display: none;
+		    	}
+		    	
+		    	.child-menu {
+				    display: none;
+				    position: absolute;
+				    top: 100%;
+				    background-color:#1a7cf2;
+				    z-index: 2;
+				    list-style: none;
+				    padding: 0;
+				}
+				
+				&:hover {
+					
+					.child-menu {
+						display: block;
+					}
+					
+					> a {
+						//font-weight: bold;
+						color:white;
+					}
+				}
+				
+				&.active {
+					
+					> a {
+						font-weight: bold;
+					}
+				}
+		    }
+		    
+		    .navbar-nav {
+		    	
+		    	> li:first-child {
+		    		position: relative;
+		
+					> a {
+						
+					    padding: 10px 20px 10px 20px;
+					    height: 100%;
+					    position: relative;
+					    
+		
+					}
+		    	}
+		    }
+		    
+		    /*--- Search ---*/
+		    .search {
+			    display: -webkit-box;
+			    display: flex;
+			    position: relative;
+			    margin-right: 15px;
+				padding: 5px 0;
+				.portlet {
+					margin-bottom: 0px!important;
+				}
+			    input {
+			    	// border: 0;
+				    // border-radius: 4px;
+				    // box-shadow: none;
+				    // width: 260px;
+				    // font-size: 14px;
+				    // height: 26px;
+				    // background-color: white;
+				    // margin: 8px 0;
+			    }
+			    .form-control {
+					height: 26px;
+		    		font-size: 0.875rem;
+				}
+				.search-bar-keywords-input{
+					border-top-left-radius: 25px;
+		    		border-bottom-left-radius: 25px;
+				}
+				.search-bar-search-button-wrapper{
+					border-top-right-radius: 25px;
+		   			border-bottom-right-radius: 25px;
+		   			padding: 0;
+		    		padding-top: 2px;
+				}
+			    .bt_search {
+			    	background-color: transparent;
+				    border: 0;
+				    color: $main-color;
+				    position: absolute;
+				    top: 0;
+				    right: 0;
+				    width: 34px;
+				    height: 100%;
+				    padding: 0;
+			    }
+			}
+		}
+	}
+}
 
 /*---------- Other ----------*/
 

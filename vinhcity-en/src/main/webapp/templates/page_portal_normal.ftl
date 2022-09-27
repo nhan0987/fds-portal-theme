@@ -38,7 +38,7 @@
 
 <#assign scope_group = theme_display.getScopeGroup() />
 
-	<div id="mWrapper" class="container">
+	<div id="mWrapper" class="container custom-pages">
 		<div id="banner">			
 			<div class="hidden-banner">
 				<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />

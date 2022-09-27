@@ -2166,6 +2166,86 @@ table .legislation-documents {
 
 }
 
+.slider-audio-responsive {
+	margin: 0;
+	padding: 0 30px;
+	
+	.slick-prev,.slick-next{
+	    background-color: transparent;
+	    width: 40px;
+	    height: 40px;
+	    display: block !important;
+	    z-index: 1;
+	  	top: 60px;
+	}
+	
+	.slick-prev::before,.slick-next::before{
+	 	font-family: FontAwesome;
+	    color: $main-color;
+	    font-size: 40px;
+	 }
+	 
+	.slick-prev{
+		left: -10px;
+		&:before{
+			content: "\f104";
+		}
+	}
+	.slick-next{
+		right: -10px;
+		&:before{
+			content: "\f105";
+		}
+	}
+
+	.slick-slide {
+		margin: 0 10px;
+
+		a {
+			display: block;
+			padding-top: 75%;
+			overflow: hidden;
+			position: relative;
+		}
+
+		img {
+			//position: absolute;
+			//top: 50%;
+			//left: 50%;
+			//@include transform(translate(-50%,-50%));
+			//min-width: 100%;
+			//min-height: 100%;
+			//width: 100%;
+			//border-radius:8px;
+			padding-top: 12px;
+    		margin-left: 27px;
+    		
+    		@media screen and (max-width: 640px) {
+				margin-left: 159px;
+			}
+		}
+
+		.title {
+			pointer-events: auto;
+		    position: relative;
+		    cursor: pointer;
+		    //left: 0;
+		    bottom: 0;
+		    width: 100%;
+		    background-color: transparent;
+		    color: $text-color;
+		    margin: 0;
+		    padding: 6px 0;
+		    display: inline-block;
+			text-align:center;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+}
+
 
 
 // Statistics
@@ -2616,14 +2696,14 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			width:15%;
 		}
 		
-		
 		p{
 			width:85%;
 			float:left;
 			background:#E9F1F9;
 			border-radius: 0px 5px 5px 0px;
-			padding:12px 2px 13px 4px;
-			
+			padding:12px 2px 12px 4px;
+			font-size: 12px;
+			line-height: 22px;
 			a{
 				color:$main-color;
 			}
@@ -2633,8 +2713,6 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			}
 			@media (max-width:1280px){
 				font-size: 12px;
-			}
-			.title{
 			}
 			&:hover {
 				background-color:#e2dcdc;
@@ -2859,6 +2937,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 }
 
 .help-info-wrapper {
+	text-align:center;
 	.container {
 		@include d_flex(flex);
 		@include flex_wrap(wrap);
@@ -2866,6 +2945,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		
 		.box-icon {
 			display: block;
+			width:164px;
 			&:hover {
 		
 				img {

@@ -74,8 +74,8 @@
 					      <p class="title"><a href="/web/vinh-city/spokesperson-information">Spokesperson Information</a></p>
 					   </div>
 					   <div class="p1">
-					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/thong-bao-ket-qua-tiep-dan">assignment</a></span></div>
-					      <p class="title"><a href="/thong-bao-ket-qua-tiep-dan">Announcement of the results of the reception</a></p>
+					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/web/vinh-city/announcement-of-the-results-of-the-reception">assignment</a></span></div>
+					      <p class="title"><a href="/web/vinh-city/announcement-of-the-results-of-the-reception">Announcement of the results of the reception</a></p>
 					   </div>
 					   
 					   <div class="p1">
