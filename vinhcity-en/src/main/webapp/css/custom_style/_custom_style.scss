@@ -2209,16 +2209,9 @@ table .legislation-documents {
 		}
 
 		img {
-			//position: absolute;
-			//top: 50%;
-			//left: 50%;
-			//@include transform(translate(-50%,-50%));
-			//min-width: 100%;
-			//min-height: 100%;
-			//width: 100%;
-			//border-radius:8px;
 			padding-top: 12px;
-    		margin-left: 27px;
+    		margin-left: 30px;
+    		cursor: pointer;
     		
     		@media screen and (max-width: 640px) {
 				margin-left: 159px;
@@ -2240,6 +2233,11 @@ table .legislation-documents {
 			text-align:center;
 			&:hover {
 				text-decoration: none;
+			}
+		}
+		.audio-img {
+			&:hover{
+				content: url('/o/vinhcity-en/images/custom-images/audio-active.png');
 			}
 		}
 	}

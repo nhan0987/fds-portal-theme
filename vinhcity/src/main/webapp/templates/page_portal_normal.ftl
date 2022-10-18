@@ -54,7 +54,7 @@
 				<a class="language-banner_vi" href="/vi/trang-chu">
 					<img src="${images_folder}/custom-images/VN.png"/>
 				</a>
-				<a class="language-banner_en" href="/en/trang-chu">
+				<a class="language-banner_en" href="/en/web/vinh-city/trang-chu">
 					<img src="${images_folder}/custom-images/ENG.png"/>
 				</a>
 			</#if>

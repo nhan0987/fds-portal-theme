@@ -67,8 +67,8 @@
 						<div class="p1"><a href="/web/vinh-city/organizational-structure"><img src="${images_folder}/lich-lam-viec/Group 58.png" /></a></div>
 						<div class="p1"><a href="/web/vinh-city/spokesperson-information"><img src="${images_folder}/lich-lam-viec/Group 57.png" /></a></div>
 						<div class="p1"><a href="/web/vinh-city/the-eader-work-schedule"><img src="${images_folder}/lich-lam-viec/Group 55.png" /></a></div>
-						<div class="p1"><a href="/web/vinh-city/reception-schedule"><img src="${images_folder}/lich-lam-viec/Group 53.png" /></a></div>
-						<div class="p1"><a href="/web/vinh-city/legal-documents"><img src="${images_folder}/lich-lam-viec/Group 54.png" /></a></div>
+						<div class="p1"><a href="/web/vinh-city/legal-documents"><img src="${images_folder}/lich-lam-viec/Group 53.png" /></a></div>
+						<div class="p1"><a href="/web/vinh-city/reception-schedule"><img src="${images_folder}/lich-lam-viec/Group 54.png" /></a></div>
 						<div class="p1">
 					      <div><span class="icon-asset material-icons-outlined icon d-block mx-auto"> <a href="/web/vinh-city/spokesperson-information">account_box </a></span></div>
 					      <p class="title"><a href="/web/vinh-city/spokesperson-information">Spokesperson Information</a></p>
