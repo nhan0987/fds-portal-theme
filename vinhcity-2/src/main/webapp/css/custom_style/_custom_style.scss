@@ -266,11 +266,11 @@
 	
 		.portlet-body { 
 	   	 	padding: 15px 15px 15px 15px;
-	   	 	//border: 1px solid $gray-color;
 	   	 	.hot-news{
+	   	 		display:flex;
 	   	 		.hot-news-image {
-					width: 164px;
-				    float: left;
+					width: 37%px;
+				    //float: left;
 				    padding-right: 0px;
 				    a{
 				    	padding-top:0px;
@@ -279,9 +279,9 @@
 	   	 		}
 	   	 		
 	   	 		.hot-news-title {
-	   	 			float: left;
+	   	 			//float: left;
 				    padding-left: 10px;
-				    width: 278px;
+				    width: 63%;
 		   	 		.hot-news-summary {
 					    color:#939393;
 					    margin-bottom: 3px;	
@@ -302,10 +302,11 @@
    	 	}
 		
 		section.portlet{
-			//border: 1px solid $gray-color;
+			
     		border-top: 0;
 	   	 	.portlet-header{
 	   	 		border-bottom: 1px solid $main-color;
+	   	 		padding-bottom: 10px;
 				margin-bottom: 0;
 				position: relative;
 				z-index: 1;
@@ -336,14 +337,11 @@
 					display: inline-block;
 					padding: 9px 9px 7px 9px;
 					text-transform: uppercase;
-					margin-top: -1px;
 					max-width: 100%;
 					font-weight: bold;
 					position: relative;
 					overflow: visible;
 					background-color:$main-color;
-					//border-bottom: 3px solid $main-color;
-					//margin-left: 17px;
 					
 					&:before {
 					    content: "";
@@ -1421,6 +1419,10 @@ table .legislation-documents {
 		ul>li{
 			height:124px;
 			padding: 0px 13px 10px 13px;
+			
+			@media (max-width:640px){
+				padding: 13px 13px 10px 13px;
+			}
 		}
 	}
 
@@ -1683,7 +1685,7 @@ table .legislation-documents {
 
 	.hot-news {
 		overflow: hidden;
-
+		display:flex;
 		.hot-news-image {
 			width: 50%;
 		    float: left;

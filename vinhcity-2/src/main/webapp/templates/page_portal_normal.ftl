@@ -82,11 +82,11 @@
 		<div id="footer-bg">
 			<div id="footer" class="container bg-opacity">
 				<div class="row">
-					<div class="footer-left col-md-8">
+					<div class="col-md-8">
 						
 						<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
 					</div>
-					<div class="footer-right col-md-4">
+					<div class="col-md-4">
 						<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="portalsessiontracking_WAR_portalsessiontracking" instanceId="sessiontracking"/>
 						
 					</div>
