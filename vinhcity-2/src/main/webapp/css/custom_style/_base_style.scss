@@ -51,7 +51,7 @@ a {
 
 #mWrapper {
 	font-size: 14px;
-	font-family: 'Roboto Serif';
+	font-family: 'Arial';
 }
 
 .journal-content-article {
@@ -321,17 +321,21 @@ img {
 #mainNav {
 	#mNav{
 		
-		padding: 0px 286px 0px 302px;
 		
-		@media screen and (max-width: 1680px) {
-			padding: 0px 173px 0px 190px;
+		
+		@media screen and (min-width: 1024px) {
+			padding: 0px 18px 0px 24px;
 		}
-		@media screen and (max-width: 1366px) {
-			padding: 0px 18px 0px 33px;
+		@media screen and (min-width: 1366px) {
+			padding: 0px 18px 0px 25px;
 		}
-		@media screen and (max-width: 1024px) {
-			padding: 0px 18px 0px 32px;
+		@media screen and (min-width: 1680px) {
+			padding: 0px 173px 0px 174px;
 		}
+		@media screen and (min-width: 1920px) {
+			padding: 0px 286px 0px 302px;
+		}
+		
     	text-transform: uppercase;
     	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 	}
@@ -388,7 +392,7 @@ img {
 		&.active {
 			
 			> a {
-				color:#FAFF0C;
+				color:#f7d000;
 			}
 		}
     }
