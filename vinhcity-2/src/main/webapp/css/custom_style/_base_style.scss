@@ -6,29 +6,7 @@ body {
     overflow-x:hidden
 }
 
-.bg-opacity {
-	.portlet {
-		margin-bottom: 0;
-	}
-    position: relative;
-    
-    &:before{
-    	content: "";
-	    position: absolute;
-	    top: 0;
-	    left: -23%;
-    	width: 146%;
-	    //height: 100%;
-	    //background-color: #E5E5E5;
-	    opacity:0.8;
-	    //background: url(../images/bg-footer.png) right bottom no-repeat;
-	    
-	    background-image: url(../images/bg-footer.png);
-	    background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-    }
-}
+
 
 .no-opacity-header:before {
     top: 35px;
@@ -190,7 +168,59 @@ img {
     }
 }
 
+#banner{
+	
+	&:before{
+    	content: "";
+	    position: absolute;
+	    top: 0;
+	    //left: -23%;
+    	width: 100%;
+	    height: 60px;
+	    
+	    @media screen and (min-width: 640px) {
+			height: 71px;
+		}
+		
+	    @media screen and (min-width: 768px) {
+			height: 94px;
+		}
+		
+	    @media screen and (min-width: 1024px) {
+			height: 128px;
+		}
+	    @media screen and (min-width: 1366px) {
+			height: 170px;
+		}
+		
+		
+	    background-image: url(../images/bg-header.png);
+	    background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+    }
+	
+}
 
+#body-content{
+
+	padding-top:58px;
+	
+	@media screen and (min-width: 1024px) {
+		padding-top:95px;
+	}
+	@media screen and (min-width: 1024px) {
+		padding-top:128px;
+	}
+	@media screen and (min-width: 1366px) {
+		padding-top:170px;
+	}
+		
+}
+
+.has-control-menu #body-content{
+	padding-top:0px;
+}
 
 
 
@@ -198,18 +228,45 @@ img {
 
 
 #footer {
+	.portlet {
+		margin-bottom: 0;
+	}
+ 	position: relative;
+	
+	&:before{
+    	content: "";
+	    position: absolute;
+	    top: 0;
+	    left: -23%;
+    	width: 146%;
+	    height: 100%;
+	    background-image: url(../images/bg-footer.png);
+	    background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+    }
+	
+}
+
+#footer {
 	padding: 20px 15px 10px;
     background-size: cover;
     color: black;
+    .btn-button-login{
+    	background: white;
+    	color: red;
+    }
     
 	.footer-title{
-		color:$main-color;
-		margin-bottom:32px;
+		color:#FAFF00;
+		margin-bottom:20px;
 	}
     
     p{
     	line-height:16.39px;
-    	font-weight:bold;
+    	font-weight: 400;
+	    color: white;
+	    font-style: normal;
     }
     .site-info {
 	    display: flex;
@@ -319,17 +376,20 @@ img {
 
 /*---------- Navbar ----------*/
 #mainNav {
+
+	background:$navigation-menu-color;
 	#mNav{
-		
-		
-		
+	
 		@media screen and (min-width: 1024px) {
 			padding: 0px 18px 0px 24px;
 		}
-		@media screen and (min-width: 1366px) {
-			padding: 0px 18px 0px 25px;
+		@media screen and (min-width: 1250px) {
+			padding: 0px 144px 0px 144px;
 		}
-		@media screen and (min-width: 1680px) {
+		@media screen and (min-width: 1316px) {
+			padding: 0px 25px 0px 25px;
+		}
+		@media screen and (min-width: 1650px) {
 			padding: 0px 173px 0px 174px;
 		}
 		@media screen and (min-width: 1920px) {
@@ -340,7 +400,7 @@ img {
     	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 	}
 
-	background-color:$navigation-menu-color;
+	
     margin-bottom: 20px;
     .navbar-toggler {
     	margin: 4px 28px;
@@ -351,7 +411,7 @@ img {
 
     	a {
     		color: $navigation-menu-text-color;
-		    padding: 10px 15px;
+		    padding: 18px 15px;
 		    display: block;
 		    text-decoration: none;
 		    font-weight: 600;
@@ -374,6 +434,15 @@ img {
 		    z-index: 2;
 		    list-style: none;
 		    padding: 0;
+
+		   	a{
+		   		color:$navigation-menu-text-hover-color;
+		   		text-transform: initial;
+		   		&:hover{
+		   			color:white;
+		   			background:$navigation-menu-color;
+		   		}
+		   	}
 		}
 		
 		&:hover {
@@ -382,7 +451,6 @@ img {
 				display: block;
 			}
 			background:$navigation-menu-hover-color;
-			//background-color: #f8f9fa;
 			
 			> a {
 				color:$navigation-menu-text-hover-color !important;
@@ -392,7 +460,7 @@ img {
 		&.active {
 			
 			> a {
-				color:#f7d000;
+				color:#FAFF00;
 			}
 		}
     }
@@ -401,6 +469,7 @@ img {
     	
     	> li:first-child {
     		position: relative;
+    		margin-left: -22px;
 
 			> a {
 			    padding: 18px 22px 18px 22px;
@@ -413,6 +482,7 @@ img {
     }
     .btn-button-login{
     	background:$navigation-menu-hover-color;
+    	color:red;
     }
     
     /*--- Search ---*/
@@ -460,6 +530,29 @@ img {
 		    height: 100%;
 		    padding: 0;
 	    }
+	}
+}
+
+#subNav {
+	#sNav{
+	
+		li {
+			&:first-child{
+				> a {
+				    padding-left: 0px;
+	
+				}
+			}
+	    	a {
+	    		color:white;
+	    		&:hover{
+	    			color:#FAFF00
+	    		}
+	    	}
+	    	
+			
+	    }
+	    
 	}
 }
 

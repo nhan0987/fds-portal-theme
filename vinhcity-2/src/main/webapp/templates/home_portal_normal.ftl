@@ -51,7 +51,7 @@
 			<div class="hidden-banner">
 			
 				<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
-				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="banner"/>
+				
 				
 			</div>
 			
@@ -71,37 +71,43 @@
 			
 		</div>
 		
-		
-		<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
-		
-		<div id="content" class="container">
+		<div id="body-content">
+			<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 			
-		
-			<#if selectable>
-				<@liferay_util["include"] page=content_include />
-			<#else>
-				${portletDisplay.recycle()}
-
-				${portletDisplay.setTitle(the_title)}
-
-				<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+			<div id="content" class="container">
+				
+			
+				<#if selectable>
 					<@liferay_util["include"] page=content_include />
-				</@>
-			</#if>
-
-			<div class="clear"></div>
-		</div>
-		
-		<div id="footer-bg">
-			<div id="footer" class="container bg-opacity">
-				<div class="row">
-					<div class="col-md-8">
-						
-						<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
-					</div>
-					<div class="col-md-4">
-						<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="portalsessiontracking_WAR_portalsessiontracking" instanceId="sessiontracking"/>
-						
+				<#else>
+					${portletDisplay.recycle()}
+	
+					${portletDisplay.setTitle(the_title)}
+	
+					<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+						<@liferay_util["include"] page=content_include />
+					</@>
+				</#if>
+	
+				<div class="clear"></div>
+			</div>
+			
+			<div id="footer-bg">
+				<div id="footer" class="container">
+					<div class="row">
+						<div class="col-md-6">
+							
+						</div>
+						<div class="col-md-6">
+							<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet" instanceId="footerNavigation"/>
+							<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
+							
+							<#if themeDisplay.isSignedIn() >
+								<a class="btn-button-login" title="Đăng xuất" href="/c/portal/logout">Đăng xuất</a>
+							<#else>
+								<a class="btn-button-login" title="Đăng nhập" href="/dang-nhap">Đăng nhập</a>
+							</#if>
+						</div>
 					</div>
 				</div>
 			</div>
