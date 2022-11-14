@@ -426,6 +426,25 @@ img {
     		display: none;
     	}
     	
+    	&.active {
+			
+			> a {
+				color:#FAFF00;
+			}
+		}
+    	
+    	&:hover {
+			
+			.child-menu {
+				display: block;
+			}
+			background:$navigation-menu-hover-color;
+			
+			> a {
+				color:$navigation-menu-text-hover-color;
+			}
+		}
+    	
     	.child-menu {
 		    display: none;
 		    position: absolute;
@@ -445,24 +464,9 @@ img {
 		   	}
 		}
 		
-		&:hover {
-			
-			.child-menu {
-				display: block;
-			}
-			background:$navigation-menu-hover-color;
-			
-			> a {
-				color:$navigation-menu-text-hover-color !important;
-			}
-		}
 		
-		&.active {
-			
-			> a {
-				color:#FAFF00;
-			}
-		}
+		
+		
     }
     
     .navbar-nav {
