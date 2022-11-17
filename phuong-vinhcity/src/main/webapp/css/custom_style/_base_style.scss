@@ -225,9 +225,9 @@ img {
 	}
 	
 	.border-dashed{
-		border-bottom: 2px solid $second-color;
+		border-bottom: 2px solid white;
 		.border-solid {
-			border-bottom: 2px dashed $second-color;
+			border-bottom: 2px dashed white;
 			margin-bottom: 6px;
 		}
 	}
@@ -287,7 +287,7 @@ img {
 
 /*---------- Navbar ----------*/
 #mainNav {
-	background-color:$navigation-menu-color;
+	background:$navigation-menu-color;
     margin-bottom: 20px;
     .navbar-toggler {
     	margin: 4px 28px;
@@ -404,7 +404,7 @@ img {
 	   @include btn-button-login-background-color();
 	    border-radius: 25px;
 	    padding: 3px 18px;
-	    color: white;
+	    color: #FF0000;
 	    margin-right: 6px;
 	}
 }
