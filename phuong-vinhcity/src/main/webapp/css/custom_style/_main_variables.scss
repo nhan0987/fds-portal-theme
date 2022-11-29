@@ -1,11 +1,11 @@
 // Main Variable
-$main-color: #FF0000;
-$second-color: #B10000;
+$main-color: #F20000;;
+$second-color: #F20000;
 $background-second-color: #ffe9e9d9;
 
 $main-color-light: lighten($main-color, 30%);
 $main-color-super-light: lighten($main-color, 30%);
-$secondary-color: #004b18;
+$secondary-color: #F20000;
 $secondary-color-dark: #004b18;
 $main-text-color: #2a2a2a;
 $gray-color: #EDEDED;
@@ -16,19 +16,24 @@ $text-color-2: #939393;
 
 $portlet-border-color:#C4C4C4;
 
-$navigation-menu-color:linear-gradient(0deg, #B10000 0%, #FF0000 100%);
-$navigation-menu-hover-color:#0D5A00;
+$navigation-menu-color:linear-gradient(180deg, #FF4F4F 0%, #CA0101 100%);
+$navigation-menu-hover-color:white;
 $navigation-menu-text-color:white;
+
 @mixin navigation-menu-hover-color() {
-    background: $second-color;
+    background: linear-gradient(360deg, #DADADA 0%, #DADADA 0.01%, #FFFFFF 59.38%);
 }
+@mixin navigation-menu-active-color() {
+    background: linear-gradient(360deg, #DADADA 0%, #DADADA 0.01%, #FFFFFF 59.38%);
+}
+
 
 
 $portlet-header-border-bottom-color:#FF0000;
 $portlet-header-h2-border-bottom-color:#FF0000;
 
 @mixin footer-background-color() {
-    background: linear-gradient(0deg, #B10000 0%, #FF0000 100%);
+    background: linear-gradient(0deg, #D00000 10.29%, #FF5E3A 100%);
 }
 
 @mixin btn-button-login-background-color() {

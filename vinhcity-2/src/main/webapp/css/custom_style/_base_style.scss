@@ -550,7 +550,8 @@ img {
 	    	a {
 	    		color:white;
 	    		&:hover{
-	    			color:#FAFF00
+	    			color:#FAFF00;
+	    			text-decoration: underline;
 	    		}
 	    	}
 	    	

@@ -19,7 +19,7 @@ a {
 
 #mWrapper {
 	font-size: 14px;
-	font-family: 'Roboto',sans-serif;
+	font-family: 'Arial','Roboto',sans-serif;
 }
 
 .journal-content-article {
@@ -164,11 +164,15 @@ img {
 
 /*---------- Footer ----------*/
 #footer {
-	padding: 20px 15px 10px;
-    //background: url('../images/bg-footer.jpg') left bottom no-repeat;
+	padding: 4px 15px 10px;
     background-size: cover;
     color: white;
-    //text-shadow: 2px 2px 4px #000000;
+    .btn-button-login{
+    	background: white;
+    	color: red;
+    	border-radius: 25px;
+    	padding: 5px 18px;
+    }
 
     @include footer-background-color();
     p{
@@ -222,14 +226,24 @@ img {
 		float:right;
 		width:50%;
 		display:inline-block;
+		text-align: end;
 	}
 	
 	.border-dashed{
-		border-bottom: 2px solid white;
+		border-bottom: 1px dashed white;
 		.border-solid {
-			border-bottom: 2px dashed white;
-			margin-bottom: 6px;
+			margin-bottom: 26px;
 		}
+	}
+	
+	.navigation-area-1{
+	
+	}
+	.description-area-2{
+	
+	}
+	.button-area-3{
+		margin-top:12px;
 	}
 }
 
@@ -302,6 +316,7 @@ img {
 		    padding: 10px 15px;
 		    display: block;
 		    text-decoration: none;
+		    text-transform: uppercase;
     	}
     	
     	.fa-caret-down {
@@ -325,16 +340,18 @@ img {
 			}
 			
 			> a {
-				//font-weight: bold;
-				color:white;
+				
+				color:#F20000;
 			}
 		}
 		
 		&.active {
 			
 			> a {
-				font-weight: bold;
+				color:#F20000;
 			}
+			
+			@include navigation-menu-active-color();
 		}
     }
     
@@ -345,10 +362,20 @@ img {
 
 			> a {
 				
-			    padding: 10px 20px 10px 20px;
+			    padding: 10px 26px 10px 26px;
 			    height: 100%;
 			    position: relative;
-			    
+			    font-size:0px;
+			    &:after{
+			    	content: "\f015";
+				    font-family: FontAwesome;
+				    font-size: 24px;
+				    font-weight: normal;
+				    position: absolute;
+				    top: 50%;
+				    left: 50%;
+				    transform: translate(-50%, -50%);
+			    }
 
 			}
     	}
@@ -621,5 +648,29 @@ img {
 	}
 	100% {
 	    transform: translateY(-110%);
+	}
+}
+
+#subNav {
+	#sNav{
+	
+		li {
+			&:first-child{
+				> a {
+				    padding-left: 0px;
+	
+				}
+			}
+	    	a {
+	    		color:white;
+	    		&:hover{
+	    			color:#FAFF00;
+	    			text-decoration: underline;
+	    		}
+	    	}
+	    	
+			
+	    }
+	    
 	}
 }

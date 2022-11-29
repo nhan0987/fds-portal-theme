@@ -5,7 +5,7 @@
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 
 <head>
-	<title>Cổng TTĐT TP Vinh</title>
+	<title>${the_title}</title>
 	
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
 
@@ -94,7 +94,33 @@
 			<div class="border-dashed">
 				<div class="border-solid">
 					<div class="hidden-footer">
-						<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
+					
+						<div class="row navigation-area-1">
+							<div class="col-md-6">
+								
+							</div>
+							<div class="col-md-6">
+								<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet" instanceId="footerNavigation"/>
+						
+							</div>
+						</div
+						
+						<div>
+						<div class="description-area-2">
+							<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
+						</div>
+						<div class="row button-area-3">
+							<div class="col-md-6">
+								
+							</div>
+							<div class="footer-right col-md-6">
+								<#if themeDisplay.isSignedIn() >
+									<a class="btn-button-login" title="Đăng xuất" href="/c/portal/logout">Đăng xuất</a>
+								<#else>
+									<a class="btn-button-login" title="Đăng nhập" href="/dang-nhap">Đăng nhập</a>
+								</#if>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
