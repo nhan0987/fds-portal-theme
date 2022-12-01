@@ -3757,5 +3757,55 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 .box-sidebar{
 	.head{
 		background:$main-color !important;
+		
+	}
+}
+
+.video-box{
+	.video-title{
+		font-size: 24px;
+		padding-top: 10px;
+    	padding-bottom: 10px;
+    	line-height: 24px;
+    	font-weight: 600;
+	}
+}
+
+.two-columns-wrapper{
+	.video-box{
+		margin-bottom: 2px;
+	    height: 0;
+	    overflow: hidden;
+	    padding-bottom: 56.25%;
+    	position: relative;
+    	img {
+    		border: 1px solid #ada5a5;
+    	}
+		.video-play-ico{
+			.play-icon{
+				    position: absolute;
+				    margin: auto;
+				    top: 0;
+				    right: 0;
+				    bottom: 0;
+				    left: 0;
+				    z-index: 1;
+				    vertical-align: middle;
+				    border-style: none;
+				    max-width: 100%;
+				    color: white;
+			}
+		}
+	}
+	
+	.video-title {
+		padding-top: 10px;
+    	padding-bottom: 10px;
+    	font-size: 14px;
+    	line-height: 24px;
+    	font-weight: 600;
+	}
+	.video-title-hot{
+		font-size: 24px;
 	}
 }
