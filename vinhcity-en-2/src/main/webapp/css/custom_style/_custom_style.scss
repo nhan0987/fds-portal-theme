@@ -144,8 +144,7 @@
 		}
 		
 		section.portlet{
-			//border: 1px solid $main-color;
-			
+			background-color: white;
 			box-shadow: -4px -4px 4px -2px #E1F0FF, 4px 4px 4px -2px #D6EBFF;
 			border-radius: 8px;
 						
@@ -217,7 +216,7 @@
 	.portlet-barebone {
 		section.portlet{
 			border:0 !important;
-			//background-color: #f9f9f9;
+			background-color: white;
 			box-shadow: -4px -4px 4px -2px #E1F0FF, 4px 4px 4px -2px #D6EBFF;
 			border-radius: 8px;
 	   	 	.portlet-header{
@@ -307,13 +306,19 @@
    	 	}
 		
 		section.portlet{
-			//border: 1px solid $gray-color;
+			background-color:white;
     		border-top: 0;
+    		padding-top: 12px;
+    		
+    		.portlet-content-editable{
+    			//padding-top:14px
+    		}
 	   	 	.portlet-header{
-	   	 		border-bottom: 1px solid $main-color;
+	   	 		//border-bottom: 1px solid $main-color;
 				margin-bottom: 0;
 				position: relative;
 				z-index: 1;
+				background-color: #F4F3F3;
 				.view_more {
 					position: absolute;
 				    top: 50%;
@@ -336,10 +341,10 @@
 		
 				h2 {
 					margin: 0;
-					font-size: 14px;
+					font-size: 16px;
 					color: white;
 					display: inline-block;
-					padding: 9px 9px 7px 9px;
+					padding: 9px 18px 7px 18px;
 					text-transform: uppercase;
 					margin-top: -1px;
 					max-width: 100%;
@@ -347,24 +352,31 @@
 					position: relative;
 					overflow: visible;
 					background-color:$main-color;
-					//border-bottom: 3px solid $main-color;
-					//margin-left: 17px;
+					margin-left: -5px;
+				    white-space: nowrap !important;
+				    font-family: Roboto serif;
 					
 					&:before {
 					    content: "";
 					    position: absolute;
-					    left: 100%;
-					    top: 0px;
+					    border-top: 0px solid transparent;
+					    border-right: 5px solid $main-color;
+					    border-bottom: 8px solid transparent;
+					    top: 100%;
 					    width: 0;
 					    height: 0;
-					    border-bottom: 34px solid $main-color;
-					    border-right: 30px solid transparent;
+					    left: 0;
 					}
 		   	 		&:after {
-						content: "\f105";
-					    font-family: 'FontAwesome';
-					    margin-left: 8px;
-					    color: lightblue;
+					    content: "";
+					    position: absolute;
+					    border-top: 18px solid transparent;
+					    border-left: 24px solid $main-color;
+					    border-bottom: 17px solid transparent;
+					    top: 0;
+					    width: 0;
+					    height: 0;
+					    right: -24px;
 					}
 				}
 				
@@ -816,7 +828,7 @@ table .legislation-documents {
 			.news-title {
 	
 				a {
-					font-weight: normal;
+					//font-weight: normal;
 				}
 			}
 		}
@@ -875,6 +887,137 @@ table .legislation-documents {
 	    	margin-left: 5px;
 	    	font-weight: 500;
 	    }
+	}
+}
+
+.list-with-image-first-big-5 {
+	
+    margin: 0 0px 30px 0px !important;
+    
+	.right-news {
+	
+		padding: 0px 10px 0px 0px !important;
+   	 	
+		ul {
+
+			@include flex_justify(space-around);
+			@include flex_direction(column);
+
+		    @media (min-width:768px){
+		    	height:360px
+		    }
+		    
+		    li {
+		    	&:not(:last-child){
+		    		border-bottom: 0.5px dashed #C4C4C4;
+		    	}
+		    	
+    			display: flex;
+    			padding: 20px 0px 20px 0px;
+    			
+		    	.background-image{
+		    		border-radius: 8px !important;
+				    width: 32%;
+				    height: 67px !important;
+		    	}
+		    	.title{
+		    		display:block;
+				    //padding-left: 10px;
+				    width: 100%;
+		    	}
+		    	
+		    	a {
+					display: block;
+					color: $text-color;
+		
+					&:hover {
+						color: $main-color;
+					}
+					label {
+					
+						font-weight: 400;
+						font-style:normal;
+						text-align: justify;
+    					line-height: 16px;
+						margin: 0;
+						
+						cursor: pointer;
+						&:first-letter {
+							text-transform: uppercase;
+						}
+				
+						@media (max-width:1920px){
+					    	font-size:14px;
+					    }
+					    @media (max-width:768px){
+					    	font-size:10px;
+					    }
+					    @media (max-width:540px){
+					    	font-size:100%;
+					    }
+						&:hover {
+							color: $main-color;
+		    				font-weight: bold;
+						}
+						
+						.news-label {
+							@media (max-width:1920px){
+						    	font-size:8px;
+						    }
+						    @media (max-width:768px){
+						    	font-size:5px;
+						    }
+						}
+					}
+				}
+		    	
+		    }
+		}
+		
+	}
+	
+
+	.left-news {
+	
+		padding: 0px 26px 0px 0px !important;
+		//border-left: 1px solid #DADADA;
+		
+		.background-image {
+			height: 360px !important;
+			border-radius: 3px !important;
+		}
+		.bg-transparents {
+			
+			bottom: 5px;
+			left: 0;
+			padding: 10px 0px 30px;
+			display: block;
+			background: white;
+			font-weight: bold;
+			width: 100%;
+
+			label {
+				color: #000000;
+				display: block;
+				margin-bottom: 0;
+				padding-left: 0px !important;
+				
+				font-weight: bold;
+				cursor:pointer;
+				text-align: justify;
+    			line-height: 16px;
+    			margin-bottom: 6px;
+			}
+
+			span {
+				font-weight: 500;
+				color: #5B5A5A;
+				text-align: justify;
+   				line-height: 16px;
+			}
+		}
+
+		
 	}
 }
 
@@ -1720,22 +1863,25 @@ table .legislation-documents {
 }
 
 // Gallery
+
 .gallery-wrapper {
-	padding: 15px 0 0;
+	padding: 0px 10px 0 5px;
 	@include d_flex(flex);
 	@include flex_wrap(wrap);
 	
-	> .col-sm-3 {
-		margin-bottom: 30px;
-		width: 33%;
+	.gallery-box {
+		padding-bottom:10px;
+		padding-right: 0px !important;
 	}
+	
+
 	
 	.box {
 		padding-top: 75%;
 		position: relative;
 		
 		&:before, &:after {
-			content: "";
+			//content: "";
 		    position: absolute;
 		    height: 1px;
 		    background: #afb7bc;
@@ -1793,7 +1939,10 @@ table .legislation-documents {
 		&:hover {
 			
 			.info {
-				color: $main-text-color;
+				//color: $main-text-color;
+				.title{
+					text-decoration: underline;
+				}
 			}
 		}
 	}
@@ -2092,6 +2241,72 @@ table .legislation-documents {
 	}
 }
 
+.has-background-portlet{
+	.portlet-body{
+		padding-left:0px !important;
+		padding-bottom:0px !important;
+		padding-right:0px !important;
+	}
+}
+
+.has-bg{
+	width: 100%;
+    height: 100%;
+    background-image: url(../images/zyro-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+	.slider-responsive-2{
+		padding: 0px !important;
+		.slick-prev{
+			top:90px !important;
+			width: 70px;
+    		background: rgba(255, 0, 0, 0.8);
+    		left: 0px;
+			height:27px;
+			&:before{
+				content: "\f104";
+				font-family: FontAwesome;
+			    color: white;
+			    font-size: 28px;
+			    opacity: 1;
+			    line-height: 0.5;
+			}
+		}
+		.slick-next{
+			top:90px !important;
+			width: 70px;
+    		background: rgba(255, 0, 0, 0.8);
+    		right: 0px;
+    		height:27px;
+    		
+			&:before{
+				content: "\f105";
+				font-family: FontAwesome;
+			    color: white;
+			    font-size: 28px;
+			    opacity: 1;
+			    line-height: 0.5;
+			}
+		}
+		.slick-list{
+			padding:0 15px;
+		}
+		.slick-slide{
+			background: rgba(255, 240, 240, 0.9);
+			margin: 16px 15px 16px 15px !important;
+			.image-center{
+				padding:11px 13px 0px 13px;
+				margin-bottom:18px;
+				.img-responsive{
+					border-radius:0px !important;
+				}
+			}
+		}
+	}
+}
+
 .slider-responsive-2 {
 	margin: 0;
 	padding: 0 30px;
@@ -2352,7 +2567,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 		padding: 0 10px 15px;
 
 		select {
-			border-radius:28px;
+			//border-radius:28px;
 		}
 
 	}
@@ -2934,8 +3149,78 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 	}
 }
 
+.legislation-document-style-phuong-vinh{
+	
+	display:inline-block;
+	display: flex;
+    flex-wrap: wrap;
+	
+	.ls-element {
+		
+    	display: inherit;
+    	border-top: 1px solid $portlet-border-color;
+    	width: 100%;
+    	
+		.ls-element-first {
+			float:left;
+			width: 24%;
+		    padding:10px 0px 10px 10px;
+		    background-color: $background-second-color;
+		    overflow: auto;
+		    
+			.ls-ma-van-ban{
+				color:$second-color;
+				font-weight:bold;
+			}
+			.ls-date-time{
+				color:$second-color;
+			}
+		}
+		.ls-element-second{
+			float:left;
+			width:67%;
+			padding:10px 0px 10px 10px;
+			overflow: auto;
+				
+			.ls-trich-yeu {
+				
+				a{
+					color:$text-color;
+					&:hover{
+						color:$second-color;
+					}
+				}
+			}
+		}
+		
+		.ls-element-third{
+			float:left;
+			width:auto;
+			padding: 18px 5px 18px 5px;
+			.icon-asset{ 
+		    	a{
+			    	color:$portlet-border-color !important;
+			    }
+		    }
+		}
+	}
+}
+
 .help-info-wrapper {
 	text-align:center;
+	.service-name {
+		font-size: 14px;
+		text-align: center;
+	    //margin-top: 4px;
+	    padding: 18px 0;
+	    position: relative;
+	    color:$main-color;
+	    span {
+	    	position: relative;
+	    	z-index: 1;
+	    }
+	}
+			
 	.container {
 		@include d_flex(flex);
 		@include flex_wrap(wrap);

@@ -98,17 +98,29 @@ img {
 	padding-top: 100px;
 }
 
-.has-control-menu .language-banner_vi{
-	top:84% !important;
-}
-.has-control-menu .language-banner_en{
-	top:84% !important;
+
+.language-banner_en{
+	width: 30px;
+	margin:0px 12px 0px 0px;
+	display:none;
+    @media screen and (min-width:992px){
+		display:block;
+		
+	}
 }
 
-.has-control-menu .language-banner_datetime{
-	top:84% !important;
+.language-collapse{
 	
+	@media screen and (min-width:992px){
+		display:none;
+	}
+	margin: 4px 28px;
+	
+	@media screen and (max-width:992px){
+		display:block;
+	}
 }
+
 
 		
 #banner {
@@ -129,43 +141,7 @@ img {
 		margin-bottom: 0 !important;
 	}
 	
-    .language-banner_vi {
-    	position:absolute;
-    	z-index: 0;
-    	width:30px;
-   		right:52px;
-   		top:70%;
-   		border: 4px solid white;
-    	border-radius: 25px;
-    	&:hover {
-    		border: 4px solid $main-color;
-    	}
-    }
-    .language-banner_en {
-    	position:absolute;
-    	width:30px;
-    	z-index: 0;
-   		right:14px;
-   		top:70%;
-   		border: 4px solid white;
-    	border-radius: 25px;
-    	&:hover {
-    		border: 4px solid $main-color;
-    	}
-    }
-	.language-banner_datetime {
-    	position: absolute;
-	    width: auto;
-	    z-index: 0;
-	    right: 91px;
-	    padding: 3px 14px;
-	    text-align: center;
-	    border-radius: 20px;
-	    top:72%;
-	    background-color:#f5f5f5e0;
-		border-radius:8px;
-		color:$main-color;
-    }
+    
 }
 
 #banner{
@@ -408,10 +384,22 @@ img {
     }
     li {
     	margin-right:4px;
+    	
+    	.language-banner_en{
+		    padding: 15px 0px 0px 0px !important;
+		    display:none;
+		    @media screen and (min-width:992px){
+				display:block;
+				
+			}
+		}
 
     	a {
     		color: $navigation-menu-text-color;
 		    padding: 18px 15px;
+		    @media screen and (max-width:992px){
+		    	padding: 18px 15px 18px 19px;
+		    }
 		    display: block;
 		    text-decoration: none;
 		    font-weight: 600;
@@ -438,10 +426,12 @@ img {
 			.child-menu {
 				display: block;
 			}
-			background:$navigation-menu-hover-color;
-			
-			> a {
-				color:$navigation-menu-text-hover-color;
+			&:not(:last-child){
+				background:$navigation-menu-hover-color;
+				
+				> a {
+					color:$navigation-menu-text-hover-color;
+				}
 			}
 		}
     	
@@ -477,6 +467,10 @@ img {
 
 			> a {
 			    padding: 18px 22px 18px 22px;
+			    
+			    @media screen and (max-width:992px){
+			    	padding: 18px 22px 18px 28px;
+			    }
 			    height: 100%;
 			    position: relative;
 			    
@@ -496,6 +490,11 @@ img {
 	    position: relative;
 	    margin-right: 15px;
 		padding: 5px 0;
+		@media screen and (mmax-width:992px){
+			
+			padding: 5px 0 5px 80px;
+			
+		}
 		.portlet {
 			margin-bottom: 0px!important;
 		}

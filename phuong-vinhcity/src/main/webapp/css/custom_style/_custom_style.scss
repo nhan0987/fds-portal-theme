@@ -857,7 +857,7 @@ table .legislation-documents {
 			.news-title {
 	
 				a {
-					font-weight: normal;
+					//font-weight: normal;
 				}
 			}
 		}
@@ -965,7 +965,7 @@ table .legislation-documents {
 						text-align: justify;
     					line-height: 16px;
 						margin: 0;
-						
+						text-transform: lowercase;
 						cursor: pointer;
 						&:first-letter {
 							text-transform: uppercase;
@@ -2512,7 +2512,14 @@ table .legislation-documents {
 
 	.slick-slide {
 		margin: 0 10px;
-
+		
+		span{
+			text-transform:lowercase;
+			&:first-letter{
+				text-transform:uppercase;
+			}
+		}
+		
 		.a-img{
 			display:block;
 			position: relative;
@@ -2757,8 +2764,8 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 .weblink-wrapper-2 {
 
 	.nav-tabs {
-		border-bottom: 2px solid $navigation-menu-hover-color;
-
+		border-bottom: 1px solid $main-color;
+		padding-bottom: 6px;
 		li {
 			position: relative;
 			margin-right: 30px;
@@ -2774,8 +2781,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			    max-width: 100%;
 			    font-weight: bold;
 			    position: relative;
-			    //overflow: visible;
-			    background-color: $navigation-menu-color;
+			    background-color: $main-color;
 				border:none;
 				border-color:none;
 				border-top-left-radius: 0px;
@@ -2784,29 +2790,41 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			    border-bottom-right-radius: 0px;
 				
 				&.active, &:hover {
-					background-color: $navigation-menu-hover-color;
-					color: white;
+					background-color: $main-color;
+					color: #FAFF00;
 					&:before{
-						border-bottom: 35px solid $navigation-menu-hover-color;
+						//border-bottom: 35px solid $main-color;
 					}
 				}
-
-				&:before {
+				
+				&:after {
 				    content: "";
 				    position: absolute;
 				    left: 100%;
 				    top: 0px;
 				    width: 0;
 				    height: 0;
-				    border-bottom: 35px solid $navigation-menu-color;
-				    border-right: 30px solid transparent;
+				    border-bottom: 35px solid $main-color;
+			        border-right: 30px solid transparent;
+					    
 				}
+				
 			}
 
 			&:not(:first-child) {
-
+				padding-left: 10px;
 				a {
-					//padding-left: 60px;
+
+					&:before {
+					    content: "";
+					    position: absolute;
+					    right: 100%;
+					    top: 0px;
+					    width: 0;
+					    height: 0;
+					    border-top: 35px solid $main-color;
+						border-left: 30px solid transparent;
+					}
 				}
 			}
 
@@ -2826,7 +2844,7 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 
 	.tab-content {
 		padding: 10px 15px;
-		border: 1px solid $gray-color;
+		//border: 1px solid $gray-color;
 
 		.tab-pane {
 			padding: 0 !important;
@@ -2837,21 +2855,21 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 			overflow: hidden;
 
 			li {
-				width: 25%;
+				width: 20%;
 				float: left;
 
 				a {
 					display: block;
 					position: relative;
-					padding: 5px 15px;
+					padding: 8px 0px 0px 10px;
 					color: $text-color;
-
+					font-weight:normal;
 					&:before {
 						content: "\f111";
 						position: absolute;
 						top: 14px;
 						left: 0;
-						color: black;
+						color: red;
 						font-family: 'FontAwesome';
 						font-size: 6px;
 					}

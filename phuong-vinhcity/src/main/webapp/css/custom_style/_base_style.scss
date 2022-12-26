@@ -308,9 +308,7 @@ img {
     	color: white !important;
     }
     li {
-    	&:hover{
-			@include navigation-menu-hover-color();
-		}
+    	
     	a {
     		color: $navigation-menu-text-color;
 		    padding: 10px 15px;
@@ -321,16 +319,27 @@ img {
     	
     	.fa-caret-down {
     		color: $navigation-menu-text-color;
+    		display:none;
     	}
     	
     	.child-menu {
+    	
 		    display: none;
 		    position: absolute;
 		    top: 100%;
-		    background-color:$navigation-menu-color;
+		    background:white;
 		    z-index: 2;
 		    list-style: none;
 		    padding: 0;
+		    
+			a{
+		   		color:$navigation-menu-text-hover-color;
+		   		text-transform: initial;
+		   		&:hover{
+		   			color:white;
+		   			background:$navigation-menu-color;
+		   		}
+		   	}
 		}
 		
 		&:hover {
@@ -339,9 +348,10 @@ img {
 				display: block;
 			}
 			
-			> a {
-				
-				color:#F20000;
+			background:$navigation-menu-hover-color;
+			
+			a {
+				color:$navigation-menu-text-hover-color;
 			}
 		}
 		

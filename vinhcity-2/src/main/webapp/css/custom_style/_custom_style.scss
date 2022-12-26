@@ -815,7 +815,7 @@ table .legislation-documents {
 			.news-title {
 	
 				a {
-					font-weight: normal;
+					//font-weight: normal;
 				}
 			}
 		}
@@ -2503,6 +2503,10 @@ table .legislation-documents {
 			}
 			
 		}
+		.a-img{
+			border-radius:8px;
+		}
+		
 
 		img {
 			position: absolute;
@@ -3772,6 +3776,22 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 }
 
 .two-columns-wrapper{
+	.col-md-8{
+		.video-box{
+			.background-image{
+				height:307px !important;
+				border-radius:0px !important
+			}
+		}
+	}
+	.col-md-4{
+		.video-box{
+			.background-image{
+				height:147px !important;
+				border-radius:0px !important
+			}
+		}
+	}
 	.video-box{
 		margin-bottom: 2px;
 	    height: 0;
