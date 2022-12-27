@@ -52,7 +52,9 @@
 			
 				<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
 				
-				
+				<div class="container">
+					<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="banner"/>
+				</div>
 			</div>
 			
 			<#if allow_display_language_icon == true >
