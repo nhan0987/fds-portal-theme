@@ -74,10 +74,9 @@
 		</div>
 		
 		<div id="body-content">
-			<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 			
 			<div id="content" class="container">
-				
+				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 			
 				<#if selectable>
 					<@liferay_util["include"] page=content_include />
