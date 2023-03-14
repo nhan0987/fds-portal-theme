@@ -2853,6 +2853,13 @@ body .portlet-boundary_frontend_web_faq_FrontendWebFaqPortlet_ {
 
 			li {
 				width: 20%;
+				@media screen and (max-width:1024px){
+					width: 25%;
+				}
+				@media screen and (max-width:768px){
+					width: 100%;
+				}
+				
 				float: left;
 
 				a {
