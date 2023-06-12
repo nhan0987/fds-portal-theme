@@ -16,7 +16,9 @@
 
 	<@liferay_util["include"] page=top_head_include />
 	
-	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" integrity="sha256-MmuZTsWcczT1IhH71aqQmja5jRcXy3mL/NOvjUy9tso=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 	<script src="https://code.responsivevoice.org/responsivevoice.js?key=k4tuTc8q"></script>
@@ -27,7 +29,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
 </head>
 
-<body class="${css_class} pages-theme">
+<body class="${css_class} home-theme">
 
 <!-- 
 <#if permissionChecker.isOmniadmin()>
@@ -48,8 +50,7 @@
 
 	<div id="mWrapper">
 		<div id="banner">
-			<div class="hidden-banner">
-			
+			<div class="hidden-banner">			
 				<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
 				
 				<div class="container">
@@ -57,12 +58,10 @@
 				</div>
 			</div>
 			
-			<#if allow_display_language_icon == true >
-			
+			<#if allow_display_language_icon == true >			
 				<div class="language-banner_datetime">
 					<span id="current_datetime"></span>
 				</div>
-				
 				<a class="language-banner_vi" href="/vi/trang-chu">
 					<img src="${images_folder}/custom-images/VN.png"/>
 				</a>
@@ -72,45 +71,28 @@
 			</#if>
 			
 		</div>
+			
+		<div id="content">
+			<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 		
-		<div id="body-content">
-			
-			<div id="content" class="container">
-				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
-			
-				<#if selectable>
+			<#if selectable>
+				<@liferay_util["include"] page=content_include />
+			<#else>
+				${portletDisplay.recycle()}
+
+				${portletDisplay.setTitle(the_title)}
+
+				<@liferay_theme["wrap-portlet"] page="portlet.ftl">
 					<@liferay_util["include"] page=content_include />
-				<#else>
-					${portletDisplay.recycle()}
-	
-					${portletDisplay.setTitle(the_title)}
-	
-					<@liferay_theme["wrap-portlet"] page="portlet.ftl">
-						<@liferay_util["include"] page=content_include />
-					</@>
-				</#if>
-	
-				<div class="clear"></div>
-			</div>
+				</@>
+			</#if>
+
+			<div class="clear"></div>
+		</div>
 			
-			<div id="footer-bg">
-				<div id="footer" class="container">
-					<div class="row">
-						<div class="col-md-6">
-							
-						</div>
-						<div class="col-md-6">
-							<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet" instanceId="footerNavigation"/>
-							<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
-							
-							<#if themeDisplay.isSignedIn() >
-								<a class="btn-button-login" title="Đăng xuất" href="/c/portal/logout">Đăng xuất</a>
-							<#else>
-								<a class="btn-button-login" title="Đăng nhập" href="/dang-nhap">Đăng nhập</a>
-							</#if>
-						</div>
-					</div>
-				</div>
+		<div id="footer">
+			<div class="container">
+				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
 			</div>
 		</div>
 	</div>
