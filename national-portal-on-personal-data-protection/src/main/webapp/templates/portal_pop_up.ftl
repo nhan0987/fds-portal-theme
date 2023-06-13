@@ -8,7 +8,6 @@
 	<title>${the_title}</title>
 
 	<@liferay_util["include"] page=top_head_include />
-	<script src="https://code.responsivevoice.org/responsivevoice.js?key=k4tuTc8q"></script>
 </head>
 
 <body class="portal-popup ${css_class}">
