@@ -39,7 +39,7 @@
 			<a href="/" class="mLogo">
 				<img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/banners/${banner_img}">
 			</a>
-			<a href="http://e.apd.edu.vn/" class="e-site" target="_blank">
+			<a href="http://en.apd.edu.vn/" class="e-site" target="_blank">
 				<img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/flag-uk.png">
 			</a>
 		</div>
