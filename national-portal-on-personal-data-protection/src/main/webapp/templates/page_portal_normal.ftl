@@ -65,7 +65,6 @@
 		</div>
 		
 		<div id="body-content">
-			
 			<div id="content" class="container">
 				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
 				
@@ -83,25 +82,11 @@
 	
 				<div class="clear"></div>
 			</div>
+		</div>
 			
-			<div id="footer-bg">
-				<div id="footer" class="container">
-					<div class="row">
-						<div class="col-md-6">
-							
-						</div>
-						<div class="col-md-6">
-							<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet" instanceId="footerNavigation"/>
-							<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
-							
-							<#if themeDisplay.isSignedIn() >
-								<a class="btn-button-login" title="Đăng xuất" href="/c/portal/logout">Đăng xuất</a>
-							<#else>
-								<a class="btn-button-login" title="Đăng nhập" href="/dang-nhap">Đăng nhập</a>
-							</#if>
-						</div>
-					</div>
-				</div>
+		<div id="footer">
+			<div class="container">
+				<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" instanceId="footer"/>
 			</div>
 		</div>
 	</div>
