@@ -17,6 +17,10 @@
 	
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
 </head>
 
 <body class="${css_class} home-theme">
@@ -34,7 +38,7 @@
 			<a href="/" class="mLogo">
 				<img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/banners/${banner_img}" class="">
 			</a>
-			<a href="http://e.apd.edu.vn/" class="e-site" target="_blank">
+			<a href="http://en.apd.edu.vn/" class="e-site" target="_blank">
 				<img src="${themeDisplay.getPathThemeRoot()}/images/custom-images/flag-uk.png">
 			</a>
 		</div>

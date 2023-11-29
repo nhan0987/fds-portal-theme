@@ -1,0 +1,22 @@
+@import "main_variables";
+@import "mixin";
+@import "base_style";
+@import "custom_style";
+@import "override_style";
+
+body {
+	
+	&.namdan-theme {
+		
+		
+		background-color: white;
+
+		.notify-wrapper {
+			display: none;
+		}
+		
+		@import "namdan_style";
+		@import "override_style";
+	}
+
+}

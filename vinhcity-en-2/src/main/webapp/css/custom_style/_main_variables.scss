@@ -1,0 +1,20 @@
+// Main Variable
+$main-color: #EF0000;
+$second-color: #F20000;
+$main-color-light: lighten($main-color, 8%);
+$main-color-super-light: lighten($main-color, 30%);
+$secondary-color: #004b18;
+$secondary-color-dark: #004b18;
+$main-text-color: #2a2a2a;
+$gray-color: #EDEDED;
+$gray-color-medium: #ebebeb;
+$gray-color-dark: #a7a7a7;
+$text-color: #000;
+$text-color-2: #939393;
+
+$navigation-menu-color:white;
+$navigation-menu-hover-color:#0052B4;
+$navigation-menu-text-color:#D80027;
+
+$portlet-border-color:#C4C4C4;
+$background-second-color: #ffe9e9d9;

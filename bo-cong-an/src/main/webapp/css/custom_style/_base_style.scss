@@ -1,4 +1,8 @@
 /*---------- Global ----------*/
+body {
+	background-color: white;
+}
+
 ul {
 	list-style: none;
 	margin: 0;
@@ -15,7 +19,7 @@ a {
 
 #mWrapper {
 	font-size: 14px;
-	font-family: 'Lora', serif;
+	font-family: 'Roboto';
 }
 
 .journal-content-article {
@@ -80,7 +84,7 @@ img {
 
 
 /*---------- Header ----------*/
-.signed-in #banner {
+.has-control-menu #banner {
 	padding-top: 100px;
 }
 		
@@ -108,7 +112,7 @@ img {
 	padding: 20px 15px 10px;
     background: url('../images/bg-footer.jpg') left bottom no-repeat;
     background-size: cover;
-    color: $secondary-text-color;
+    color: $secondary-color-dark;
     
     .site-info {
 	    display: flex;
@@ -116,7 +120,8 @@ img {
 	
 	 img {
 	    margin-right: 20px;
-	    margin-top: -15px;
+		margin-top: -15px;
+		margin-left: 10px;
 	}
 	
 	.sitename {
@@ -124,7 +129,8 @@ img {
 	}
 	
 	.infos {
-	
+		
+		padding-left: 53px;
 		> div {
 		    display: flex;
 		    align-items: baseline;
@@ -164,6 +170,7 @@ img {
 
 		.infos {
 			margin-bottom: 10px;
+			padding-left: 53px;
 		}
 	}
 }
@@ -183,7 +190,7 @@ img {
 		}
 		
 		.infos {
-			
+			padding-left: 53px;
 			> div {
 				width: 100%;
 			}
@@ -199,11 +206,7 @@ img {
 
 /*---------- Navbar ----------*/
 #mainNav {
-    background: rgb(91,3,3);
-    background: -moz-linear-gradient(left,  rgba(91,3,3,1) 0%, rgba(223,0,35,1) 100%);
-    background: -webkit-linear-gradient(left,  rgba(91,3,3,1) 0%,rgba(223,0,35,1) 100%);
-    background: linear-gradient(to right,  rgba(91,3,3,1) 0%,rgba(223,0,35,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b0303', endColorstr='#df0023',GradientType=1 );
+	@include background-gradient(#5b0303, #df0023);
     margin-bottom: 20px;
     
     li {
@@ -223,11 +226,7 @@ img {
 		    display: none;
 		    position: absolute;
 		    top: 100%;
-		    background: rgb(91,3,3);
-		    background: -moz-linear-gradient(left,  rgba(91,3,3,1) 0%, rgba(223,0,35,1) 100%);
-		    background: -webkit-linear-gradient(left,  rgba(91,3,3,1) 0%,rgba(223,0,35,1) 100%);
-		    background: linear-gradient(to right,  rgba(91,3,3,1) 0%,rgba(223,0,35,1) 100%);
-		    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b0303', endColorstr='#df0023',GradientType=1 );
+		    @include background-gradient(#5b0303, #df0023);
 		    z-index: 2;
 		    list-style: none;
 		    padding: 0;
@@ -320,18 +319,24 @@ img {
 	    display: flex;
 	    position: relative;
 	    margin-right: 15px;
-	    
+		padding: 5px 0;
+		.portlet {
+			margin-bottom: 0px!important;
+		}
 	    input {
-	    	border: 0;
-		    border-radius: 4px;
-		    box-shadow: none;
-		    width: 260px;
-		    font-size: 14px;
-		    height: 26px;
-		    background-color: white;
-		    margin: 8px 0;
+	    	// border: 0;
+		    // border-radius: 4px;
+		    // box-shadow: none;
+		    // width: 260px;
+		    // font-size: 14px;
+		    // height: 26px;
+		    // background-color: white;
+		    // margin: 8px 0;
 	    }
-	    
+	    .form-control {
+			height: 26px;
+    		font-size: 0.875rem;
+		}
 	    .bt_search {
 	    	background-color: transparent;
 		    border: 0;
@@ -347,25 +352,43 @@ img {
 }
 
 
-
 /*---------- Other ----------*/
 
 // Nested portlet
-.portlet-nested-portlets {
+#content .portlet-nested-portlets.outer-most {
 
 	> .portlet {
-		margin-bottom: 15px;
-
-		.portlet {
-			margin-bottom: 0;
-		}
+		margin-bottom: 0;
 	}
 
-	.columns-2 > div > div > div {
-		height: 100%;
-		
-		> div {
-			height: 100%;
+	.portlet-nested-portlets {
+	
+		> .portlet {
+			margin-bottom: 15px;
+			border: 0;
+	
+			> div > div > .portlet-body {
+				padding: 0;
+			}
+	
+			.portlet {
+				margin-bottom: 0;
+			}
+		}
+	
+		.columns-2, .columns-3 {
+	
+			> div > div > div {
+				height: 100%;
+				
+				> div {
+					height: 100%;
+	
+					> .portlet {
+						height: 100%;
+					}
+				}
+			}
 		}
 	}
 }
@@ -395,7 +418,7 @@ img {
 		min-width: 100%;
 		min-height: 100%;
 		max-width: inherit;
-		width: 100%;
+		height: 100%;
 	}
 
 	&.r169 {

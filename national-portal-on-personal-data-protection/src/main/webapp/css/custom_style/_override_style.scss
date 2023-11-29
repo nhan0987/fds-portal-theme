@@ -1,0 +1,58 @@
+/*---------- General ----------*/
+.portlet {
+	
+	.portlet-header {
+		margin-bottom: 15px;
+		
+		.portlet-title-text {
+			font-size: 20px;
+			color: $main-color;
+			max-width: 100%;
+			border-bottom: 1px solid $main-color;
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.portlet-journal-content {
+	
+	.journal-content-article {
+		line-height: 18px;	
+	}
+}
+
+
+/*---------- Input ----------*/
+.form-control {
+	font-size: 14px;
+}
+
+
+/*---------- Breadcrumb ----------*/
+.portlet-breadcrumb .portlet {
+	margin-bottom: 0;
+}
+
+.breadcrumb {
+	margin-bottom: 0;
+	
+	.breadcrumb-item {
+		
+		.breadcrumb-link {
+			color: $text-color;
+		}
+	
+		&:last-child {
+			
+			.breadcrumb-link {
+				color: $main-color;
+				pointer-events: none;
+			}
+		}
+	}
+	
+	.active {
+		color: $main-color;
+	}
+}

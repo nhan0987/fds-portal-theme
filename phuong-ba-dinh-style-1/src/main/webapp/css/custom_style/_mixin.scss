@@ -1,0 +1,78 @@
+//Mixin
+@mixin content($color-default-num, $color-main-num) {
+  	background: nth($colors, $color-default-num);
+  	color: nth($colors, $color-main-num);
+}
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    box-shadow: $value;
+}
+@mixin transform($value) {
+	-webkit-transform: $value;
+    transform: $value;
+}
+@mixin transition($value) {
+    -webkit-transition: $value;
+    transition: $value;
+}
+@mixin d_flex($value) {
+  	display: $value;
+}
+@mixin flex_wrap($value) {
+  	-webkit-flex-wrap: $value;
+  	flex-wrap: $value;
+}
+@mixin flex_align($value) {
+  	-webkit-align-items: $value;
+  	align-items: $value;
+}
+@mixin flex_justify($value) {
+  	-webkit-justify-content: $value;
+  	justify-content: $value;
+}
+@mixin flex_variables($value) {
+  	-webkit-flex: $value;
+  	flex: $value;
+}
+@mixin flex_direction($value) {
+  	-webkit-flex-direction: $value;
+  	flex-direction: $value;
+}
+@mixin flex_order($value) {
+  	-webkit-order: $value;
+  	order: $value;
+}
+@mixin flex_direction($value) {
+  	-webkit-flex-direction: $value;
+  	flex-direction: $value;
+}
+@mixin background-opacity($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+@mixin background-gradient($first-color, $second-color) {
+    background: $first-color;
+	background: -moz-linear-gradient(left,  $first-color 0%, $second-color 100%);
+	background: -webkit-linear-gradient(left,  $first-color 0%,$second-color 100%);
+	background: linear-gradient(to right,  $first-color 0%,$second-color 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color',GradientType=1 );
+}
+@mixin animation($value) {
+	-webkit-animation: $value;
+	animation: $value;
+}
+@mixin animation-pause($value) {
+	-webkit-animation-play-state: $value;
+	animation-play-state: $value;
+}
+
+
+
+
+//Function
+@function set-text-color($color) {
+  	@if (lightness($color) > 50) {
+    	@return #000; // Lighter backgorund, return dark color
+  	} @else {
+   		@return #fff; // Darker background, return light color
+  	}
+}

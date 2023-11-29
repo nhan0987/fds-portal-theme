@@ -5,7 +5,7 @@
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 
 <head>
-	<title>Cổng Thông tin Bộ Công an</title>
+	<title>Cổng TTĐT Thanh tra Bộ Công an</title>
 	
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
 
@@ -18,11 +18,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" integrity="sha256-MmuZTsWcczT1IhH71aqQmja5jRcXy3mL/NOvjUy9tso=" crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+	<script src="https://code.responsivevoice.org/responsivevoice.js?key=k4tuTc8q"></script>
 </head>
 
 <body class="${css_class} pages-theme">
 
-<@liferay.control_menu />
+<#if permissionChecker.isOmniadmin()>
+	<@liferay.control_menu />
+</#if>
 
 <@liferay_ui["quick-access"] contentId="#main-content" />
 
@@ -39,14 +42,17 @@
 		</div>
 		
 		<@liferay_portlet["runtime"] defaultPreferences="${preferences}" portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"/>
-		
-		<div class="notify-wrapper">
-			<div class="notify-title">Thông báo</div>
-			<marquee scrolldelay="200"><span>${marqueeText}</span></marquee>
-			<span id="current_datetime"><span id="current_datetime"> - <span id="current_time"></span>
-		</div>
-		
+
 		<div id="content">
+		
+			<div class="notify-wrapper">
+				<div class="notify-title">Thông báo</div>
+				<div class="marquee">
+					<marquee scrolldelay="200"><span>${marqueeText}</span></marquee>
+				</div>
+				<span id="current_datetime"><span id="current_datetime"> - <span id="current_time"></span>
+			</div>
+			
 			<#if selectable>
 				<@liferay_util["include"] page=content_include />
 			<#else>
